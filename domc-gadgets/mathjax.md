@@ -1,5 +1,16 @@
 ## MathJax
 
+### Meta
+
++ Library: MathJax
++ Version: 2.7.2
++ Payload: ```<a id="MathJax"></a> <a id="MathJax" name="root" href="https://xxx.xxx.xxx"></a>```
++ Impact: XSS
++ Foundby: TheHulk
+
+
+### Library
+
 URL: 
 + `https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js`
 + `https://www.mathjax.org/MathJax-v2-7-9-available/`
