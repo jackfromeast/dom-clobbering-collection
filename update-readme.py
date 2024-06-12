@@ -3,6 +3,7 @@ import os
 # Directory containing the library files
 input_directory = 'domc-gadgets'
 output_file = 'README.md'
+github_base_url = 'https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/'
 
 # Initialize the README content
 readme_content = """# DOM Clobbering Collection
@@ -42,10 +43,11 @@ for filename in os.listdir(input_directory):
         file_path = os.path.join(input_directory, filename)
         metadata = extract_metadata(file_path)
         if metadata:
-            readme_content += f"| {metadata['Library']} | {metadata['Version']} | {metadata['Payload']} | {metadata['Impact']} | {metadata['Foundby']} |\n"
+            library_link = f"[{metadata['Library']}]({github_base_url}{filename})"
+            readme_content += f"| {library_link} | {metadata['Version']} | {metadata['Payload']} | {metadata['Impact']} | {metadata['Foundby']} |\n"
 
 # Write the content to README.md
 with open(output_file, 'w') as file:
     file.write(readme_content)
 
-print(f"README.md has been generated successfully.")
+print("README.md has been generated successfully.")
