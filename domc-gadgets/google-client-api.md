@@ -107,9 +107,8 @@ https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.6jI6mC1Equ4.O/m=clien
 <body onload="initialize()">
   <h1>Google Sheets API Client Example</h1>
   // PAYLOAD
-  <iframe name="scripts" src=”https://api.google.com/js/api.js”>alert("GG!")</iframe>
-  <iframe name="scripts" src=”https://api.google.com/js/api.js”>alert("GG!")</iframe>
+  <iframe name="scripts" src="https://api.google.com/js/api.js">alert("GG!")</iframe>
+  <iframe name="scripts" src="https://api.google.com/js/api.js">alert("GG!")</iframe>
 </body>
 </html>
-
 ```
