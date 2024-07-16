@@ -38,7 +38,7 @@ def extract_metadata(file_path):
     return metadata
 
 # Iterate over each file in the directory
-for filename in os.listdir(input_directory):
+for filename in sorted(os.listdir(input_directory)):
     if filename.endswith('.md'):
         file_path = os.path.join(input_directory, filename)
         metadata = extract_metadata(file_path)
