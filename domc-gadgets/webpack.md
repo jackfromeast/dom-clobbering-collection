@@ -110,4 +110,4 @@ __webpack_require__.l = (url, done, key, chunkId) => {
 
 ## PoC
 
-Webpack's generated code differes significantly for each use. Ensure that the code snippets appear, then browse the network requests to see the URLs that are requested. Some users may configure their public path differently.
+Webpack's generated code differes significantly for each use. Ensure that the code snippets appear, then browse the network requests to see the URLs that are requested. Some users may configure their public path differently. Fingerprint may not work if Webpack is configured to not produce source maps.
