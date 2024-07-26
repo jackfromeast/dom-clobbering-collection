@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build": "webpack",
+    "deploy": "npm run build"
+  },
+  "dependencies": {
+    "webpack": "^5.93.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  }
+}
