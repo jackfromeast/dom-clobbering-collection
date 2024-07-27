@@ -9,9 +9,4 @@ module.exports = {
   },
   target: 'web',
   mode: 'development',
-  optimization: {
-    splitChunks: {
-      chunks: 'all', // This will create separate chunk files for dynamic imports
-    },
-  },
 };
