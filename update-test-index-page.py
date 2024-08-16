@@ -39,7 +39,7 @@ def generate_index_html(base_dir):
             folder_dict[folder_name].append(file_path)
         
         # Write each folder and its poc files to the index.html
-        for folder_name, file_paths in folder_dict.items():
+        for folder_name, file_paths in sorted(folder_dict.items()):
             index.write(f'  <h2>{folder_name} Test</h2><ul>\n')
             for file_path in file_paths:
                 test_name = os.path.splitext(os.path.basename(file_path))[0]
