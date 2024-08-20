@@ -44,7 +44,7 @@ for filename in sorted(os.listdir(input_directory)):
         metadata = extract_metadata(file_path)
         if metadata:
             library_link = f"[{metadata['Library']}]({github_base_url}{filename})"
-            readme_content += f"| {library_link} | {metadata['Version']} | {metadata['Payload']} | {metadata['Impact']} | {metadata['Foundby']} |\n"
+            readme_content += f"| {library_link} | {metadata.get('Version', '')} | {metadata['Payload']} | {metadata['Impact']} | {metadata['Foundby']} |\n"
 
 # Write the content to README.md
 with open(output_file, 'w') as file:
