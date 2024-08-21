@@ -11,7 +11,7 @@
 ### Library
 
 URL:
-+ `https://static.addtoany.com/menu/page.js`
++ `https://static.addtoany.com/menu/page.js` (patched)
 
 ### Vulnerable Code Snippet
 
