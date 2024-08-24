@@ -3,10 +3,12 @@
 ### Meta
 
 + Library: pagefind
++ Stars: 3.3K
 + Version: v1.1.0
 + Fingerprint: `typeof PagefindUI !== 'undefined'`
 + Payload: ```<img name="currentScript" src="blob:https://xxx.xxx.xxx/ui.js"></img>```
 + Impact: XSS
++ CVE: N/A
 + Foundby: TheHulk
 
 ### Library

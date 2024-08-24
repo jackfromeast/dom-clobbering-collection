@@ -14,8 +14,8 @@ In this repo, we collect a list of client-side libraries that are either vulnera
 
 ## DOM Clobbering Gadgets
 
-| Library | Version | Payloads | Impact | Found By |
-|:-------:|:-------:|----------|:------:|:--------:|
+| Library | Stars | Version | Payloads | Impact | Found By | CVE |
+|:-------:|:-----:|:-------:|----------|:------:|:--------:|:---:|
 """
 
 # Function to extract metadata from a file
@@ -27,6 +27,8 @@ def extract_metadata(file_path):
     for line in lines:
         if line.startswith("+ Library:"):
             metadata['Library'] = line.split(": ")[1]
+        elif line.startswith("+ Stars:"):
+            metadata['Stars'] = line.split(": ")[1]
         elif line.startswith("+ Version:"):
             metadata['Version'] = line.split(": ")[1]
         elif line.startswith("+ Payload:"):
@@ -35,6 +37,8 @@ def extract_metadata(file_path):
             metadata['Impact'] = line.split(": ")[1]
         elif line.startswith("+ Foundby:"):
             metadata['Foundby'] = line.split(": ")[1]
+        elif line.startswith("+ CVE:"):
+            metadata['CVE'] = line.split(": ")[1]
     return metadata
 
 # Iterate over each file in the directory
@@ -44,7 +48,7 @@ for filename in sorted(os.listdir(input_directory)):
         metadata = extract_metadata(file_path)
         if metadata:
             library_link = f"[{metadata['Library']}]({github_base_url}{filename})"
-            readme_content += f"| {library_link} | {metadata.get('Version', '')} | {metadata['Payload']} | {metadata['Impact']} | {metadata['Foundby']} |\n"
+            readme_content += f"| {library_link} | {metadata.get('Stars', 'N/A')} |{metadata.get('Version', 'N/A')} | {metadata['Payload']} | {metadata['Impact']} | {metadata['Foundby']} | {metadata['CVE']} |\n"
 
 # Write the content to README.md
 with open(output_file, 'w') as file:

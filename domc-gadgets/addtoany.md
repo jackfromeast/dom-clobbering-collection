@@ -3,9 +3,11 @@
 ### Meta
 
 + Library: AddToAny
++ Stars: N/A
 + Fingerprint: `window.hasOwnProperty('a2a_config')`
 + Payload: ```<img src="https://addtoany.xxx.xxx" name="currentScript">```
 + Impact: XSS
++ CVE: N/A
 + Foundby: TheHulk
 
 ### Library
