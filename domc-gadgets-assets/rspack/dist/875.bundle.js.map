@@ -1,0 +1,1 @@
+{"version":3,"file":"875.bundle.js","sources":["webpack:///./src/answer.js"],"sourcesContent":["export function hello () {\n  console.log('Hello');\n}"],"names":["hello","console"],"mappings":"0FAAO,SAASA,IACdC,QAAQ,GAAG,CAAC,QACd,C"}
