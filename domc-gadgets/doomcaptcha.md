@@ -7,6 +7,7 @@
 + Payload: ```<img name=currentScript label="<script>alert(1)</script>"></img>```
 + Impact: XSS
 + CVE: N/A
++ Status: Mitre
 + Foundby: TheHulk
 
 ### Library

