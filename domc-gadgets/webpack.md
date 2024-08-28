@@ -8,6 +8,7 @@
 + Fingerprint: `typeof __webpack_require__ !== 'undefined' && __webpack_require__.hasOwnProperty('p')`
 + Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img>```
 + Impact: XSS
++ Status: Patched
 + CVE: CVE-2024-43788
 + Foundby: TheHulk
 
