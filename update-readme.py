@@ -10,8 +10,6 @@ readme_content = """# DOM Clobbering Collection
 
 In this repo, we collect a list of client-side libraries that are either vulnerable to HTML injection or contain DOM Clobbering gadgets that lead to severe consequences, e.g., XSS.
 
-## HTML Injection
-
 ## DOM Clobbering Gadgets
 
 | Library | Stars | Version | Payloads | Impact | Found By | Status | CVE |
