@@ -8,7 +8,7 @@
 + Payload: ```<img src="https://addtoany.xxx.xxx" name="currentScript">```
 + Impact: XSS
 + CVE: N/A
-+ Status: Mitre
++ Status: Patched
 + Foundby: TheHulk
 
 ### Library
