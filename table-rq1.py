@@ -79,6 +79,8 @@ def extract_metadata(file_path):
             metadata['CVE'] = line.split(": ")[1]
         elif line.startswith("+ Status:"):
             metadata['Status'] = line.split(": ")[1]
+        elif line.startswith("+ TheThing:"):
+            metadata['TheThing'] = line.split(": ")[1]
     
     # Ensure Stars_numeric is set
     if 'Stars_numeric' not in metadata:
@@ -106,7 +108,7 @@ for metadata in metadata_list:
         f"{metadata.get('Version', 'N/A')} & "
         f"{metadata['Impact']} & "
         f"{metadata['CVE'] if metadata.get('CVE', 'N/A') != 'N/A' else metadata.get('Status', 'N/A')} & "
-        f"\\Circle & "  # Adjust as needed for detection (assuming empty Circle)
+        f"\\{('Circle' if metadata.get('TheThing', 'None') == 'None' else 'LEFTcircle' if metadata.get('TheThing', 'None') == 'Flow' else 'CIRCLE' if metadata.get('TheThing', 'None') == 'Exploit' else '')} &"
         f"\\CIRCLE & &"  # Adjust as needed for exploitation (assuming filled Circle)
         f"\\tightcode{{{metadata['Payload']}}} \\\\ \n"
     )

