@@ -10,6 +10,7 @@
 + Impact: XSS
 + CVE: N/A
 + Foundby: TheHulk
++ TheThing: None
 
 ### Library
 

