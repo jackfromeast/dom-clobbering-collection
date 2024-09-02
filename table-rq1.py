@@ -10,7 +10,7 @@ latex_table_content = r"""
 \begin{table*}[!t]
 \centering
 \scriptsize
-\caption{A selective list of zero-day gadgets found by \sys in high-profile client-side libraries with over 1,000 stars on GitHub.}
+\caption{[RQ1 \& RQ2] A selective list of zero-day gadgets detected by Hulk but not found or verified by the state-of-the-art approach, \thething, in wildly-used client-side libraries, with over 1,000 stars on GitHub (shown in the "\# of Stars" column). The column "version" indicates the latest affected version. The column \textit{Det.} and \textit{Exp.} are shorthand for the detection of vulnerable flow and exploit generation respectively.}
 \label{table:rq1-zero-day-gadgets}
 \vspace{5pt}
 \setlength{\tabcolsep}{2pt}
@@ -19,7 +19,7 @@ latex_table_content = r"""
  \multirow{2}{*}{\textbf{Library}} &
  \multirow{2}{*}{\textbf{\# of Stars}} &
  \multirow{2}{*}{\textbf{Version}} &
- \multirow{2}{*}{\textbf{Conseq.}} &
+ \multirow{2}{*}{\textbf{Impact}} &
  \multirow{2}{*}{\textbf{Status}} &
  \multicolumn{1}{c}{\textbf{\thething}} &
  \multicolumn{1}{c}{\textbf{\sys}} & &
@@ -117,7 +117,14 @@ for metadata in metadata_list:
 latex_table_content += r"""
 \bottomrule
 \end{tabular}
-\vspace{5pt}
+\begin{flushleft}
+\vspace{-5pt}
+\scriptsize 
+\Circle\xspace: indicates that the gadget cannot be detected or exploited by the tool.
+\LEFTcircle\xspace: indicates successful detection but failed exploit generation.
+\CIRCLE\xspace: indicates successful detection and verification.
+\end{flushleft}
+\vspace{-15pt}
 \end{table*}
 """
 
