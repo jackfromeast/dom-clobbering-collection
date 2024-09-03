@@ -6,7 +6,7 @@
 + Stars: 8.6K
 + Version: v1.0.0-rc.0
 + Fingerprint: N/A
-+ Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img>```
++ Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx">```
 + Impact: XSS
 + CVE: N/A
 + Status: Reported

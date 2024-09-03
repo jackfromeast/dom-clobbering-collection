@@ -5,7 +5,7 @@
 + Library: AddToAny
 + Stars: N/A
 + Fingerprint: `window.hasOwnProperty('a2a_config')`
-+ Payload: ```<img name="currentScript" src="https://addtoany.xxx.xxx"></img>```
++ Payload: ```<img name="currentScript" src="https://addtoany.xxx.xxx">```
 + Impact: XSS
 + CVE: N/A
 + Status: Patched
