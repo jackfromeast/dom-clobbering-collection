@@ -697,7 +697,12 @@ document.body.innerHTML = janitor.clean(INPUT);
 </html>
 ```
 
+### Clobbering the clobbered
+
+#### Reference
 + https://readmedium.com/en/dom-clobbering-techniques-8443547ebe94
+
+#### Vulnerable Code
 ```
 window.CONFIG = window.CONFIG || {
   version: "v20190816",
@@ -725,7 +730,17 @@ loadModule('h1-magic');
 loadModule('tracker');
 ```
 
+#### Exploit
+```
+```
+
+
+### Go Go XSS Gadgets
+
+#### Reference
 + https://buer.haus/2024/02/23/go-go-xss-gadgets-chaining-a-dom-clobbering-exploit-in-the-wild/
+
+#### Vulnerable Code
 ```
 <script charset="utf-8" type="text/javascript">
       var script = document.createElement("script")
@@ -733,4 +748,8 @@ loadModule('tracker');
       script.src = window.parent.mGlobals.nuanceLaunchJS; // get from global variables
       document.getElementsByTagName("head")[0].appendChild(script);
     </script>
+```
+
+#### Exploit
+```
 ```
