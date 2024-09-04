@@ -908,3 +908,57 @@ header("Content-Security-Policy: script-src 'nonce-$nonce'");
 ```
 window.environment
 ```
+
+### light-note
+
+#### Reference
++ https://blog.ankursundara.com/seccon-2022-finals/
+
+#### Vulnerable Code
+```
+<div id="notes"></div>
+
+<script>
+const write = async (element, input) => {
+  try {
+    element.setHTML(input, {
+      sanitizer: new Sanitizer({ dropElements: ["link", "style"] })
+    });
+  } catch (e) {
+    //await import("DOMPurify").then(({ default: DOMPurify }) => {
+      // fallback: Firefox does not support Sanitizer API yet.
+      //element.innerHTML = DOMPurify.sanitize(input);
+    //}).catch((e) => {
+      // fallback: Safari does not support import maps :(
+      //element.innerHTML = input.replace(/[<>'"&]/, "");
+    //});
+    element.innerHTML = input;
+  }
+};
+
+const refresh = async () => {
+  //const notes = await fetch("/api/notes").then(r => r.json());
+
+  const root = document.getElementById("notes");
+  root.innerHTML = "";
+  for (const [index, note] of Object.entries(INPUT)) {
+    //const elm = document.getElementById("noteTmpl").content.cloneNode(true);
+    write(root, note);
+    //elm.querySelector(".delete").addEventListener("click", async () => {
+      //await deleteNote(index);
+      //await refresh();
+    //});
+    //root.appendChild(elm);
+  }
+};
+
+refresh()
+</script>
+```
+
+#### Exploit
+```
+INPUT = htmlcollection
+setHTML,
+```
+
