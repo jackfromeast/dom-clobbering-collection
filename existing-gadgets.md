@@ -302,3 +302,45 @@ function addInfos(){
 }
 addInfos()
 ```
+
++ https://github.com/aszx87410/ctf-writeups/issues/21
+```
+const jsonp = (url, callback) => {
+  const s = document.createElement('script');
+
+  if (callback) {
+    s.src = `${url}?callback=${callback}`;
+  } else {
+    s.src = url;
+  }
+
+  document.body.appendChild(s);
+};
+
+const init = () => {
+  // try to register trusted types
+  try {
+    trustedTypes.createPolicy('default', {
+      createHTML(url) {
+        return url.replace(/[<>]/g, '');
+      },
+      createScriptURL(url) {
+        if (url.includes('callback')) {
+          throw new Error('custom callback is unimplemented');
+        }
+
+        return url;
+      }
+    });
+  } catch {
+    if (!trustedTypes.defaultPolicy) {
+      throw new Error('failed to register default policy');
+    }
+  }
+
+  // TODO: implement custom callback
+  jsonp('/api.php', window.callback);
+};
+
+init();
+```
