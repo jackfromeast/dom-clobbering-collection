@@ -618,3 +618,31 @@ document.body.innerHTML = janitor.clean(INPUT);
   </body>
 </html>
 ```
+
++ https://readmedium.com/en/dom-clobbering-techniques-8443547ebe94
+```
+window.CONFIG = window.CONFIG || {
+  version: "v20190816",
+  test: false,
+  appName: "XSS Challenge",
+}
+
+function loadModule(moduleName) {
+  const scriptSrc = new URL(location); // patched here
+  let url = '';
+  
+  
+  if (CONFIG.test && window.testPath) {
+    url = window.testPath.protocol + '//' + window.testPath.host;
+  } else {
+    url = scriptSrc.origin;
+  }
+  url += `/xss/1/modules/${CONFIG.version}/${moduleName}.js`;
+  const sc = document.createElement('script');
+  sc.src = url;
+  document.body.appendChild(sc);
+}
+
+loadModule('h1-magic');
+loadModule('tracker');
+```
