@@ -148,6 +148,7 @@ function reloadRecaptchaScript(index) {
 ```
 
 + https://gist.github.com/terjanq/e2198440c4fdfbdec43e921b600d4a1d#recaptcha-for-the-rescue
++ https://ctftime.org/writeup/23580
 ```
 function writeOutput() {
   if (statusCode !== 3) {
@@ -273,186 +274,31 @@ window.onload = () => {
 </html>
 ```
 
-+ https://ctftime.org/writeup/23580
++ https://web.archive.org/web/20220524204523/https://blog.bi0s.in/2021/08/30/Web/Fword-CTF-2021-Shisui-Write-up/
 ```
-let program, pc, buf, p;
-let statusCode = 0; // 0: not running, 1: running, 2: exit successfully, 3: exit with an error
-let output = '';
-let steps = 0;
-const maxSteps = 1000000;
-
-function checkStep() {
-  steps++;
-  if (steps > maxSteps) {
-    throw new Error('maximum steps exceeded')
+window.SETTINGS = window.SETTINGS || [{
+  dataset:{
+    "timezone":"",
+    "location":"Tunisia"
+  },
+  Title:"FwordFeedbacks",
+  check: false	
+}]
+function looseJsonParse(obj){
+  if(obj.length<35){  
+	return eval("(" + obj + ")");
+  }else{
+    return {location:"Limit Length Exceeded"}
   }
 }
-
-function pinc() {
-  p++;
+function addInfos(){
+	if(window.showInfos && SETTINGS.check  && SETTINGS[0].dataset.timezone.length>2){
+        var infos=`{location:${SETTINGS[0].dataset.location}}`;
+	var result=document.createElement("p");
+	result.textContent=`Location: ${looseJsonParse(infos).location} Timezone: UTC+1` ;
+	document.getElementById("out").appendChild(result);
+	console.log(result);
+	}
 }
-
-function pdec() {
-  p--;
-}
-
-function inc() {
-  buf[p]++;
-}
-
-function dec() {
-  buf[p]--;
-}
-
-function putc() {
-  output += String.fromCharCode(buf[p]);
-}
-
-function getc() {
-  console.err('not implemented');
-}
-
-function lbegin() {
-  if (buf[p] === 0) {
-    let i = pc+1;
-    let depth = 1;
-    while (i < program.length) {
-      if (program[i] === '[') {
-        depth++;
-      }
-      if (program[i] === ']') {
-        depth--;
-        if (depth === 0) {
-          break;
-        }
-      }
-
-      i++;
-      checkStep();
-    }
-
-    if (depth === 0) {
-      pc = i;
-    }
-    else {
-      throw new Error('parenthesis mismatch')
-    }
-  }
-}
-
-function lend() {
-  if (buf[p] !== 0) {
-    let i = pc-1;
-    let depth = 1;
-    while (0 <= i) {
-      if (program[i] === ']') {
-        depth++;
-      }
-      if (program[i] === '[') {
-        depth--;
-        if (depth === 0) {
-          break;
-        }
-      }
-
-      i--;
-      checkStep();
-    }
-
-    if (depth === 0) {
-      pc = i;
-    }
-    else {
-      throw new Error('parenthesis mismatch')
-    }
-  }
-}
-
-function writeOutput() {
-  if (statusCode !== 3) {
-    if (CONFIG.unsafeRender) {
-      document.getElementById('output').innerHTML = output;
-    } else {
-      document.getElementById('output').innerText = output;
-    }
-  }
-}
-
-function initProgram() {
-  // load program
-  program = document.getElementById('program').innerText;
-  document.getElementById('program').innerHTML = DOMPurify.sanitize(program).toString();
-
-  // initialize
-  pc = 0;
-  buf = new Uint8Array(30000);
-  p = 0;
-
-  statusCode = 0;
-}
-
-function runProgram() {
-  statusCode = 1;
-  try {
-    while (pc < program.length) {
-      switch (program[pc]) {
-        case '>':
-          pinc();
-          break;
-        case '<':
-          pdec();
-          break;
-        case '+':
-          inc();
-          break;
-        case '-':
-          dec();
-          break;
-        case '.':
-          putc();
-          break;
-        case ',':
-          getc(); // not implemented
-          break;
-        case '[':
-          lbegin();
-          break;
-        case ']':
-          lend();
-          break;
-        case '=':
-          console.log('=)');
-          break;
-        case '/':
-          console.log(':/');
-          break;
-        case ' ':
-          break;
-        default:
-          throw new Error(`invalid op: ${program[pc]}`)
-      }
-  
-      pc++;
-      checkStep();
-    }
-
-    CONFIG = window.CONFIG || {
-      unsafeRender: false
-    };
-
-    statusCode = 2;
-  }
-  catch {
-    statusCode = 3;
-    return;
-  }
-  // no xss please
-  output = output.replaceAll('<', '&lt;').replaceAll('>', '&gt;')
-  writeOutput();
-}
-
-window.addEventListener('DOMContentLoaded', function() {
-  initProgram();
-  runProgram();
-});
+addInfos()
 ```
