@@ -646,3 +646,13 @@ function loadModule(moduleName) {
 loadModule('h1-magic');
 loadModule('tracker');
 ```
+
++ https://buer.haus/2024/02/23/go-go-xss-gadgets-chaining-a-dom-clobbering-exploit-in-the-wild/
+```
+<script charset="utf-8" type="text/javascript">
+      var script = document.createElement("script")
+      script.type = "text/javascript";
+      script.src = window.parent.mGlobals.nuanceLaunchJS; // get from global variables
+      document.getElementsByTagName("head")[0].appendChild(script);
+    </script>
+```
