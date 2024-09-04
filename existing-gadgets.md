@@ -547,3 +547,74 @@ let janitor = new HTMLJanitor({tags: {input:{name:true,type:true,value:true},for
 document.body.innerHTML = janitor.clean(INPUT);
 </script>
 ```
+
++ https://sec.stealthcopter.com/intigriti-july-2024-ctf-challenge-memo/
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memo Sharing</title>
+    <script
+      integrity="sha256-bSjVkAbbcTI28KD1mUfs4dpQxuQ+V4WWUvdQWCI4iXw="
+      src="./dompurify.js"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Memo Sharing</h1>
+    </div>
+    <div class="container">
+      <div class="app-description">
+        <h4>
+          Welcome to Memo Sharing, your safe platform for sharing memos.<br />Just type your memo
+          below and send it!
+        </h4>
+      </div>
+      <form id="memoForm">
+        <input type="text" id="memoContentInput" placeholder="Enter your memo here..." required />
+        <button type="submit" id="submitMemoButton">Submit Memo</button>
+      </form>
+    </div>
+
+    <div class="memos-display">
+      <p id="displayMemo"></p>
+    </div>
+
+    <script integrity="sha256-C1icWYRx+IVzgDTZEphr2d/cs/v0sM76a7AX4LdalSo=">
+      document.getElementById("memoForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const memoContent = document.getElementById("memoContentInput").value;
+        window.location.href = `${window.location.href.split("?")[0]}?memo=${encodeURIComponent(
+          memoContent
+        )}`;
+      });
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const sharedMemo = urlParams.get("memo");
+
+      if (sharedMemo) {
+        const displayElement = document.getElementById("displayMemo");
+        //Don't worry about XSS, the CSP will protect us for now
+        displayElement.innerHTML = sharedMemo;
+
+        //if (origin === "http://localhost") isDevelopment = true;
+        if (isDevelopment) {
+          //Testing XSS sanitization for next release
+          try {
+            const sanitizedMemo = DOMPurify.sanitize(sharedMemo);
+            displayElement.innerHTML = sanitizedMemo;
+          } catch (error) {
+            const loggerScript = document.createElement("script");
+            loggerScript.src = "./logger.js";
+            loggerScript.onload = () => logError(error);
+            document.head.appendChild(loggerScript);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
+```
