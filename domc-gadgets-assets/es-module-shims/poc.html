@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Polyfills Example</title>
+</head>
+
+<!-- <img name="baseURI" src="https://xxx.xxx.xxx">
+<img name="baseURI" src="https://xxx.xxx.xxx">
+<img name="baseURI" src="https://xxx.xxx.xxx"> -->
+
+<script async src="https://ga.jspm.io/npm:es-module-shims@1.10.0/dist/es-module-shims.js"></script>
+
+
+<script type="importmap-shim">
+  {
+    "imports": {
+      "test": "/test.js"
+    },
+    "scopes": {
+      "/": {
+        "test-dep": "/test-dep.js"
+      }
+    },
+    "integrity": {
+      "/test.js": "sha386-..."
+    }
+  }
+</script>
+<script type="module-shim">
+  import test from "test";
+  console.log(test);
+</script>
+
+
+<a id="x"></a><a id="x" name="tagName" href="https://attack.com"></a>
+  
+<body>
+</body>
+</html>

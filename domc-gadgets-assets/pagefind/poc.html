@@ -1,7 +1,7 @@
 <html>
 
 site
-<img name="currentScript" src="blob:http://localhost:8000/ui.js"></img>
+<!-- <img name="currentScript" src="blob:http://localhost:8000/ui.js"></img> -->
 
 <link href="pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="pagefind/pagefind-ui.js"></script>
@@ -9,6 +9,18 @@ site
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
         new PagefindUI({ element: "#search", showSubResults: true });
+    });
+
+    function type(element, text) {
+        element.focus();
+        element.value = text;
+
+        element.dispatchEvent(new Event('input', { bubbles: true }));
+        element.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+
+    document.querySelectorAll('.pagefind-ui__search-input.svelte-e9gkc3').forEach(element => {
+        type(element, 'SOME_TEXT');
     });
 </script>
 </html>
