@@ -745,3 +745,212 @@ loadModule('tracker');
 #### Exploit
 ```
 ```
+
+
+### WIZER CTF #21: MENU DETAILS
+
+#### Reference
++ https://www.wizer-training.com/for-developers/wizer-ctf-21-menu-details
+
+#### Vulnerable Code
+```
+<html>
+<head>
+<title> Dashboard </title>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.15/purify.js"></script>
+</head>
+<body>	
+    <h1>Dashboard</h1>
+
+    <p> <span id="name">Guest</span>, Welcome to the Dashboard
+    <a href="logout">Logout</a>
+    </p>
+    <p> <a href="profile">Profile</a> <span id="profileComment"></span></p>
+    <p> <a href="settings">Settings</a> <span id="settingsComment"></span></p>
+    <p> <a href="points">Points</a> (<span id="points">0</span>)</p>
+    <p> <a href="leaderboard">Leaderboard</a></p>
+</body>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    for (var [key, value] of urlParams) {
+        if(document.getElementById(key)) {
+            document.getElementById(key).innerText = `${value}`;
+        } else if (window.debugMode) {
+            document.write("unidentified keys <br/>");
+            document.write(`${key} = ${value} <br/>`);
+        } else {
+            key = DOMPurify.sanitize(key);
+            document.write(`<span style='color: red'>${key} not found in the document</span><br/>`);
+        }
+    }
+</script>
+</html>
+```
+
+#### Exploit
+```
+```
+
+### PBCTF 2020 - Ikea Name Generator
+
+#### Reference
++ https://w0y.at/writeup/2020/12/08/pbctf-2020-ikea-name-generator.html
++ https://blog.jimmyli.us/articles/2020-12/PerfectBlueCTF-WebExploitaiton
+
+#### Vulnerable Code
+```
+function createFromObject(obj) {
+  var el = document.createElement("span");
+
+  for (var key in obj) {
+    el[key] = obj[key]
+  }
+
+  return el
+}
+
+function generateName() {
+
+  var default_config = {
+    "style": "color: red;",
+    "text": "Could not generate name"
+  }
+
+  var output = document.getElementById('output')
+  var req = new XMLHttpRequest();
+
+  req.open("POST", CONFIG.url);
+  req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+  req.onreadystatechange = function () {
+
+    if (req.readyState === XMLHttpRequest.DONE) {
+      if (req.status === 200) {
+        var obj = JSON.parse(req.responseText);
+        var config = _.merge(default_config, obj)
+
+
+        sandbox = document.createElement("iframe")
+        sandbox.src = "/sandbox.php"
+        var el = createFromObject({
+          style: config.style,
+          innerText: config.text
+        })
+
+        output.appendChild(sandbox)
+        sandbox.onload = function () {
+          sandbox.contentWindow.output.appendChild(el)
+        }
+      }
+    }
+  }
+
+  req.send("name=" + CONFIG.name)
+}
+
+window.onload = function() {
+  document.getElementById("button-submit").onclick = function() {
+    window.location = "/?name=" + document.getElementById("input-name").value
+  }
+
+  generateName();
+}
+```
+
+#### Exploit
+```
+<a id=CONFIG></a><a id=CONFIG name=url href='URL'>
+```
+
+
+### Welcome Page
+
+#### Reference
++ https://wizer-ctf.com/writeups/ctf3.html	
+
+#### Vulnerable Code
+```
+<?php
+$nonce = md5(random_bytes(32));
+header("Content-Security-Policy: script-src 'nonce-$nonce'");
+?>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <?php echo 'Welcome ' . ($_GET['name'] ?? "") ?>
+    </title>
+    <script nonce="<?php echo $nonce ?>">
+        window.environment = 'production';
+    </script>
+</head>
+<body>
+<script nonce="<?php echo $nonce ?>">
+    if (window.environment && window.environment !== 'production') {
+        let debug = new URL(location)
+            .searchParams.get('debug') || '';
+        const script = document.createElement('script');
+        script.nonce = "<?php echo $nonce ?>";
+        script.innerText = debug;
+        document.body.appendChild(script);
+    }
+</script>
+</body>
+```
+
+#### Exploit
+```
+window.environment
+```
+
+### light-note
+
+#### Reference
++ https://blog.ankursundara.com/seccon-2022-finals/
+
+#### Vulnerable Code
+```
+<div id="notes"></div>
+
+<script>
+const write = async (element, input) => {
+  try {
+    element.setHTML(input, {
+      sanitizer: new Sanitizer({ dropElements: ["link", "style"] })
+    });
+  } catch (e) {
+    //await import("DOMPurify").then(({ default: DOMPurify }) => {
+      // fallback: Firefox does not support Sanitizer API yet.
+      //element.innerHTML = DOMPurify.sanitize(input);
+    //}).catch((e) => {
+      // fallback: Safari does not support import maps :(
+      //element.innerHTML = input.replace(/[<>'"&]/, "");
+    //});
+    element.innerHTML = input;
+  }
+};
+
+const refresh = async () => {
+  //const notes = await fetch("/api/notes").then(r => r.json());
+
+  const root = document.getElementById("notes");
+  root.innerHTML = "";
+  for (const [index, note] of Object.entries(INPUT)) {
+    //const elm = document.getElementById("noteTmpl").content.cloneNode(true);
+    write(root, note);
+    //elm.querySelector(".delete").addEventListener("click", async () => {
+      //await deleteNote(index);
+      //await refresh();
+    //});
+    //root.appendChild(elm);
+  }
+};
+
+refresh()
+</script>
+```
+
+#### Exploit
+```
+INPUT = htmlcollection
+setHTML,
+```
+
