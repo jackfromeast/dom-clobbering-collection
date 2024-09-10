@@ -6,6 +6,7 @@ module.exports = {
     filename: 'webpack-gadgets.bundle.js', // Output bundle file
     path: path.resolve(__dirname, 'dist'), // Output directory
     // publicPath: '/dist/', // this line will make __webpack_require__.p = "/dist/";
+    publicPath: "auto",
   },
   target: 'web',
   mode: 'development',

@@ -32,7 +32,7 @@ document.write(captcha_html);
 ## PoC
 
 ```
-<img name=currentScript label="<scrip>alert(1)</script>"></img>
+<img name=currentScript label="<script>alert(1)</script>"></img>
 
 <form>
 <script src=script.js></script>

