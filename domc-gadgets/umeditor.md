@@ -3,10 +3,10 @@
 ### Meta
 
 + Library: UMeditor
-+ Stars: 1.4k
++ Stars: 1.4K
 + Version: v1.2.2
 + Fingerprint: `typeof window.UM !== 'undefined' && UM.hasOwnProperty('version')`
-+ Payload: ```<a id="UMEDITOR_HOME_URL" href="https://special-memory-pp75xj6xvjrcrjx7-8001.app.github.dev/"></a>```
++ Payload: ```<a id="UMEDITOR_HOME_URL" href="https://xxx.xxx.xxx/"></a>```
 + Impact: XSS
 + Status: Reported
 + CVE: N/A
