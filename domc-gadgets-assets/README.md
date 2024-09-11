@@ -2,5 +2,5 @@ This folder contains the Proof-of-Concept pages for each DOM Clobbering gadgets 
 
 To host the server locally:
 ```
-http-server .
+chmod +x run.sh && ./run.sh
 ```

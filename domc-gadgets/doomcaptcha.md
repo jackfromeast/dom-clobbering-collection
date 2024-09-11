@@ -31,10 +31,14 @@ document.write(captcha_html);
 
 ## PoC
 
-```
-<img name=currentScript label="<script>alert(1)</script>"></img>
-
+``` html
+<!--Library-->
 <form>
 <script src=script.js></script>
 </form>
+<!--Library-->
+
+<!--Payload-->
+<img name=currentScript label="<script>alert(1)</script>"></img>
+<!--Payload-->
 ```

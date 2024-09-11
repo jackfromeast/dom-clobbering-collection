@@ -35,7 +35,18 @@ document.head.append(s)
 
 example html:
 
-```html
+<!-- ```html
 <img name="currentScript" src="//xxx.xxx.xxx"></img>
 <script src="dist/index.js"></script>
+``` -->
+
+```html
+<!--Library-->
+<script src="dist/index.js"></script>
+<!--Library-->
+
+<!--Payload-->
+<img name="currentScript" src="//localhost:9999"></img>
+<!--Payload-->
 ```
+

