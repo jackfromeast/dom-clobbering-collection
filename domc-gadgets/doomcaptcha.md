@@ -31,7 +31,7 @@ document.write(captcha_html);
 
 ## PoC
 
-```
+``` html
 <!--Library-->
 <form>
 <script src=script.js></script>

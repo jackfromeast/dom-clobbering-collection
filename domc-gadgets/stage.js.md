@@ -46,7 +46,7 @@ URL:
 
 ## PoC
 
-```
+```html
 <!--Library-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stage.js/0.8.10/stage.web.js" integrity="sha512-rA/8kCbIrzxcXW6akXAiN6FnpM+VW2iv9Zzw4ghu5Mt7xDobt3oraMSDxDeqq4kSUkaTBVdNOy1iyEyFhmceCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 

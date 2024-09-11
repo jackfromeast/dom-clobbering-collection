@@ -25,7 +25,7 @@ let url = new URL("./inspire.mjs", document.currentScript ? document.currentScri
 
 ## PoC
 
-```
+```html
 <!--Library-->
 <script src="https://inspirejs.org/inspire.js"></script>
 <!--Library-->

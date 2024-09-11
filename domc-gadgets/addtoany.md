@@ -36,7 +36,7 @@ c(e + "core" + g + ".js", !0);
 
 ## PoC
 
-```
+``` html
 <!--Library-->
 <script async src="https://static.addtoany.com/menu/page.js"></script>
 <!--Library-->

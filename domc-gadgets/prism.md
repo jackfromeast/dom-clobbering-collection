@@ -58,7 +58,7 @@ if (script) {
 
 host malicious file at `/components/prism-css.min.js`
 
-```
+```html
 <!--Library-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css" integrity="sha512-jtWR3pdYjGwfw9df601YF6uGrKdhXV37c+/6VNzNctmrXoO0nkgHcS03BFxfkWycOa2P2Nw9Y9PCT9vjG9jkVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.js" integrity="sha512-jhk8ktzYxeUWJ/vx3Lzp53xE0Jgsp+UxA3wDyRSYeMBdPutgCp6jiGvTjyZm+R7cn3Lu/0MnEIR421EOdl3qAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

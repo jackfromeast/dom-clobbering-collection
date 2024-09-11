@@ -27,7 +27,7 @@ too complicated.
 
 after running `npm install`
 
-```
+```html
 <!--Library-->
 <script src="./node_modules/steal/steal.js" main></script>
 <!--Library-->

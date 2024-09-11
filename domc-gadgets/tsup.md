@@ -40,7 +40,7 @@ example html:
 <script src="dist/index.js"></script>
 ``` -->
 
-```
+```html
 <!--Library-->
 <script src="dist/index.js"></script>
 <!--Library-->

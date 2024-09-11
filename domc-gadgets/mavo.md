@@ -35,7 +35,7 @@ if (o.dependencies) {
 
 ## PoC
 
-```
+```html
 <!--Library-->
 <script src="https://get.mavo.io/stable/mavo.js"></script>
 <link rel="stylesheet" href="https://get.mavo.io/stable/mavo.css">

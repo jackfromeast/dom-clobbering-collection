@@ -36,6 +36,16 @@ def generate_html_files(gadget_name, poc_content):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Clobbering Micro Benchmarks</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {{
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }}
+    </style>
 </head>
 <body>
 <h1>DOM Clobbering Collection - {gadget_name}</h1>

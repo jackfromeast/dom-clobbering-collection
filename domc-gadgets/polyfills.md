@@ -54,7 +54,7 @@ if (polyfills.length) {
 
 ## PoC
 
-```
+```html
 <!--Library-->
 <script src="./webcomponents-loader.js"></script>
 <!--Library-->

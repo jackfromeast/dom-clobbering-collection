@@ -147,7 +147,7 @@ Webpack's generated code differes significantly for each use. Ensure that the co
 
 ## PoC
 
-```
+```html
 <!--Library-->
 <script src="./dist/webpack-gadgets.bundle.js"></script>
 <!--Library-->
