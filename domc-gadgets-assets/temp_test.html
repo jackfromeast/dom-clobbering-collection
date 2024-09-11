@@ -1,0 +1,104 @@
+<html>
+<body>
+  <script src="test.js"></script>
+  <script src="https://xxx.xxx.xxx"> console.log('Hello, World!'); </script>
+  <script>
+  // CASE 1 - SUCCESS:
+  // let d = document.scripts;
+  // let f = d[0];
+  // let h = f.nodeType;
+  // f = 3 == h || 4 == h ? f.nodeValue : f.textContent || "";
+  // f = eval(f);
+
+  // OUTPUT:
+  // [*] Code: eval(f)
+	// Variable: f
+	// 	slice 1- (loc: 4 ): f = ("3" == h || "4" == h)? f.nodeValue: f.textContent || ""
+	// 	slice 2- (loc: 3 ): let h = f.nodeType
+	// 	slice 3- (loc: 2 ): let f = d["0"]
+	// 	slice 4- (loc: 1 ): let d = document.scripts
+  
+  // CASE 2 - FAIL:
+  // let d = document.scripts;
+  // let f = [], h = 1;
+  // (f = d[0]) ? (f = 3 == h || 4 == h ? f.nodeValue : f.textContent || ""):f = void 0, f = eval(f);
+
+  // OUTPUT
+  // [*] Code: eval(f)
+	// Variable: f
+	// 	slice 1- (loc: 18 ): let f = [ ], h = "1"
+
+  // CASE 3 - SUCCESS:
+  // let d = document.scripts;
+  // let f = d[0], h = 1;
+  // (f) ? (f = 3 == h || 4 == h ? f.nodeValue : f.textContent || ""):f = void 0, f = eval(f);
+  
+  // OUTPUT
+  // [*] Code: eval(f)
+	// Variable: f
+	// 	slice 1- (loc: 28 ): let f = d["0"], h = "1"
+	// 	slice 2- (loc: 27 ): let d = document.scripts
+  </script>
+
+  <script>
+    // CASE 4 - SUCCESS:
+    // let e = document.scripts;
+    // let d = [];
+
+    // for (var h = 0; h < e.length; ++h)
+    //   for (var k = e[h], l = 0; l < f.length; ++l)
+    //     k.src && 0 == k.src.indexOf(f[l]) && d.push(k);
+
+    // for (var m = 0; m < d.length; ++m) {
+    //   let f = d[m];
+    //   f = 3 == h || 4 == h ? f.nodeValue : f.textContent || "", (f = eval(f))
+    // }
+
+    // [*] Code: eval(f)
+    // Variable: f
+    //   slice 1- (loc: 10 ): f = ("3" == h || "4" == h)? f.nodeValue: f.textContent || ""; f = eval(f)
+    //   slice 2- (loc: 4 ): h++
+    //   slice 3- (loc: 4 ): var h = "0"
+    //   slice 4- (loc: 9 ): let f = d.m
+    //   slice 5- (loc: 6 ): k.src && "0" == k.src.indexOf(f.l) && d.push(k)
+    //   slice 6- (loc: 5 ): var k = e.h, l = "0"
+    //   slice 7- (loc: 1 ): let e = document.scripts
+    //   slice 8- (loc: 2 ): let d = [ ]
+
+    // CASE 5 - SUCCESS:
+    // var e = document.scripts ||
+    //     document.getElementsByTagName("script") || []; 
+    // var d = [], f = ["https://apis.google.com/js/api.js"];
+
+    // for (var h = 0; h < e.length; ++h) {
+    //   for (var k = e[h], l = 0; l < f.length; ++l) {
+    //     k.src && 0 == k.src.indexOf(f[l]) && d.push(k);
+    //   }
+    // }
+
+    // for (e = 0; e < d.length; ++e) {
+    //   d[e].getAttribute("gapi_processed") || 
+    //   d[e].setAttribute("gapi_processed", !0);
+    //   f = d[e];
+    //   (f) ? (h = f.nodeType, f = 3 == h||4 == h ? f.nodeValue : f.textContent || "") : f = void 0,
+    //   (f = eval(f));
+    // }
+
+    // OUTPUT:
+    // [*] Code: eval(f)
+    // Variable: f
+    // 	slice 1- (loc: 41 ): (f)? h = f.nodeType; f = ("3" == h || "4" == h)? f.nodeValue: f.textContent || "": f = "0"; f = eval(f)
+    // 	slice 2- (loc: 31 ): h++
+    // 	slice 3- (loc: 41 ): (f)? h = f.nodeType; f = ("3" == h || "4" == h)? f.nodeValue: f.textContent || "": f = "0"; f = eval(f)
+    // 	slice 4- (loc: 31 ): var h = "0"
+    // 	slice 5- (loc: 40 ): f = d.e
+    // 	slice 6- (loc: 33 ): k.src && "0" == k.src.indexOf(f.l) && d.push(k)
+    // 	slice 7- (loc: 32 ): var k = e.h, l = "0"
+    // 	slice 8- (loc: 26 ): var e = document.scripts || document.getElementsByTagName("script") || [ ]
+    // 	slice 9- (loc: 28 ): var d = [ ], f = [ "https://apis.google.com/js/api.js" ]
+    // 	slice 10- (loc: 28 ): var d = [ ], f = [ "https://apis.google.com/js/api.js" ]
+
+  </script>
+  
+</body>
+</html>
