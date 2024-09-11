@@ -1,0 +1,1 @@
+alert("PoC From dom-clobbering-collection/domc-gadgets-assets/attacker.com/alert.js");
