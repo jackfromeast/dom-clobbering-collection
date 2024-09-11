@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+<h1>DOM Clobbering Collection - pagefind</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;link href=&quot;pagefind/pagefind-ui.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;pagefind/pagefind-ui.js&quot;&gt;&lt;/script&gt;
+&lt;div id=&quot;search&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    window.addEventListener(&#x27;DOMContentLoaded&#x27;, (event) =&gt; {
+        new PagefindUI({ element: &quot;#search&quot;, showSubResults: true });
+    });
+&lt;/script&gt;</pre>
+  <link href="pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+</script>
+  </div>
+</section>
+
+</body>
+</html>

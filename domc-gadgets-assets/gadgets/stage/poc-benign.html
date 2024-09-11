@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+<h1>DOM Clobbering Collection - stage</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/stage.js/0.8.10/stage.web.js&quot; integrity=&quot;sha512-rA/8kCbIrzxcXW6akXAiN6FnpM+VW2iv9Zzw4ghu5Mt7xDobt3oraMSDxDeqq4kSUkaTBVdNOy1iyEyFhmceCw==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+Stage.preload(&#x27;./a.js&#x27;)
+&lt;/script&gt;</pre>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stage.js/0.8.10/stage.web.js" integrity="sha512-rA/8kCbIrzxcXW6akXAiN6FnpM+VW2iv9Zzw4ghu5Mt7xDobt3oraMSDxDeqq4kSUkaTBVdNOy1iyEyFhmceCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+Stage.preload('./a.js')
+</script>
+  </div>
+</section>
+
+</body>
+</html>

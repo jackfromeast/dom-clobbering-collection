@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+<h1>DOM Clobbering Collection - mavo</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script src=&quot;https://get.mavo.io/stable/mavo.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://get.mavo.io/stable/mavo.css&quot;&gt;
+&lt;script&gt;
+(function ($, $$) {
+
+Mavo.Plugins.register(&quot;myplugin&quot;, {
+	dependencies: [&quot;a.js&quot;],
+});
+
+})(Bliss, Bliss.$);
+&lt;/script&gt;</pre>
+  <script src="https://get.mavo.io/stable/mavo.js"></script>
+<link rel="stylesheet" href="https://get.mavo.io/stable/mavo.css">
+<script>
+(function ($, $$) {
+
+Mavo.Plugins.register("myplugin", {
+	dependencies: ["a.js"],
+});
+
+})(Bliss, Bliss.$);
+</script>
+  </div>
+</section>
+
+</body>
+</html>

