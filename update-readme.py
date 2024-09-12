@@ -13,6 +13,9 @@ In this repo, we collect a list of client-side libraries that are either vulnera
 
 ## HTML Injection Vulnerabilities
 
+The following libraries accept user input and output content as `type/html` with certain named attributes (e.g., `id` or `name`) preserved at different levels (refer to `Capability`).
+Using these libraries may expose web applications to HTML injection risks. Libraries may directly insert user input into the DOM, or the web application may retrive the output from the library and then add it to the DOM.
+
 | Library | Stars | Version | Input | Sanitizer | Capability | Status | CVE |
 |:-------:|:-----:|:-------:|-------|:---------:|-------------------------|:------:|:---:|
 """

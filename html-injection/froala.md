@@ -8,7 +8,7 @@
 + Fingerprint: `document.getElementsByClassName('fr-box').length > 0`
 + Input: Copy&Paste
 + Sanitizer: DOMPurify
-+ Capability: Any Tag & Any `name` attributes
++ Capability: Any `name` attributes
 + CVE: N/A
 + Status: N/A
 

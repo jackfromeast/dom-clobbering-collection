@@ -8,7 +8,7 @@
 + Fingerprint: `typeof(window.tinymce) !== undefined`
 + Input: Copy&Paste
 + Sanitizer: N/A
-+ Capability: Any Tag & Any named property
++ Capability: Any named property
 + CVE: N/A
 + Status: N/A
 
