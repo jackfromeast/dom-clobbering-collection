@@ -14,7 +14,7 @@ In this repo, we collect a list of client-side libraries that are either vulnera
 ## HTML Injection Vulnerabilities
 
 | Library | Stars | Version | Input | Sanitizer | Capability | Status | CVE |
-|:-------:|:-----:|:-------:|-------|:---------:|------------|:------:|:---:|
+|:-------:|:-----:|:-------:|-------|:---------:|-------------------------|:------:|:---:|
 """
 
 # HTML Injection section content placeholder
