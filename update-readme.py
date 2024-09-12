@@ -13,7 +13,7 @@ In this repo, we collect a list of client-side libraries that are either vulnera
 
 ## HTML Injection Vulnerabilities
 
-| Library | Stars | Version | Input | Sanitizer | Capability | Status | CVE |
+| Library | Stars | Version | Input | Sanitizer | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Capability &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Status | CVE |
 |:-------:|:-----:|:-------:|-------|:---------:|-------------------------|:------:|:---:|
 """
 
@@ -46,7 +46,7 @@ def extract_metadata(file_path, is_html_injection=False):
             elif line.startswith("+ Sanitizer:"):
                 metadata['Sanitizer'] = line.split(": ")[1]
             elif line.startswith("+ Capability:"):
-                metadata['Capability'] = "```" + line.split(": ")[1] + "```"
+                metadata['Capability'] = line.split(": ")[1]
         else:
             if line.startswith("+ Payload:"):
                 metadata['Payload'] = line.split(": ")[1]

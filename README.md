@@ -4,12 +4,12 @@ In this repo, we collect a list of client-side libraries that are either vulnera
 
 ## HTML Injection Vulnerabilities
 
-| Library | Stars | Version | Input | Sanitizer | Capability | Status | CVE |
+| Library | Stars | Version | Input | Sanitizer | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Capability &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Status | CVE |
 |:-------:|:-----:|:-------:|-------|:---------:|-------------------------|:------:|:---:|
-| [Froala](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/froala.md) | 5.3K | v4.2.2 | Copy&Paste | DOMPurify | ```Any Tag & Any `name` attributes``` | N/A | N/A |
-| [RichTextEditor](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/richtexteditor.md) | N/A | Latest | Copy&Paste | N/A | ```Any Tag & Any named property``` | N/A | N/A |
-| [TinyMCE-v5/6/7](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/tinymce.md) | 14.9K | v7.3.0 | Copy&Paste | DOMPurify | ```Any Tag & Any named property without collision``` | N/A | N/A |
-| [TinyMCE-v4](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/tinymce4.md) | 14.9K | v4.9.11 | Copy&Paste | N/A | ```Any Tag & Any named property``` | N/A | N/A |
+| [Froala](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/froala.md) | 5.3K | v4.2.2 | Copy&Paste | DOMPurify | Any Tag & Any `name` attributes | N/A | N/A |
+| [RichTextEditor](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/richtexteditor.md) | N/A | Latest | Copy&Paste | N/A | Any Tag & Any named property | N/A | N/A |
+| [TinyMCE-v5/6/7](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/tinymce.md) | 14.9K | v7.3.0 | Copy&Paste | DOMPurify | Any Tag & Any named property without collision | N/A | N/A |
+| [TinyMCE-v4](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/tinymce4.md) | 14.9K | v4.9.11 | Copy&Paste | N/A | Any Tag & Any named property | N/A | N/A |
 
 ## DOM Clobbering Gadgets
 
