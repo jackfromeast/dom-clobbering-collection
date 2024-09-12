@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+<h1>DOM Clobbering Collection - froala</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;link href=&quot;https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+
+&lt;textarea&gt;&lt;/textarea&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+  new FroalaEditor(&#x27;textarea&#x27;);
+&lt;/script&gt;</pre>
+  <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+
+<textarea></textarea>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+
+<script>
+  new FroalaEditor('textarea');
+</script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../richtexteditor/poc.html">Next: richtexteditor</a>
+  </div>
+</section>
+
+</body>
+</html>

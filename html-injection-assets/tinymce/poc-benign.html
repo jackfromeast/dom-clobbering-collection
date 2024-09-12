@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+<h1>DOM Clobbering Collection - tinymce</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script src=&quot;https://cdn.tiny.cloud/1/kvw088syhtkdcjivzwu785cisjwpon4zfjj2isannsfsw555/tinymce/7/tinymce.min.js&quot; referrerpolicy=&quot;origin&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+  tinymce.init({
+  selector: &#x27;textarea#default&#x27;
+});
+&lt;/script&gt;
+&lt;textarea id=&quot;default&quot;&gt;Hello, World!&lt;/textarea&gt;</pre>
+  <script src="https://cdn.tiny.cloud/1/kvw088syhtkdcjivzwu785cisjwpon4zfjj2isannsfsw555/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+<script>
+  tinymce.init({
+  selector: 'textarea#default'
+});
+</script>
+<textarea id="default">Hello, World!</textarea>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../tinymce4/poc.html">Next: tinymce4</a>
+  </div>
+</section>
+
+</body>
+</html>
