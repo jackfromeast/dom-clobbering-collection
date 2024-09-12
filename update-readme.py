@@ -46,7 +46,7 @@ def extract_metadata(file_path, is_html_injection=False):
             elif line.startswith("+ Sanitizer:"):
                 metadata['Sanitizer'] = line.split(": ")[1]
             elif line.startswith("+ Capability:"):
-                metadata['Capability'] = line.split(": ")[1]
+                metadata['Capability'] = "```" + line.split(": ")[1] + "```"
         else:
             if line.startswith("+ Payload:"):
                 metadata['Payload'] = line.split(": ")[1]
