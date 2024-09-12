@@ -9,25 +9,24 @@ github_base_url = 'https://github.com/jackfromeast/dom-clobbering-collection/blo
 # Initialize the README content
 readme_content = """# DOM Clobbering Collection
 
-In this repo, we collect a list of client-side libraries that are either vulnerable to HTML injection or contain DOM Clobbering gadgets that lead to severe consequences, e.g., XSS.
+This repository lists client-side libraries that are vulnerable to HTML injection or contain DOM Clobbering gadgets that can result in severe issues like XSS.
 
-## HTML Injection Vulnerabilities
-
-The following libraries accept user input and output content as `type/html` with certain named attributes (e.g., `id` or `name`) preserved at different levels (refer to `Capability`).
-Using these libraries may expose web applications to HTML injection risks. Libraries may directly insert user input into the DOM, or the web application may retrive the output from the library and then add it to the DOM.
-
-| Library | Stars | Version | Input | Sanitizer | Capability | Status | CVE |
-|:-------:|:-----:|:-------:|-------|:---------:|-------------------------|:------:|:---:|
-"""
-
-# HTML Injection section content placeholder
-html_injection_section = ""
-
-# DOM Clobbering section content placeholder
-dom_clobbering_section = """\n## DOM Clobbering Gadgets
+## DOM Clobbering Gadgets
 
 | Library | Stars | Version | Payloads | Impact | Found By | Status | CVE |
 |:-------:|:-----:|:-------:|----------|:------:|:--------:|:------:|:---:|
+"""
+
+# DOM Clobbering section content placeholder
+dom_clobbering_section = ""
+
+# HTML Injection section content placeholder
+html_injection_section = """\n## HTML Injection Vulnerabilities
+
+The following libraries accept user input and output content as `type/html` with certain named attributes (e.g., `id` or `name`) preserved at different levels of capability. Using these libraries may expose web applications to HTML injection risks. Libraries may directly insert user input into the DOM, or the web application may retrieve the user input from the library and then add it to the DOM.
+
+| Library | Stars | Version | Input | Sanitizer | Capability | Status | CVE |
+|:-------:|:-----:|:-------:|-------|:---------:|-------------------------|:------:|:---:|
 """
 
 # Function to extract metadata from a file
@@ -78,15 +77,15 @@ def process_files(input_directory, is_html_injection=False):
                     section_content += f"| {library_link} | {metadata.get('Stars', 'N/A')} | {metadata.get('Version', 'N/A')} | {metadata.get('Payload', 'N/A')} | {metadata.get('Impact', 'N/A')} | {metadata.get('Foundby', 'N/A')} | {metadata.get('Status', 'N/A')} | {metadata.get('CVE', 'N/A')} |\n"
     return section_content
 
-# Process HTML Injection files
-html_injection_section += process_files(html_input_directory, is_html_injection=True)
-
-# Process DOM Clobbering Gadget files
+# Process DOM Clobbering Gadget files first
 dom_clobbering_section += process_files(gadgets_input_directory, is_html_injection=False)
 
+# Process HTML Injection files next
+html_injection_section += process_files(html_input_directory, is_html_injection=True)
+
 # Combine sections into final README content
-readme_content += html_injection_section
 readme_content += dom_clobbering_section
+readme_content += html_injection_section
 
 # Write the content to README.md
 with open(output_file, 'w') as file:

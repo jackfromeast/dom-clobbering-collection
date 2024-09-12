@@ -1,20 +1,6 @@
 # DOM Clobbering Collection
 
-In this repo, we collect a list of client-side libraries that are either vulnerable to HTML injection or contain DOM Clobbering gadgets that lead to severe consequences, e.g., XSS.
-
-## HTML Injection Vulnerabilities
-
-The following libraries accept user input and output content as `type/html` with certain named attributes (e.g., `id` or `name`) preserved at different levels (refer to `Capability`).
-Using these libraries may expose web applications to HTML injection risks. Libraries may directly insert user input into the DOM, or the web application may retrive the output from the library and then add it to the DOM.
-
-| Library | Stars | Version | Input | Sanitizer | Capability | Status | CVE |
-|:-------:|:-----:|:-------:|-------|:---------:|-------------------------|:------:|:---:|
-| [Froala](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/froala.md) | 5.3K | v4.2.2 | Copy&Paste | DOMPurify | Any `name` attributes | N/A | N/A |
-| [RichTextEditor](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/richtexteditor.md) | N/A | Latest | Copy&Paste | N/A | Any named property | N/A | N/A |
-| [SunEditor](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/sun-editor.md) | 1.7K | v2.47.0 | Type | N/A | `a` tag with `id` | N/A | N/A |
-| [TinyMCE-v5/6/7](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/tinymce.md) | 14.9K | v7.3.0 | Copy&Paste | DOMPurify | Any named property without collision | N/A | N/A |
-| [TinyMCE-v4](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/tinymce4.md) | 14.9K | v4.9.11 | Copy&Paste | N/A | Any named property | N/A | N/A |
-| [tui.editor](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/tui-editor.md) | 17.1K | v3.2.2 | Type | DOMPurify | Any named property without collision  | N/A | N/A |
+This repository lists client-side libraries that are vulnerable to HTML injection or contain DOM Clobbering gadgets that can result in severe issues like XSS.
 
 ## DOM Clobbering Gadgets
 
@@ -38,3 +24,16 @@ Using these libraries may expose web applications to HTML injection risks. Libra
 | [tsup](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/tsup.md) | N/A | N/A | ```<img src="https://xxx.xxx.xxx" name="currentScript">``` | XSS | TheHulk | N/A | N/A |
 | [UMeditor](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/umeditor.md) | 1.4K | v1.2.2 | ```<a id="UMEDITOR_HOME_URL" href="https://xxx.xxx.xxx/"></a>``` | XSS | TheHulk | Reported | N/A |
 | [Webpack](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/webpack.md) | 64.4K | v5.93.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Patched | CVE-2024-XXXXX |
+
+## HTML Injection Vulnerabilities
+
+The following libraries accept user input and output content as `type/html` with certain named attributes (e.g., `id` or `name`) preserved at different levels of capability. Using these libraries may expose web applications to HTML injection risks. Libraries may directly insert user input into the DOM, or the web application may retrieve the user input from the library and then add it to the DOM.
+
+| Library | Stars | Version | Input | Sanitizer | Capability | Status | CVE |
+|:-------:|:-----:|:-------:|-------|:---------:|-------------------------|:------:|:---:|
+| [Froala](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/froala.md) | 5.3K | v4.2.2 | Copy&Paste | DOMPurify | Any `name` attributes | N/A | N/A |
+| [RichTextEditor](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/richtexteditor.md) | N/A | Latest | Copy&Paste | N/A | Any named property | N/A | N/A |
+| [SunEditor](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/sun-editor.md) | 1.7K | v2.47.0 | Copy&Paste | N/A | `a` tag with `id` | N/A | N/A |
+| [TinyMCE-v5/6/7](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/tinymce.md) | 14.9K | v7.3.0 | Copy&Paste | DOMPurify | Any named property without collision | N/A | N/A |
+| [TinyMCE-v4](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/tinymce4.md) | 14.9K | v4.9.11 | Copy&Paste | N/A | Any named property | N/A | N/A |
+| [tui.editor](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/tui-editor.md) | 17.1K | v3.2.2 | Type | DOMPurify | Any named property without collision  | N/A | N/A |

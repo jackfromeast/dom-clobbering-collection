@@ -6,7 +6,7 @@
 + Version: v2.47.0
 + Stars: 1.7K
 + Fingerprint: `typeof window.SUNEDITOR !== undefined`
-+ Input: Type
++ Input: Copy&Paste
 + Sanitizer: N/A
 + Capability: `a` tag with `id`
 + CVE: N/A
