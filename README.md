@@ -32,6 +32,7 @@ The following libraries accept user input and output content as `type/html` with
 | Library | Stars | Version | Input | Sanitizer | Capability | Status | CVE |
 |:-------:|:-----:|:-------:|-------|:---------:|-------------------------|:------:|:---:|
 | [Froala](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/froala.md) | 5.3K | v4.2.2 | Copy&Paste | DOMPurify | Any `name` attributes | N/A | N/A |
+| [mermaid](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/mermaid.md) | 70.6K | v0.1.4 | Input | DOMPurify | Any named property without collision | N/A | N/A |
 | [RichTextEditor](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/richtexteditor.md) | N/A | Latest | Copy&Paste | N/A | Any named property | N/A | N/A |
 | [SunEditor](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/sun-editor.md) | 1.7K | v2.47.0 | Copy&Paste | N/A | `a` tag with `id` | N/A | N/A |
 | [TinyMCE-v5/6/7](https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/tinymce.md) | 14.9K | v7.3.0 | Copy&Paste | DOMPurify | Any named property without collision | N/A | N/A |
