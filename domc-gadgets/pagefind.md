@@ -8,8 +8,8 @@
 + Fingerprint: `typeof PagefindUI !== 'undefined'`
 + Payload: ```<img name="currentScript" src="blob:https://xxx.xxx.xxx/ui.js"></img>```
 + Impact: XSS
-+ CVE: N/A
-+ Status: Reported
++ CVE: CVE-2024-XXXXX
++ Status: Accepted
 + Foundby: TheHulk
 
 ### Library
