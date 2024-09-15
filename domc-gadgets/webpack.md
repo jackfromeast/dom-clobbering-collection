@@ -122,7 +122,7 @@ __webpack_require__.l = (url, done, key, chunkId) => {
 <img name="currentScript" src="https://xxx.xxxx.xxx"></img>
 
 
-<script src="https://raw.githubusercontent.com/jackfromeast/dom-clobbering-collection/main/domc-gadgets-assets/webpack/dist/webpack-gadgets.bundle.js?token=GHSAT0AAAAAACHOWGIH7SZYJ4GGACO6R4ZOZVDEPLQ"></script>
+<script src="https://raw.githubusercontent.com/xxxxxxxxxxxx/dom-clobbering-collection/main/domc-gadgets-assets/webpack/dist/webpack-gadgets.bundle.js?token=GHSAT0AAAAAACHOWGIH7SZYJ4GGACO6R4ZOZVDEPLQ"></script>
 </body>
 </html>
 ```
