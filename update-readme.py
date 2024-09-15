@@ -4,7 +4,8 @@ import os
 gadgets_input_directory = 'domc-gadgets'
 html_input_directory = 'html-injection'
 output_file = 'README.md'
-github_base_url = './domc-gadgets/'
+gadgets_base_url = './domc-gadgets/'
+html_base_url = './html-injection/'
 
 # Initialize the README content
 readme_content = """# DOM Clobbering Collection
@@ -70,10 +71,11 @@ def process_files(input_directory, is_html_injection=False):
             file_path = os.path.join(input_directory, filename)
             metadata = extract_metadata(file_path, is_html_injection)
             if metadata:
-                library_link = f"[{metadata['Library']}]({github_base_url}{filename})"
                 if is_html_injection:
+                    library_link = f"[{metadata['Library']}]({html_base_url}{filename})"
                     section_content += f"| {library_link} | {metadata.get('Stars', 'N/A')} | {metadata.get('Version', 'N/A')} | {metadata.get('Input', 'N/A')} | {metadata.get('Sanitizer', 'N/A')} | {metadata.get('Capability', 'N/A')} | {metadata.get('Status', 'Reported')} | {metadata.get('CVE', 'N/A')} |\n"
                 else:
+                    library_link = f"[{metadata['Library']}]({gadgets_base_url}{filename})"
                     section_content += f"| {library_link} | {metadata.get('Stars', 'N/A')} | {metadata.get('Version', 'N/A')} | {metadata.get('Payload', 'N/A')} | {metadata.get('Impact', 'N/A')} | {metadata.get('Foundby', 'N/A')} | {metadata.get('Status', 'Reported')} | {metadata.get('CVE', 'N/A')} |\n"
     return section_content
 
