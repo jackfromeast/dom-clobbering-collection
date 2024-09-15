@@ -1,10 +1,6 @@
 import os
 import re
-import html 
-
-# Directories for input and output
-input_directory = './html-injection'
-output_directory = './html-injection-assets'
+import html
 
 # Function to extract PoC section from the markdown file
 def extract_poc_from_file(file_path):
@@ -26,7 +22,7 @@ def extract_poc_from_file(file_path):
     return poc_section
 
 # Function to generate HTML files based on extracted PoC content
-def generate_html_files(gadget_name, poc_content, next_gadget_name=None):
+def generate_html_files(gadget_name, poc_content, output_directory, next_gadget_name=None):
     os.makedirs(os.path.join(output_directory, gadget_name), exist_ok=True)
     
     next_page_link = f'<a href="../{next_gadget_name}/poc.html">Next: {next_gadget_name}</a>' if next_gadget_name else ''
@@ -118,15 +114,21 @@ def generate_html_files(gadget_name, poc_content, next_gadget_name=None):
 
     print(f"Generated HTML files for {gadget_name}")
 
-# Iterate over markdown files and generate HTML files with next page links
-markdown_files = sorted([f for f in os.listdir(input_directory) if f.endswith('.md')])
+# Function to process the directories
+def process_directories(input_directory, output_directory):
+    # Iterate over markdown files and generate HTML files with next page links
+    markdown_files = sorted([f for f in os.listdir(input_directory) if f.endswith('.md')])
 
-for i, filename in enumerate(markdown_files):
-    file_path = os.path.join(input_directory, filename)
-    poc_content = extract_poc_from_file(file_path)
-    if poc_content:
-        gadget_name = filename.split('.')[0]
-        next_gadget_name = None if i == len(markdown_files) - 1 else markdown_files[i + 1].split('.')[0]
-        generate_html_files(gadget_name, poc_content, next_gadget_name)
+    for i, filename in enumerate(markdown_files):
+        file_path = os.path.join(input_directory, filename)
+        poc_content = extract_poc_from_file(file_path)
+        if poc_content:
+            gadget_name = filename.split('.')[0]
+            next_gadget_name = None if i == len(markdown_files) - 1 else markdown_files[i + 1].split('.')[0]
+            generate_html_files(gadget_name, poc_content, output_directory, next_gadget_name)
 
-print("PoC web pages with next links generated successfully.")
+    print(f"PoC web pages with next links generated successfully for {input_directory}.")
+
+# Process both sets of directories
+process_directories('./html-injection', './html-injection-assets')
+process_directories('./domc-gadgets', './domc-gadgets-assets/gadgets')
