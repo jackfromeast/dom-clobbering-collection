@@ -4,7 +4,7 @@ import os
 gadgets_input_directory = 'domc-gadgets'
 html_input_directory = 'html-injection'
 output_file = 'README.md'
-github_base_url = 'https://github.com/jackfromeast/dom-clobbering-collection/blob/main/domc-gadgets/'
+github_base_url = './domc-gadgets/'
 
 # Initialize the README content
 readme_content = """# DOM Clobbering Collection
