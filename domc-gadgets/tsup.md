@@ -46,7 +46,7 @@ example html:
 <!--Library-->
 
 <!--Payload-->
-<img name="currentScript" src="//localhost:9999"></img>
+<img name="currentScript" src="//localhost:9999">
 <!--Payload-->
 ```
 

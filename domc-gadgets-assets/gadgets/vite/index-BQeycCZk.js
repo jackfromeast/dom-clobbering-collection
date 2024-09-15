@@ -1,0 +1,1 @@
+"use strict";var e=typeof document<"u"?document.currentScript:null,t=document.createElement("script");t.src=(typeof document>"u"?require("url").pathToFileURL(__filename).href:e&&e.src||new URL("assets/index-BQeycCZk.js",document.baseURI).href)+"extra.js";document.head.append(t);
