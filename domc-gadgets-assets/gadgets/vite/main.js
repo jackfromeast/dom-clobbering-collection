@@ -1,3 +1,4 @@
+import extraURL from './extra.js?url'
 var s = document.createElement('script')
-s.src = import.meta.url + 'extra.js'
+s.src = extraURL
 document.head.append(s)
