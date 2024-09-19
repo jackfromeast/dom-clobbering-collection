@@ -39,6 +39,7 @@ The following libraries accept user input and output content as `type/html` with
 | [Froala](./html-injection/froala.md) | 5.3K | v4.2.2 | Copy&Paste | DOMPurify | Any `name` attributes | N/A | N/A |
 | [mermaid](./html-injection/mermaid.md) | 70.6K | v0.1.4 | Input | DOMPurify | Any named property without collision | N/A | N/A |
 | [RichTextEditor](./html-injection/richtexteditor.md) | N/A | Latest | Copy&Paste | N/A | Any named property | N/A | N/A |
+| [simplemde](./html-injection/simplemde.md) | 9.9K | v1.11.2 | Type | N/A | Any named property | N/A | N/A |
 | [SunEditor](./html-injection/sun-editor.md) | 1.7K | v2.47.0 | Copy&Paste | N/A | `a` tag with `id` | N/A | N/A |
 | [TinyMCE-v5/6/7](./html-injection/tinymce.md) | 14.9K | v7.3.0 | Copy&Paste | DOMPurify | Any named property without collision | N/A | N/A |
 | [TinyMCE-v4](./html-injection/tinymce4.md) | 14.9K | v4.9.11 | Copy&Paste | N/A | Any named property | N/A | N/A |
