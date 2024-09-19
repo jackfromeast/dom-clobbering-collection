@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+<h1>DOM Clobbering Collection - plotly</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;div id=&quot;gd&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;https://cdn.plot.ly/plotly-2.35.2.min.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    Plotly.newPlot(&quot;gd&quot;, /* JSON object */ {
+        &quot;data&quot;: [{ &quot;y&quot;: [1, 2, 3] }],
+        &quot;layout&quot;: { &quot;width&quot;: 600, &quot;height&quot;: 400}
+    })
+    Plotly.Plots.sendDataToCloud(gd);
+&lt;/script&gt;</pre>
+  <div id="gd"></div>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+<script>
+    Plotly.newPlot("gd", /* JSON object */ {
+        "data": [{ "y": [1, 2, 3] }],
+        "layout": { "width": 600, "height": 400}
+    })
+    Plotly.Plots.sendDataToCloud(gd);
+</script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../polyfills/poc.html">Next: polyfills</a>
+  </div>
+</section>
+
+</body>
+</html>
