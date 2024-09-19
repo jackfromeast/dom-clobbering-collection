@@ -8,7 +8,7 @@
 + Fingerprint: `typeof window.sq !== 'undefined'`
 + Payload: ```<img name="scripts" src="http://xxx.xxx.xxx"><img name="scripts" src="http://xxx.xxx.xxx">```
 + Impact: XSS
-+ Status: N/A 
++ Status: Reported
 + CVE: N/A
 + Foundby: TheHulk
 

