@@ -1,9 +1,9 @@
-## AddToAny
+## tsup
 
 ### Meta
 
 + Library: tsup
-+ Stars: N/A
++ Stars: 8.9K
 + Payload: ```<img src="https://xxx.xxx.xxx" name="currentScript">```
 + Impact: XSS
 + CVE: N/A
