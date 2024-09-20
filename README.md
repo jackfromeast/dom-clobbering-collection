@@ -36,6 +36,7 @@ The following libraries accept user input and output content as `type/html` with
 
 | Library | Stars | Version | Input | Sanitizer | Capability | Status | CVE |
 |:-------:|:-----:|:-------:|-------|:---------:|-------------------------|:------:|:---:|
+| [editor.md](./html-injection/editor.md.md) | 13.8K | v1.5.0 | Type | N/A | Any named property | N/A | N/A |
 | [Froala](./html-injection/froala.md) | 5.3K | v4.2.2 | Copy&Paste | DOMPurify | Any `name` attributes | N/A | N/A |
 | [mermaid](./html-injection/mermaid.md) | 70.6K | v0.1.4 | Input | DOMPurify | Any named property without collision | N/A | N/A |
 | [RichTextEditor](./html-injection/richtexteditor.md) | N/A | Latest | Copy&Paste | N/A | Any named property | N/A | N/A |
