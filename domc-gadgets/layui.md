@@ -9,7 +9,7 @@
 + Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx">```
 + Impact: XSS
 + CVE: N/A
-+ Status: N/A
++ Status: Reported
 + Security Policy: Requested
 + Foundby: TheHulk
 

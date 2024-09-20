@@ -38,7 +38,7 @@ if (polyfills.length) {
   var polyfillFile = 'bundles/webcomponents-' + polyfills.join('-') + '.js';
 
   // Load it from the right place.
-  if (window.WebComponents.root) {
+  if (window.WebComponents.root && typeof window.WebComponents.root === 'string' ) {
     url = window.WebComponents.root + polyfillFile;
     if (
       window.trustedTypes &&
@@ -57,7 +57,9 @@ if (polyfills.length) {
 
 ```html
 <!--Library-->
-<script src="./webcomponents-loader.js"></script>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.8.0/webcomponents-loader.js"></script>
+<script type="module" src="my-element.js"></script>
+<my-element></my-element>
 <!--Library-->
 
 <!--Payload-->

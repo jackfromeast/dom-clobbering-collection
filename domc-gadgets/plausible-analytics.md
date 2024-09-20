@@ -9,7 +9,8 @@
 + Payload: ```<img name="currentScript" data-domain="xxx.xxx.xxx" data-api="https://xxx.xxx.xxx">```
 + Impact: CSRF
 + CVE: N/A
-+ Status: N/A
++ Status: Reported
++ Security Policy: Email
 + Foundby: TheHulk
 
 ### Library
