@@ -7,8 +7,8 @@
 + Stars: 25.2K
 + Payload: ```<img src="https://xxx.xxx.xxx" name="currentScript">```
 + Impact: XSS
-+ CVE: N/A
-+ Status: Reported
++ CVE: 2024-CVE-XXXXX
++ Status: Fixed
 + Foundby: TheHulk
 
 ### Library
