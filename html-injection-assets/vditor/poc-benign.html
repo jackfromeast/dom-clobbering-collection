@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+<h1>DOM Clobbering Collection - vditor</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/vditor/dist/index.css&quot;&gt;
+  &lt;div id=&quot;vditor&quot; class=&quot;vditor&quot;&gt;&lt;/div&gt;
+  &lt;script src=&quot;https://unpkg.com/vditor/dist/index.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    let vditorInstance;
+    function initVditor() {
+      vditorInstance = new Vditor(&#x27;vditor&#x27;, {
+        after: () =&gt; {
+          vditorInstance.setValue(&quot;HELLO WORLD&quot;);
+        }
+      });
+    }
+    window.onload = initVditor;
+  &lt;/script&gt;</pre>
+  <link rel="stylesheet" href="https://unpkg.com/vditor/dist/index.css">
+  <div id="vditor" class="vditor"></div>
+  <script src="https://unpkg.com/vditor/dist/index.min.js"></script>
+  <script>
+    let vditorInstance;
+    function initVditor() {
+      vditorInstance = new Vditor('vditor', {
+        after: () => {
+          vditorInstance.setValue("HELLO WORLD");
+        }
+      });
+    }
+    window.onload = initVditor;
+  </script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  
+  </div>
+</section>
+
+</body>
+</html>

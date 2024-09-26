@@ -46,3 +46,4 @@ The following libraries accept user input and output content as `type/html` with
 | [TinyMCE-v5/6/7](./html-injection/tinymce.md) | 14.9K | v7.3.0 | Copy&Paste | DOMPurify | Any named property without collision | N/A | N/A |
 | [TinyMCE-v4](./html-injection/tinymce4.md) | 14.9K | v4.9.11 | Copy&Paste | N/A | Any named property | N/A | N/A |
 | [tui.editor](./html-injection/tui-editor.md) | 17.1K | v3.2.2 | Type | DOMPurify | Any named property without collision  | N/A | N/A |
+| [vditor](./html-injection/vditor.md) | 8.3K | v3.10.6 | Type | N/A | Any named property | N/A | N/A |
