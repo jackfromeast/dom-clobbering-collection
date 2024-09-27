@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+<h1>DOM Clobbering Collection - seajs</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;../static/hello/src/style.css&quot;&gt;
+&lt;script src=&quot;../sea-modules/seajs/seajs/3.0.3/sea.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+// Set configuration
+seajs.config({
+  alias: {
+    &quot;jquery&quot;: &quot;jquery/jquery/1.10.1/jquery.js&quot;
+  }
+});
+seajs.use(&quot;examples/hello/1.0.0/main&quot;);
+&lt;/script&gt;</pre>
+  <link rel="stylesheet" href="../static/hello/src/style.css">
+<script src="../sea-modules/seajs/seajs/3.0.3/sea.js"></script>
+<script>
+// Set configuration
+seajs.config({
+  alias: {
+    "jquery": "jquery/jquery/1.10.1/jquery.js"
+  }
+});
+seajs.use("examples/hello/1.0.0/main");
+</script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../squirt/poc.html">Next: squirt</a>
+  </div>
+</section>
+
+</body>
+</html>
