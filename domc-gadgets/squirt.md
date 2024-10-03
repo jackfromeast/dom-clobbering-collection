@@ -14,8 +14,7 @@
 
 ### Library
 
-URL:
-+ `https://github.com/cameron/squirt/tree/master`
+https://github.com/cameron/squirt/tree/master
 
 ### Vulnerable Code Snippet
 

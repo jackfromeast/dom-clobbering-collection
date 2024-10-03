@@ -13,9 +13,8 @@
 
 ### Library
 
-URL: https://github.com/rollup/rollup
+https://github.com/rollup/rollup
 
-Bundlers run locally
 
 ### Vulnerable Code Snippet
 

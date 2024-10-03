@@ -14,9 +14,7 @@
 
 ### Library
 
-URL: 
-+ `https://gitee.com/niandeng/ckplayer`
-
+https://gitee.com/niandeng/ckplayer
 
 ### Vulnerable Code Snippet
 

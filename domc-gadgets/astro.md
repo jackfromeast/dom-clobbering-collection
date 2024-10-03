@@ -14,8 +14,7 @@
 
 ### Library
 
-URL: 
-+ `https://github.com/withastro/astro`
+https://github.com/withastro/astro
 
 
 ### Vulnerable Code Snippet

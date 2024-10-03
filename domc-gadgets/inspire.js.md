@@ -14,8 +14,7 @@
 
 ### Library
 
-URL:
-+ `https://inspirejs.org/inspire.js`
+https://inspirejs.org/inspire.js
 
 ### Vulnerable Code Snippet
 

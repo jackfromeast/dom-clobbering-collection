@@ -14,7 +14,7 @@
 
 ### Library
 
-URL: https://github.com/webcomponents/polyfills
+https://github.com/webcomponents/polyfills
 
 ### Vulnerable Code Snippet
 

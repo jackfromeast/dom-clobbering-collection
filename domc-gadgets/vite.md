@@ -13,8 +13,7 @@
 
 ### Library
 
-URL: https://github.com/vitejs/vite
-Bundlers run locally
+https://github.com/vitejs/vite
 
 ### Vulnerable Code Snippet
 

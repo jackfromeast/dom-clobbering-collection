@@ -14,8 +14,7 @@
 
 ### Library
 
-URL: 
-+ `https://github.com/djyde/cusdis`
+https://github.com/djyde/cusdis
 
 
 ### Vulnerable Code Snippet

@@ -15,10 +15,8 @@
 
 ### Library
 
-URL: 
-+ `https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js`
-+ `https://www.mathjax.org/MathJax-v2-7-9-available/`
-
+https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js
+https://www.mathjax.org/MathJax-v2-7-9-available/
 
 ### Vulnerable Code Snippet
 
@@ -152,13 +150,5 @@ app.listen(port, () => {
 <a id="MathJax"></a>
 <a id="MathJax" name="root" href="http://xxx.xxx.xxx"></a>
 
-<script>
-	(function() {
-		  var script = document.createElement("script");
-		  script.type = "text/javascript";
-		  script.src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-		  document.getElementsByTagName("head")[0].appendChild(script);
-		}
-	)();
-</script>
+<script id="MathJax-script" async src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 ```

@@ -14,9 +14,8 @@
 
 ### Library
 
-URL: 
-+ `https://cdnjs.cloudflare.com/ajax/libs/google-closure-library/20230103.0.0/base.js`
-+ `https://cdnjs.cloudflare.com/ajax/libs/google-closure-library/20230103.0.0/base.min.js`
+https://cdnjs.cloudflare.com/ajax/libs/google-closure-library/20230103.0.0/base.js
+https://cdnjs.cloudflare.com/ajax/libs/google-closure-library/20230103.0.0/base.min.js
 
 
 ### Vulnerable Code Snippet

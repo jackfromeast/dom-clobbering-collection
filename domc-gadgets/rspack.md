@@ -13,7 +13,7 @@
 
 ### Library
 
-URL: Self hosted
+https://github.com/web-infra-dev/rspack
 
 ### Vulnerable Code Snippet
 

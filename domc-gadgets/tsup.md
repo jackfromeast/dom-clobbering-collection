@@ -13,9 +13,7 @@
 
 ### Library
 
-URL: https://github.com/egoist/tsup
-
-Bundlers run locally
+https://github.com/egoist/tsup
 
 ### Vulnerable Code Snippet
 

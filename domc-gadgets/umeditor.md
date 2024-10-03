@@ -16,8 +16,6 @@
 
 https://github.com/fex-team/umeditor
 
-Self hosted.
-
 ### Vulnerable Code Snippet
 
 ```javascript

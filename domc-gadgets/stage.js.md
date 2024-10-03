@@ -14,6 +14,8 @@
 
 ### Library
 
+https://github.com/piqnt/stage.js
+
 URL:
 + `https://cdn.jsdelivr.net/npm/stage-js@1.0.0-alpha.4/+esm`
 + `https://cdnjs.cloudflare.com/ajax/libs/stage.js/0.8.10/stage.cordova.js `

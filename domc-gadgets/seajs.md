@@ -14,7 +14,7 @@
 
 ### Library
 
-URL: `https://github.com/seajs/seajs`
+https://github.com/seajs/seajs
 
 
 ### Vulnerable Code Snippet

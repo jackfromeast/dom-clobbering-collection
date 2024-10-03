@@ -14,9 +14,7 @@
 
 ### Library
 
-URL: 
-+ `https://github.com/cujojs/curl`
-
+https://github.com/cujojs/curl
 
 ### Vulnerable Code Snippet
 

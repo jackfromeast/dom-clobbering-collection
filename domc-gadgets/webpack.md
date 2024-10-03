@@ -14,7 +14,7 @@
 
 ### Library
 
-URL: Self hosted
+https://github.com/webpack/webpack
 
 ### Vulnerable Code Snippet
 

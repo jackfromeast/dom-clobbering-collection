@@ -13,8 +13,7 @@
 
 ### Library
 
-URL:
-+ `https://github.com/vivirenremoto/doomcaptcha/blob/main/script.js`
+https://github.com/vivirenremoto/doomcaptcha/blob/main/script.js
 
 ### Vulnerable Code Snippet
 

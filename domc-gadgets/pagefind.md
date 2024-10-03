@@ -14,8 +14,7 @@
 
 ### Library
 
-Built locally
-+ `https://github.com/cloudcannon/pagefind`
+https://github.com/cloudcannon/pagefind
 
 ### Vulnerable Code Snippet
 

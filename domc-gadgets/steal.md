@@ -15,8 +15,6 @@
 
 ### Library
 
-Built locally
-
 https://github.com/stealjs/steal
 
 ### Vulnerable Code Snippet

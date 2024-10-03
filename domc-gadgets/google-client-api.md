@@ -14,9 +14,8 @@
 
 ### Library
 
-URL: 
-+ `https://apis.google.com/js/api.js`
-+ `https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.5BIk7BglYEE.O/m=client/rt=j/sv=1/d=1/ed=1/am=AAAC/rs=AHpOoo9V8V9Op_7rn4BCy9pIOBNUyU2IjA/cb=gapi.loaded_0?le=scs`
+https://apis.google.com/js/api.js
+https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.5BIk7BglYEE.O/m=client/rt=j/sv=1/d=1/ed=1/am=AAAC/rs=AHpOoo9V8V9Op_7rn4BCy9pIOBNUyU2IjA/cb=gapi.loaded_0?le=scs
 
 
 ### Vulnerable Code Snippet
