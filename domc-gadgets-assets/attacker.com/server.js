@@ -10,6 +10,12 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/api/open/project/:appId/comments/count', (req, res) => {
+  const data = {
+    "XXX-YYY-ZZZ": "<img src=0 onerror=alert(1)>"
+  };
+  res.json({ data: data });
+});
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'alert.js'));
