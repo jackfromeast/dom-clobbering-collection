@@ -8,7 +8,7 @@
 + Payload: ```<img name="currentScript" data-host="https://xxx.xxx.xxx">```
 + Impact: XSS
 + CVE: N/A
-+ Status: Reported(Snyk)
++ Status: Reported(MITRE)
 + Foundby: TheHulk
 
 

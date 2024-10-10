@@ -8,7 +8,7 @@
 + Payload: ```<form name="scripts">alert(1)</form><form name="scripts">alert(1)</form>```
 + Impact: XSS
 + CVE: N/A
-+ Status: Reported
++ Status: Accepted
 + Foundby: TheHulk
 
 
