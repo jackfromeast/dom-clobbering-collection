@@ -8,19 +8,19 @@
 </head>
 <body>
 
-<h1>DOM Clobbering Collection - rspack</h1>
+<h1>DOM Clobbering Collection - plausible-analytics</h1>
 
 <section class="section">
   <div class="column">
   <p><span class="label">Library</span><br><br>
-  <pre>&lt;script defer src=&quot;./dist/main.bundle.js&quot;&gt;&lt;/script&gt;</pre>
-  <script defer src="./dist/main.bundle.js"></script>
+  <pre>&lt;script defer data-domain=&quot;mydomain.com&quot; src=&quot;https://plausible.io/js/script.js&quot;&gt;&lt;/script&gt;</pre>
+  <script defer data-domain="mydomain.com" src="https://plausible.io/js/script.js"></script>
   </div>
 </section>
 
 <section class="section">
   <div class="column">
-  <a href="../seajs/poc.html">Next: seajs</a>
+  <a href="../plotly/poc.html">Next: plotly</a>
   </div>
 </section>
 

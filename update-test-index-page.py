@@ -2,7 +2,7 @@ import os
 
 # Base directory containing all the test folders
 root_path = os.path.dirname(os.path.abspath(__file__))
-assets_path = os.path.join(root_path, 'domc-gadgets-assets')
+assets_path = os.path.join(root_path, 'domc-gadgets-assets', 'gadgets')
 
 # Output file
 index_file = os.path.join(assets_path, 'index.html')
@@ -40,10 +40,13 @@ def generate_index_html(base_dir):
         
         # Write each folder and its poc files to the index.html
         for folder_name, file_paths in sorted(folder_dict.items()):
-            index.write(f'  <h2>{folder_name} Test</h2><ul>\n')
+            index.write(f'  <h3>{folder_name} Test</h3><ul>\n')
             for file_path in file_paths:
                 test_name = os.path.splitext(os.path.basename(file_path))[0]
-                index.write(f'    <li><a href="{file_path}">Test: {test_name}</a></li>\n')
+                if 'squirt' in file_path:
+                    index.write(f'    <li><a href="{file_path}?sq-dev">PoC</a></li>\n')
+                else:
+                    index.write(f'    <li><a href="{file_path}">PoC</a></li>\n')
             index.write('  </ul>\n')
         
         index.write('</section>\n')

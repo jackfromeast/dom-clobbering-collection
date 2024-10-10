@@ -113,7 +113,7 @@ loadScript: function (def, success, failure) {
 ### PoC
 ```html
 <!--Library-->
-<script src="https://raw.githubusercontent.com/cujojs/curl/refs/heads/master/dist/curl/curl.js">
+<script src="./curl.js"></script>
 <!--Library-->
 
 <!--Payload-->

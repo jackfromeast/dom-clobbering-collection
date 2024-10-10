@@ -38,12 +38,12 @@ window.UMEDITOR_CONFIG = {
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <title>UMEDITOR 简单功能</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="./themes/default/_css/umeditor.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="./third-party/jquery.min.js"></script>
-<script type="text/javascript" src="./third-party/template.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="../umeditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="editor_api.js"></script>
-<script type="text/javascript" src="./lang/zh-cn/zh-cn.js"></script>
+<link href="/umeditor/themes/default/_css/umeditor.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/umeditor/third-party/jquery.min.js"></script>
+<script type="text/javascript" src="/umeditor/third-party/template.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/umeditor/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/umeditor/_examples/editor_api.js"></script>
+<script type="text/javascript" src="/umeditor/lang/zh-cn/zh-cn.js"></script>
 <style type="text/css">
 h1{
         font-family: "微软雅黑";
@@ -71,7 +71,7 @@ var um = UM.getEditor('myEditor',{
 <!--Library-->
 
 <!--Payload-->
-<a id="UMEDITOR_HOME_URL" href="https://localhost:9999"></a>
+<a id="UMEDITOR_HOME_URL" href="http://localhost:9999"></a>
 <!--Payload-->
 ```
 

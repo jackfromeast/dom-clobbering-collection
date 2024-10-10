@@ -22,8 +22,8 @@
 <section class="section">
   <div class="column">
   <p><span class="label">Payload</span><br><br>
-  <pre>&lt;img name=&quot;currentScript&quot; src=&quot;blob:http://localhost:9999/ui.js&quot;&gt;&lt;/img&gt;</pre>
-  <img name="currentScript" src="blob:http://localhost:9999/ui.js"></img>
+  <pre>&lt;img name=&quot;currentScript&quot; src=&quot;blob:http://localhost:9999/ui.js&quot;&gt;</pre>
+  <img name="currentScript" src="blob:http://localhost:9999/ui.js">
   </div>
 </section>
 
@@ -37,6 +37,11 @@
     window.addEventListener(&#x27;DOMContentLoaded&#x27;, (event) =&gt; {
         new PagefindUI({ element: &quot;#search&quot;, showSubResults: true });
     });
+    const inputElement = document.querySelector(&#x27;.pagefind-ui__search-input.svelte-e9gkc3&#x27;);
+    if (inputElement) {
+        inputElement.value = &#x27;Your text here&#x27;;
+        inputElement.dispatchEvent(new Event(&#x27;input&#x27;));
+    }
 &lt;/script&gt;</pre>
   <link href="pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="pagefind/pagefind-ui.js"></script>
@@ -44,6 +49,11 @@
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
         new PagefindUI({ element: "#search", showSubResults: true });
+        const inputElement = document.querySelector('.pagefind-ui__search-input.svelte-e9gkc3');
+        if (inputElement) {
+            inputElement.value = 'Your text here';
+            inputElement.dispatchEvent(new Event('input'));
+        }
     });
 </script>
   </div>
@@ -51,7 +61,7 @@
 
 <section class="section">
   <div class="column">
-  <a href="../polyfills/poc.html">Next: polyfills</a>
+  <a href="../plausible-analytics/poc.html">Next: plausible-analytics</a>
   </div>
 </section>
 

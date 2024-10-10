@@ -58,7 +58,7 @@ var doc = win.document;
 
 ```html
 <!--Library-->
-<link href="./layui.css" rel="stylesheet" />
+<!-- <link href="./layui.css" rel="stylesheet" /> -->
 <script src="./layui.js"></script>
 <script>
   // Usage

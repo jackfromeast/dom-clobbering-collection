@@ -27,6 +27,10 @@ def generate_html_files(gadget_name, poc_content, output_directory, next_gadget_
     
     next_page_link = f'<a href="../{next_gadget_name}/poc.html">Next: {next_gadget_name}</a>' if next_gadget_name else ''
 
+    if next_gadget_name == 'squirt':
+        ## sq-dev is a necessay query parameter to trigger the gadget in Squirt
+        next_page_link = f'<a href="../{next_gadget_name}/poc.html?sq-dev">Next: {next_gadget_name}</a>'
+
     poc_html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
