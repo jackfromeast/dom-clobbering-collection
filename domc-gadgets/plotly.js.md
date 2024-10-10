@@ -7,7 +7,7 @@
 + Version: v2.35.2
 + Fingerprint: `window.PLOTLYENV  !== undefined`
 + Payload: ```<a id="PLOTLYENV"></a><a id="PLOTLYENV" name="BASE_URL" href="https://xxx.xxx.xxx/?a="></a>```
-+ Impact: Open Redirection
++ Impact: CSRF
 + CVE: N/A
 + Status: N/A
 + Security Policy: Email
