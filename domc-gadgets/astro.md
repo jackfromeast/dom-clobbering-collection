@@ -7,7 +7,7 @@
 + Version: v4.5.9
 + Payload: ```<form name="scripts">alert(1)</form><form name="scripts">alert(1)</form>```
 + Impact: XSS
-+ CVE: N/A
++ CVE: CVE-2024-XXXXX
 + Status: Accepted
 + Foundby: TheHulk
 

