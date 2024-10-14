@@ -7,7 +7,7 @@
 + Version: v1.3.0
 + Payload: ```<img name="currentScript" data-host="https://xxx.xxx.xxx">```
 + Impact: XSS
-+ CVE: N/A
++ CVE: CVE-2024-XXXXX
 + Status: Reported(MITRE)
 + Foundby: TheHulk
 
