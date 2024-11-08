@@ -7,7 +7,7 @@
 + Version: v3.0.3
 + Payload: ```<img name="scripts" src="https://xxx.xxx.xxx"><img name="scripts" src="https://xxx.xxx.xxx">```
 + Impact: XSS
-+ CVE: N/A
++ CVE: CVE-2024-XXXXX
 + Status: Reported(Snyk)
 + Foundby: TheHulk
 
