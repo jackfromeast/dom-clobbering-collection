@@ -99,7 +99,7 @@ def generate_html_files(gadget_name, poc_content, output_directory, next_gadget_
 
 <section class="section">
   <div class="column">
-  {next_page_link}
+  {next_page_link.replace('poc.html', 'poc-benign.html')}
   </div>
 </section>
 

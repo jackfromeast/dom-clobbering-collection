@@ -36,12 +36,12 @@
 &lt;script&gt;
     window.addEventListener(&#x27;DOMContentLoaded&#x27;, (event) =&gt; {
         new PagefindUI({ element: &quot;#search&quot;, showSubResults: true });
+        const inputElement = document.querySelector(&#x27;.pagefind-ui__search-input.svelte-e9gkc3&#x27;);
+        if (inputElement) {
+            inputElement.value = &#x27;Your text here&#x27;;
+            inputElement.dispatchEvent(new Event(&#x27;input&#x27;));
+        }
     });
-    const inputElement = document.querySelector(&#x27;.pagefind-ui__search-input.svelte-e9gkc3&#x27;);
-    if (inputElement) {
-        inputElement.value = &#x27;Your text here&#x27;;
-        inputElement.dispatchEvent(new Event(&#x27;input&#x27;));
-    }
 &lt;/script&gt;</pre>
   <link href="pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="pagefind/pagefind-ui.js"></script>
