@@ -37,7 +37,7 @@ c(e + "core" + g + ".js", !0);
 
 ``` html
 <!--Library-->
-<script async src="https://static.addtoany.com/menu/page.js"></script>
+<script async src="./page.js"></script>
 <!--Library-->
 
 <!--Payload-->
