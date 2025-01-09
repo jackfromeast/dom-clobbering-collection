@@ -1,0 +1,26 @@
+<html>
+    <head>
+    <title>DOM Clobbering Gadget 6: ReCAPTCHA for the rescue</title>
+    <p>SOURCE:</p>
+    <a href="https://gist.github.com/terjanq/e2198440c4fdfbdec43e921b600d4a1d#recaptcha-for-the-rescue">https://gist.github.com/terjanq/e2198440c4fdfbdec43e921b600d4a1d#recaptcha-for-the-rescue</a><br/>
+<a href="https://ctftime.org/writeup/23580">https://ctftime.org/writeup/23580</a><br/>
+
+    </head>
+    <body>
+    <p>Vulnerable Code:</p>
+    <script>
+function writeOutput() {
+  if (statusCode !== 3) {
+    if (CONFIG.unsafeRender) {
+      document.getElementById('output').innerHTML = output;
+    } else {
+      document.getElementById('output').innerText = output;
+    }
+  }
+}
+writeOutput();
+</script>
+    <p>Exploit Code:</p>
+    
+    </body>
+    </html>

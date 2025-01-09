@@ -1,0 +1,40 @@
+<html>
+    <head>
+    <title>DOM Clobbering Gadget 10: Intigriti-2024-memo</title>
+    <p>SOURCE:</p>
+    <a href="https://sec.stealthcopter.com/intigriti-july-2024-ctf-challenge-memo/">https://sec.stealthcopter.com/intigriti-july-2024-ctf-challenge-memo/</a><br/>
+<a href="https://readmedium.com/en/dom-clobbering-techniques-8443547ebe94">https://readmedium.com/en/dom-clobbering-techniques-8443547ebe94</a><br/>
+
+    </head>
+    <body>
+    <p>Vulnerable Code:</p>
+    <script>
+window.CONFIG = window.CONFIG || {
+  version: "v20190816",
+  test: false,
+  appName: "XSS Challenge",
+}
+
+function loadModule(moduleName) {
+  const scriptSrc = new URL(location); // patched here
+  let url = '';
+  
+  
+  if (CONFIG.test && window.testPath) {
+    url = window.testPath.protocol + '//' + window.testPath.host;
+  } else {
+    url = scriptSrc.origin;
+  }
+  url += `/xss/1/modules/${CONFIG.version}/${moduleName}.js`;
+  const sc = document.createElement('script');
+  sc.src = url;
+  document.body.appendChild(sc);
+}
+
+loadModule('h1-magic');
+loadModule('tracker');
+</script>
+    <p>Exploit Code:</p>
+    
+    </body>
+    </html>

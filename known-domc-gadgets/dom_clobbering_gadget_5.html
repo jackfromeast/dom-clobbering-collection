@@ -1,0 +1,29 @@
+<html>
+    <head>
+    <title>DOM Clobbering Gadget 5: Notes CTF Challenge</title>
+    <p>SOURCE:</p>
+    <a href="https://github.com/aszx87410/ctf-writeups/issues/55">https://github.com/aszx87410/ctf-writeups/issues/55</a><br/>
+
+    </head>
+    <body>
+    <p>Vulnerable Code:</p>
+    <script>
+function reloadRecaptchaScript(index) {
+  // delay for a bit to not block main thread
+  setTimeout(() => {
+    console.log('reload', index, document.scripts[index])
+    const element = document.scripts[index]
+    const src = element.getAttribute('src')
+    if (!src.startsWith('https://www.google.com/recaptcha/')) {
+      throw new Error('reload failed, invalid src')
+    }
+    element.parentNode.removeChild(element)
+    loadScript(src)
+  }, 1000)
+}
+reloadRecaptchaScript();
+</script>
+    <p>Exploit Code:</p>
+    
+    </body>
+    </html>

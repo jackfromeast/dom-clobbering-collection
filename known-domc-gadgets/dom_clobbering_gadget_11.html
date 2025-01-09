@@ -1,0 +1,19 @@
+<html>
+    <head>
+    <title>DOM Clobbering Gadget 11: Go Go XSS Gadgets</title>
+    <p>SOURCE:</p>
+    <a href="https://buer.haus/2024/02/23/go-go-xss-gadgets-chaining-a-dom-clobbering-exploit-in-the-wild/">https://buer.haus/2024/02/23/go-go-xss-gadgets-chaining-a-dom-clobbering-exploit-in-the-wild/</a><br/>
+
+    </head>
+    <body>
+    <p>Vulnerable Code:</p>
+    <script charset="utf-8" type="text/javascript">
+      var script = document.createElement("script")
+      script.type = "text/javascript";
+      script.src = window.parent.mGlobals.nuanceLaunchJS; // get from global variables
+      document.getElementsByTagName("head")[0].appendChild(script);
+    </script>
+    <p>Exploit Code:</p>
+    
+    </body>
+    </html>
