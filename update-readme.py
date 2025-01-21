@@ -88,7 +88,7 @@ def process_files(input_directory, is_html_injection=False):
             section_content += f"| {library_link} | {metadata.get('Stars', 'N/A')} | {metadata.get('Version', 'N/A')} | {metadata.get('Input', 'N/A')} | {metadata.get('Sanitizer', 'N/A')} | {metadata.get('Capability', 'N/A')} |\n"
         else:
             library_link = f"[{metadata['Library']}]({gadgets_base_url}{filename})"
-            section_content += f"| {library_link} | {metadata.get('Stars', 'N/A')} | {metadata.get('Version', 'N/A')} | {metadata.get('Payload', 'N/A')} | {metadata.get('Impact', 'N/A')} | {metadata.get('Foundby', 'N/A')} |\n"
+            section_content += f"| {library_link} | {metadata.get('Stars', 'N/A')} | {metadata.get('Version', 'N/A')} | {metadata.get('Payload', 'N/A')} | {metadata.get('Impact', 'N/A')} | {metadata.get('Foundby', 'N/A')} | {metadata.get('Status', 'Reported')} | {metadata.get('CVE', 'N/A')} |\n"
     
     return section_content
 
