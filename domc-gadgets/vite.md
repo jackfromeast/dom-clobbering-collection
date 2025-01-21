@@ -1,13 +1,13 @@
-## vite
+## Vite
 
 ### Meta
 
-+ Library: vite
++ Library: Vite
 + Version: v5.4.5
 + Stars: 67.2K
 + Payload: ```<img src="https://xxx.xxx.xxx" name="currentScript">```
 + Impact: XSS
-+ CVE: CVE-2024-XXXXX
++ CVE: CVE-2024-45812
 + Status: Patched
 + Foundby: TheHulk
 

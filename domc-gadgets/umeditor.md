@@ -9,7 +9,7 @@
 + Payload: ```<a id="UMEDITOR_HOME_URL" href="https://xxx.xxx.xxx/"></a>```
 + Impact: XSS
 + Status: Reported
-+ CVE: N/A
++ CVE: CVE-2024-53387
 + Foundby: TheHulk
 
 ### Library

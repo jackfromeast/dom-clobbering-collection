@@ -6,7 +6,7 @@
 + Stars: 8.9K
 + Payload: ```<img src="https://xxx.xxx.xxx" name="currentScript">```
 + Impact: XSS
-+ CVE: N/A
++ CVE: CVE-2024-53384
 + Version: v8.3.4
 + Status: Reported
 + Security Policy: Requested

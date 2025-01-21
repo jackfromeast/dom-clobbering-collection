@@ -8,7 +8,7 @@
 + Payload: ```<img name="scripts" src="https://xxx.xxx.xxx/js/"><img name="scripts" src="https://xxx.xxx.xxx/js/">```
 + Impact: XSS
 + CVE: N/A
-+ Status: N/A
++ Status: Reported
 + Foundby: TheHulk
 
 

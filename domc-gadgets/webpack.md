@@ -9,7 +9,7 @@
 + Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>```
 + Impact: XSS
 + Status: Patched
-+ CVE: CVE-2024-XXXXX
++ CVE: CVE-2024-43788
 + Foundby: TheHulk
 
 ### Library

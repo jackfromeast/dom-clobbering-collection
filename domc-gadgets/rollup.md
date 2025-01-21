@@ -7,7 +7,7 @@
 + Stars: 25.2K
 + Payload: ```<img src="https://xxx.xxx.xxx" name="currentScript">```
 + Impact: XSS
-+ CVE: 2024-CVE-XXXXX
++ CVE: CVE-2024-47068
 + Status: Fixed
 + Foundby: TheHulk
 

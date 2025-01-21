@@ -8,8 +8,8 @@
 + Fingerprint: N/A
 + Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>```
 + Impact: XSS
-+ Status: Accepted
-+ CVE: CVE-2024-XXXXX
++ Status: Fixed
++ CVE: CVE-2024-43788
 + Foundby: TheHulk
 
 ### Library
