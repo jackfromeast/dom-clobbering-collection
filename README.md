@@ -1,6 +1,27 @@
 # DOM Clobbering Collection
 
-This repository lists client-side libraries that are vulnerable to HTML injection or contain DOM Clobbering gadgets that can result in severe issues like XSS.
+# DOM Clobbering Collection
+
+This repository maintains client-side libraries that are vulnerable to HTML injection or contain DOM Clobbering gadgets that can result in severe issues like XSS. This repository is actively maintained by [jackfromeast](https://github.com/jackfromeast) and [ishmeal](https://github.com/ishmeals).
+
+> [!NOTE]
+> Got new gadgets or HTML injections? Please feel free to create a Pull Request and join the house!
+
+## What is DOM Clobbering?
+
+_DOM Clobbering_ is a type of code-less injection attack on the web where attackers first inject a seemingly benign, scriptless HTML markup into a webpage. Then, the injected markup could be unexpectedly loaded by JavaScript through collided named property lookups on the `window` or `document` objects, potentially altering program execution and leading to serious security risks such as Cross-site Scripting (XSS) and Client-side Request Forgery (CSRF).
+
+We also recommend checking out the following great websites, papers, and blog posts about DOM Clobbering:
+
++ Introductions:
+  + The website [DOM Clobbering Wiki](https://domclob.xyz/) offers comprehensive information on attack techniques, vulnerability patterns, and defenses, along with tools for browser testing and payload generation.
+  + The blog post "[Can HTML affect JavaScript? Introduction to DOM clobbering](https://aszx87410.github.io/beyond-xss/en/ch3/dom-clobbering/)" explains how HTML elements can influence JavaScript execution through DOM Clobbering.
++ Academic Papers:
+  + The paper [It’s (DOM) Clobbering Time: Attack Techniques, Prevalence, and Defenses](https://publications.cispa.saarland/3756/1/sp23_domclob.pdf) by Soheil Khodayari and Giancarlo Pellegrino presents a systematic study of DOM Clobbering, uncovering various attack techniques, browser behaviors, and vulnerable code patterns, and evaluates existing countermeasures.
+  + The paper [The DOMino Effect: Detecting and Exploiting DOM Clobbering Gadgets via Concolic Execution with Symbolic DOM]() by Zhengyu Liu et al. introduces a dynamic analysis tool using symbolic DOM modeling and concolic execution to detect and exploit DOM Clobbering gadgets at scale.
++ Cool Real-world Exploitations:
+  + The blog post "[XSS in GMail’s AMP4Email via DOM Clobbering](https://research.securitum.com/xss-in-amp4email-dom-clobbering/)" by Michał Bentkowski details a real-world exploitation of DOM Clobbering to achieve XSS in Gmail's AMP4Email feature.
+  + The blog post "[Go Go XSS Gadgets: Chaining a DOM Clobbering Exploit in the Wild](https://buer.haus/2024/02/23/go-go-xss-gadgets-chaining-a-dom-clobbering-exploit-in-the-wild/)" by Brett Buerhaus details how DOM Clobbering vulnerabilities can be chained to execute advanced XSS exploits.
 
 ## DOM Clobbering Gadgets
 
