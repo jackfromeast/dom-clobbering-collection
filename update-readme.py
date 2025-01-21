@@ -22,8 +22,8 @@ html_injection_section = """\n## HTML Injection Vulnerabilities
 
 The following libraries accept user input and output content as `type/html` with certain named attributes (e.g., `id` or `name`) preserved at different levels of capability. Using these libraries may expose web applications to HTML injection risks. Libraries may directly insert user input into the DOM, or the web application may retrieve the user input from the library and then add it to the DOM.
 
-| Library | Stars | Version | Input | Sanitizer | Capability | Status | CVE |
-|:-------:|:-----:|:-------:|-------|:---------:|-------------------------|:------:|:---:|
+| Library | Stars | Version | Input | Sanitizer | Capability |
+|:-------:|:-----:|:-------:|-------|:---------:|-------------------------|
 """
 
 def convert_stars_to_number(stars_str):
@@ -85,10 +85,10 @@ def process_files(input_directory, is_html_injection=False):
         filename = metadata['filename']
         if is_html_injection:
             library_link = f"[{metadata['Library']}]({html_base_url}{filename})"
-            section_content += f"| {library_link} | {metadata.get('Stars', 'N/A')} | {metadata.get('Version', 'N/A')} | {metadata.get('Input', 'N/A')} | {metadata.get('Sanitizer', 'N/A')} | {metadata.get('Capability', 'N/A')} | {metadata.get('Status', 'Reported')} | {metadata.get('CVE', 'N/A')} |\n"
+            section_content += f"| {library_link} | {metadata.get('Stars', 'N/A')} | {metadata.get('Version', 'N/A')} | {metadata.get('Input', 'N/A')} | {metadata.get('Sanitizer', 'N/A')} | {metadata.get('Capability', 'N/A')} |\n"
         else:
             library_link = f"[{metadata['Library']}]({gadgets_base_url}{filename})"
-            section_content += f"| {library_link} | {metadata.get('Stars', 'N/A')} | {metadata.get('Version', 'N/A')} | {metadata.get('Payload', 'N/A')} | {metadata.get('Impact', 'N/A')} | {metadata.get('Foundby', 'N/A')} | {metadata.get('Status', 'Reported')} | {metadata.get('CVE', 'N/A')} |\n"
+            section_content += f"| {library_link} | {metadata.get('Stars', 'N/A')} | {metadata.get('Version', 'N/A')} | {metadata.get('Payload', 'N/A')} | {metadata.get('Impact', 'N/A')} | {metadata.get('Foundby', 'N/A')} |\n"
     
     return section_content
 
