@@ -23,6 +23,10 @@ We also recommend checking out the following great websites, papers, and blog po
 
 ## DOM Clobbering Gadgets
 
+Want to try out the gadgets?
+
+We provide a website hosting Proof-of-Concept (PoC) pages for each DOM Clobbering gadget in our collection. To set it up locally, [click here](https://github.com/jackfromeast/dom-clobbering-collection/tree/main/domc-gadgets-assets).
+
 | Library | Stars | Version | Payloads | Impact | Found By | Status | CVE |
 |:-------:|:-----:|:-------:|----------|:------:|:--------:|:------:|:---:|
 | [Vite](./domc-gadgets/vite.md) | 67.2K | v5.4.5 | ```<img src="https://xxx.xxx.xxx" name="currentScript">``` | XSS | TheHulk | Patched | CVE-2024-45812 |
