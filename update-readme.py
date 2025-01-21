@@ -8,7 +8,7 @@ html_base_url = './html-injection/'
 
 readme_content = """# DOM Clobbering Collection
 
-This repository maintains client-side libraries that are vulnerable to HTML injection or contain DOM Clobbering gadgets that can result in severe issues like XSS. This repository is actively maintained by [jackfromeast](https://github.com/jackfromeast) and [ishmeal](https://github.com/ishmeals).
+This repository maintains a list of client-side library that is vulnerable to HTML injection or contains DOM Clobbering gadgets that can result in severe issues like XSS. This repository is actively maintained by [jackfromeast](https://github.com/jackfromeast) and [ishmeal](https://github.com/ishmeals).
 
 > [!NOTE]
 > Got new gadgets or HTML injections? Please feel free to create a Pull Request and join the house!
@@ -31,7 +31,7 @@ We also recommend checking out the following great websites, papers, and blog po
 
 ## DOM Clobbering Gadgets
 
-Want to try out the gadgets?
+**Want to try out the gadgets?**
 
 We provide a website hosting Proof-of-Concept (PoC) pages for each DOM Clobbering gadget in our collection. To set it up locally, [click here](https://github.com/jackfromeast/dom-clobbering-collection/tree/main/domc-gadgets-assets).
 
