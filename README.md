@@ -1,6 +1,8 @@
 # DOM Clobbering Collection
 
-This repository maintains a list of client-side library that is vulnerable to HTML injection or contains DOM Clobbering gadgets that can result in severe issues like XSS. This repository is actively maintained by [jackfromeast](https://github.com/jackfromeast) and [ishmeal](https://github.com/ishmeals).
+This repository maintains a list of client-side library that is vulnerable to HTML injection or contains DOM Clobbering gadgets that can result in severe issues like XSS. 
+
+This repository is actively maintained by [jackfromeast](https://github.com/jackfromeast) and [ishmeal](https://github.com/ishmeals).
 
 > [!NOTE]
 > Got new gadgets or HTML injections? Please feel free to create a Pull Request and join the house!
