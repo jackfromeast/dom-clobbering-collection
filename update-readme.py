@@ -23,7 +23,7 @@ We also recommend checking out the following great websites, papers, and blog po
 
 + Introductions:
   + The website [DOM Clobbering Wiki](https://domclob.xyz/) offers comprehensive information on attack techniques, vulnerability patterns, and defenses, along with tools for browser testing and payload generation.
-  + The blog post "[Can HTML affect JavaScript? Introduction to DOM clobbering](https://aszx87410.github.io/beyond-xss/en/ch3/dom-clobbering/)" explains how HTML elements can influence JavaScript execution through DOM Clobbering.
+  + The blog post "[Can HTML affect JavaScript? Introduction to DOM clobbering](https://aszx87410.github.io/beyond-xss/en/ch3/dom-clobbering/)" by Huli explains how HTML elements can influence JavaScript execution through DOM Clobbering.
 + Academic Papers:
   + The paper [It’s (DOM) Clobbering Time: Attack Techniques, Prevalence, and Defenses](https://publications.cispa.saarland/3756/1/sp23_domclob.pdf) by Soheil Khodayari and Giancarlo Pellegrino presents a systematic study of DOM Clobbering, uncovering various attack techniques, browser behaviors, and vulnerable code patterns, and evaluates existing countermeasures.
   + The paper [The DOMino Effect: Detecting and Exploiting DOM Clobbering Gadgets via Concolic Execution with Symbolic DOM]() by Zhengyu Liu et al. introduces a dynamic analysis tool using symbolic DOM modeling and concolic execution to detect and exploit DOM Clobbering gadgets at scale.
