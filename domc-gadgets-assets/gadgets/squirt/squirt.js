@@ -20,6 +20,10 @@ sq.host =  window.location.search.match('sq-dev') ?
       startSquirt();
     });
 
+    // Avoid hosting squirt.css on the attacker's server
+    makeGUI();
+    startSquirt();
+
     function startSquirt(){
       Keen.addEvent('start');
       showGUI();

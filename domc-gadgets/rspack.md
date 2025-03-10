@@ -6,10 +6,10 @@
 + Stars: 8.6K
 + Version: v1.0.0-rc.0
 + Fingerprint: N/A
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>```
++ Payload: ```<img name="currentScript" src="https://attack.hulk"></img>```
 + Impact: XSS
 + Status: Fixed
-+ CVE: CVE-2024-43788
++ CVE: [CVE-2024-43788](https://nvd.nist.gov/vuln/detail/CVE-2024-43788)
 + Foundby: TheHulk
 
 ### Library

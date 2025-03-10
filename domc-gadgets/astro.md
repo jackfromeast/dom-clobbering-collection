@@ -7,7 +7,7 @@
 + Version: v4.5.9
 + Payload: ```<form name="scripts">alert(1)</form><form name="scripts">alert(1)</form>```
 + Impact: XSS
-+ CVE: CVE-2024-47885
++ CVE: [CVE-2024-47885](https://github.com/withastro/astro/security/advisories/GHSA-m85w-3h95-hcf9)
 + Status: Fixed
 + Foundby: TheHulk
 

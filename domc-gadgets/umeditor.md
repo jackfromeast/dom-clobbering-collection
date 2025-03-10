@@ -6,10 +6,10 @@
 + Stars: 1.4K
 + Version: v1.2.2
 + Fingerprint: `typeof window.UM !== 'undefined' && UM.hasOwnProperty('version')`
-+ Payload: ```<a id="UMEDITOR_HOME_URL" href="https://xxx.xxx.xxx/"></a>```
++ Payload: ```<a id="UMEDITOR_HOME_URL" href="https://attack.hulk/"></a>```
 + Impact: XSS
 + Status: Reported
-+ CVE: CVE-2024-53387
++ CVE: [CVE-2024-53387](https://nvd.nist.gov/vuln/detail/CVE-2024-53387)
 + Foundby: TheHulk
 
 ### Library
